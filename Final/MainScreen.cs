@@ -18,6 +18,7 @@ namespace Final
             InitializeComponent();
             instance = this;
             ///123456
+            /////123
         }
     }
 }
