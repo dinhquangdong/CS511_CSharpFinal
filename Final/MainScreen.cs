@@ -12,9 +12,11 @@ namespace Final
 {
     public partial class MainScreen : Form
     {
+        public static MainScreen instance;
         public MainScreen()
         {
             InitializeComponent();
+            instance = this;
         }
     }
 }
