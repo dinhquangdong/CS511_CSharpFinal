@@ -17,6 +17,7 @@ namespace Final
         {
             InitializeComponent();
             instance = this;
+            ////okeoje
         }
     }
 }
