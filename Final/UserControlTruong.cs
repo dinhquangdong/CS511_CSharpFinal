@@ -13,7 +13,7 @@ namespace Final
     public partial class UserControlTruong : UserControl
     {
         public static UserControlTruong Instance;
-        public string TenTruong = "messi.png";
+        public string TenTruong;
         public string AnhTruong;
         public UserControlTruong()
         {
