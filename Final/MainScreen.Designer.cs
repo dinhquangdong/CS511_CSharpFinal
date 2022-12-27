@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonMapSearch = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.wbMap = new System.Windows.Forms.WebBrowser();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
@@ -37,17 +41,60 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.buttonMapSearch);
+            this.panel1.Controls.Add(this.button6);
+            this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel1.Location = new System.Drawing.Point(308, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1076, 711);
             this.panel1.TabIndex = 0;
+            // 
+            // buttonMapSearch
+            // 
+            this.buttonMapSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonMapSearch.Location = new System.Drawing.Point(851, 13);
+            this.buttonMapSearch.Name = "buttonMapSearch";
+            this.buttonMapSearch.Size = new System.Drawing.Size(63, 35);
+            this.buttonMapSearch.TabIndex = 4;
+            this.buttonMapSearch.Text = "Maps";
+            this.buttonMapSearch.UseVisualStyleBackColor = true;
+            this.buttonMapSearch.Click += new System.EventHandler(this.buttonMapSearch_Click);
+            // 
+            // button6
+            // 
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Location = new System.Drawing.Point(778, 12);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(56, 35);
+            this.button6.TabIndex = 3;
+            this.button6.Text = "tìm";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.wbMap);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(0, 73);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1076, 638);
+            this.panel3.TabIndex = 1;
+            // 
+            // wbMap
+            // 
+            this.wbMap.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.wbMap.Location = new System.Drawing.Point(0, 0);
+            this.wbMap.MinimumSize = new System.Drawing.Size(20, 20);
+            this.wbMap.Name = "wbMap";
+            this.wbMap.Size = new System.Drawing.Size(1076, 638);
+            this.wbMap.TabIndex = 0;
             // 
             // textBox1
             // 
@@ -130,6 +177,7 @@
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -145,6 +193,10 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.WebBrowser wbMap;
+        private System.Windows.Forms.Button buttonMapSearch;
+        private System.Windows.Forms.Button button6;
     }
 }
 
