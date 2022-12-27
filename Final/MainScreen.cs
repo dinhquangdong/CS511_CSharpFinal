@@ -23,6 +23,8 @@ namespace Final
 
         private void buttonMapSearch_Click(object sender, EventArgs e)
         {
+            flowLayoutPanel1.Visible = false;
+            wbMap.Visible = true;
             try
             {
                 StringBuilder stringBuilder = new StringBuilder();
@@ -42,6 +44,7 @@ namespace Final
         private void button1_Click(object sender, EventArgs e)
         {
             wbMap.Visible = false;
+            flowLayoutPanel1.Visible = true;
             DataTable dt = new DataTable();
             dt = TruongDAO.Instance.GetListTruong();
             flowLayoutPanel1.Controls.Clear();
