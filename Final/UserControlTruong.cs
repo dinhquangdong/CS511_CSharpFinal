@@ -12,9 +12,16 @@ namespace Final
 {
     public partial class UserControlTruong : UserControl
     {
+        public static UserControlTruong Instance;
+        public string TenTruong = "messi.png";
+        public string AnhTruong;
         public UserControlTruong()
         {
             InitializeComponent();
+            Instance = this;
+            pictureBox1.BackgroundImage = Image.FromFile("Images/"+AnhTruong);
+            labelName.Text = TenTruong;
         }
+
     }
 }

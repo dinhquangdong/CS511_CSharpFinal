@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Final.DAO;
+using Final.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -40,7 +42,16 @@ namespace Final
         private void button1_Click(object sender, EventArgs e)
         {
             wbMap.Visible = false;
-            flowLayoutPanel1.Controls.Add(new UserControlTruong());
+            DataTable dt = new DataTable();
+            dt = TruongDAO.Instance.GetListTruong();
+            foreach(DataRow row in dt.Rows)
+            {
+                UserControlTruong t = new UserControlTruong();
+                t.TenTruong = row[0].ToString();
+                t.AnhTruong = row[1].ToString();
+
+                flowLayoutPanel1.Controls.Add(t);
+            }
         }
     }
 }
