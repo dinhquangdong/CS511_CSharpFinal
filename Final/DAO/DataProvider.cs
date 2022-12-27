@@ -41,8 +41,8 @@ namespace Final.DAO
             {
                 connection.Open();
                 SqlCommand command = new SqlCommand(query, connection);
-                connection.Close();
                 data = command.ExecuteNonQuery();
+                connection.Close();
             }
             return data;
         }
@@ -54,8 +54,8 @@ namespace Final.DAO
             {
                 connection.Open();
                 SqlCommand command = new SqlCommand(query, connection);
-                connection.Close();
                 data = command.ExecuteScalar();
+                connection.Close();
             }
             return data;
         }

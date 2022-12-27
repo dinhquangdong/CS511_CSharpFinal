@@ -129,6 +129,7 @@
             this.btnThemTruong.TabIndex = 18;
             this.btnThemTruong.Text = "Thêm trưởng";
             this.btnThemTruong.UseVisualStyleBackColor = false;
+            this.btnThemTruong.Click += new System.EventHandler(this.btnThemTruong_Click);
             // 
             // groupBox1
             // 
@@ -157,6 +158,7 @@
             this.btnThemToHopMon.TabIndex = 19;
             this.btnThemToHopMon.Text = "Thêm tổ hợp môn";
             this.btnThemToHopMon.UseVisualStyleBackColor = false;
+            this.btnThemToHopMon.Click += new System.EventHandler(this.btnThemToHopMon_Click);
             // 
             // txbTenCacToHop
             // 
@@ -221,6 +223,7 @@
             this.btnThemNganh.TabIndex = 19;
             this.btnThemNganh.Text = "Thêm ngành";
             this.btnThemNganh.UseVisualStyleBackColor = false;
+            this.btnThemNganh.Click += new System.EventHandler(this.btnThemNganh_Click);
             // 
             // txbTenNganh
             // 
@@ -435,6 +438,7 @@
             this.btnThemCTToHopMon.TabIndex = 20;
             this.btnThemCTToHopMon.Text = "Thêm chi tiết tổ hợp môn";
             this.btnThemCTToHopMon.UseVisualStyleBackColor = false;
+            this.btnThemCTToHopMon.Click += new System.EventHandler(this.btnThemCTToHopMon_Click);
             // 
             // txbMaToHopMonCT_THM
             // 
@@ -502,6 +506,7 @@
             this.btnCTNganhHoc.TabIndex = 21;
             this.btnCTNganhHoc.Text = "Thêm chi tiết ngành học";
             this.btnCTNganhHoc.UseVisualStyleBackColor = false;
+            this.btnCTNganhHoc.Click += new System.EventHandler(this.btnCTNganhHoc_Click);
             // 
             // txbDiemChuanCT_NH
             // 
@@ -557,13 +562,13 @@
             this.label14.TabIndex = 1;
             this.label14.Text = "Mã trường";
             // 
-            // InsertDB
+            // InsertData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1343, 804);
             this.Controls.Add(this.splitContainer1);
-            this.Name = "InsertDB";
+            this.Name = "InsertData";
             this.Text = "InsertDB";
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
