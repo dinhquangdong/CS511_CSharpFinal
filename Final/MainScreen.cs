@@ -35,8 +35,12 @@ namespace Final
 
         private void button6_Click(object sender, EventArgs e)
         {
+        }
 
-            pictureBox1.BackgroundImage = Image.FromFile("Images/messi.png");
+        private void button1_Click(object sender, EventArgs e)
+        {
+            wbMap.Visible = false;
+            flowLayoutPanel1.Controls.Add(new UserControlTruong());
         }
     }
 }
