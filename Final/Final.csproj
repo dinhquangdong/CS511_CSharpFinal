@@ -47,7 +47,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\NganhDAO.cs" />
+    <Compile Include="DAO\ToHopMonDAO.cs" />
     <Compile Include="DAO\TruongDAO.cs" />
+    <Compile Include="DTO\Nganh.cs" />
+    <Compile Include="DTO\ToHopMon.cs" />
     <Compile Include="DTO\Truong.cs" />
     <Compile Include="InsertDB.cs">
       <SubType>Form</SubType>
