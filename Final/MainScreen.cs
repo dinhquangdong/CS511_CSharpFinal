@@ -32,5 +32,11 @@ namespace Final
                 MessageBox.Show(ex.Message.ToString(), "Error");
             }
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+            pictureBox1.BackgroundImage = Image.FromFile("Images/messi.png");
+        }
     }
 }
