@@ -44,6 +44,7 @@ namespace Final
             wbMap.Visible = false;
             DataTable dt = new DataTable();
             dt = TruongDAO.Instance.GetListTruong();
+            flowLayoutPanel1.Controls.Clear();
             foreach(DataRow row in dt.Rows)
             {
                 UserControlTruong t = new UserControlTruong();

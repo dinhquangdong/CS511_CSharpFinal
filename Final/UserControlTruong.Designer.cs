@@ -63,6 +63,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "UserControlTruong";
             this.Size = new System.Drawing.Size(172, 196);
+            this.Load += new System.EventHandler(this.UserControlTruong_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 

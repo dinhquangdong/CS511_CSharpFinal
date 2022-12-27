@@ -19,9 +19,12 @@ namespace Final
         {
             InitializeComponent();
             Instance = this;
-            pictureBox1.BackgroundImage = Image.FromFile("Images/"+AnhTruong);
-            labelName.Text = TenTruong;
         }
 
+        private void UserControlTruong_Load(object sender, EventArgs e)
+        {
+            pictureBox1.BackgroundImage = Image.FromFile("Images/" + AnhTruong);
+            labelName.Text = TenTruong;
+        }
     }
 }
