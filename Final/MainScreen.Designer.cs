@@ -32,6 +32,7 @@
             this.buttonMapSearch = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.wbMap = new System.Windows.Forms.WebBrowser();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -40,7 +41,6 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -89,6 +89,15 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1076, 638);
             this.panel3.TabIndex = 1;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1076, 638);
+            this.flowLayoutPanel1.TabIndex = 1;
             // 
             // wbMap
             // 
@@ -147,7 +156,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(308, 68);
             this.button3.TabIndex = 2;
-            this.button3.Text = "Tìm kiếm theo nghành";
+            this.button3.Text = "Tìm kiếm theo ngành";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // button2
@@ -170,15 +179,6 @@
             this.button1.Text = "Tất cả các trường";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1076, 638);
-            this.flowLayoutPanel1.TabIndex = 1;
             // 
             // MainScreen
             // 
