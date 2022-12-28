@@ -39,22 +39,40 @@ namespace Final
 
         private void button6_Click(object sender, EventArgs e)
         {
-            panel1.Visible = true;
-            wbMap.Visible = true;
-            flowLayoutPanel1.Visible = false;
-            try
+            if(flowLayoutPanel1.Visible == true)
             {
-                StringBuilder stringBuilder = new StringBuilder();
-                stringBuilder.Append("http://maps.google.com/maps?q=");
-                if(textBoxSearch.Text != string.Empty)
+                flowLayoutPanel1.Controls.Clear();
+                //neu dang hien danh sach cac truong dai hoc
+                DataTable dt = new DataTable();
+                dt = TruongDAO.Instance.TimKiem(textBoxSearch.Text);
+
+                foreach (DataRow row in dt.Rows)
                 {
-                    stringBuilder.Append(textBoxSearch.Text);
+                    UserControlTruong t = new UserControlTruong();
+                    t.TenTruong = row[0].ToString();
+                    t.AnhTruong = row[1].ToString();
+
+                    flowLayoutPanel1.Controls.Add(t);
                 }
-                wbMap.Navigate(stringBuilder.ToString());
             }
-            catch (Exception ex )
+            
+            if(wbMap.Visible == true)
             {
-                MessageBox.Show(ex.Message.ToString(), "Error");
+                //neu dang hien map
+                try
+                {
+                    StringBuilder stringBuilder = new StringBuilder();
+                    stringBuilder.Append("http://maps.google.com/maps?q=");
+                    if (textBoxSearch.Text != string.Empty)
+                    {
+                        stringBuilder.Append(textBoxSearch.Text);
+                    }
+                    wbMap.Navigate(stringBuilder.ToString());
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message.ToString(), "Error");
+                }
             }
         }
 
@@ -73,6 +91,29 @@ namespace Final
 
                 flowLayoutPanel1.Controls.Add(t);
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MainScreen_Load(object sender, EventArgs e)
+        {
+            flowLayoutPanel1.Visible = false;
+            panel1.Visible = true;
+            wbMap.Visible = true;
+            wbMap.Navigate("http://maps.google.com/maps?q=");
         }
     }
 }

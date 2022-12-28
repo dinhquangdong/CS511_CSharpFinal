@@ -25,6 +25,12 @@ namespace Final.DAO
             return DataProvider.Instance.ExcuteQuery("Select TenTruong,AnhTruong from TRUONG");
         }
 
+        public DataTable TimKiem(string text)
+        {
+            DataTable dt = new DataTable();
+            dt = DataProvider.Instance.ExcuteQuery($"Select TenTruong, AnhTruong from TRUONG where TenTruong like N'%{text}%'");
 
+            return dt;
+        }
     }
 }
