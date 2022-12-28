@@ -114,6 +114,10 @@ namespace Final
             panel1.Visible = true;
             wbMap.Visible = true;
             wbMap.Navigate("http://maps.google.com/maps?q=");
+            buttonMapSearch.BackgroundImage = Image.FromFile("Images/map.png");
+            buttonMapSearch.BackColor = Color.Transparent;
+            buttonTimChu.BackColor = Color.Transparent;
+            buttonTimChu.BackgroundImage = Image.FromFile("Images/search.png");
         }
 
         private void button4_Click(object sender, EventArgs e)

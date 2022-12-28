@@ -30,20 +30,20 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.buttonMapSearch = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.buttonTimChu = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.wbMap = new System.Windows.Forms.WebBrowser();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -52,7 +52,7 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.buttonMapSearch);
-            this.panel1.Controls.Add(this.button6);
+            this.panel1.Controls.Add(this.buttonTimChu);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.textBoxSearch);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
@@ -63,25 +63,31 @@
             // 
             // buttonMapSearch
             // 
+            this.buttonMapSearch.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.buttonMapSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonMapSearch.FlatAppearance.BorderSize = 0;
+            this.buttonMapSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonMapSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonMapSearch.Location = new System.Drawing.Point(851, 13);
             this.buttonMapSearch.Name = "buttonMapSearch";
-            this.buttonMapSearch.Size = new System.Drawing.Size(63, 35);
+            this.buttonMapSearch.Size = new System.Drawing.Size(38, 35);
             this.buttonMapSearch.TabIndex = 4;
-            this.buttonMapSearch.Text = "Maps";
-            this.buttonMapSearch.UseVisualStyleBackColor = true;
+            this.buttonMapSearch.UseVisualStyleBackColor = false;
             this.buttonMapSearch.Click += new System.EventHandler(this.buttonMapSearch_Click);
             // 
-            // button6
+            // buttonTimChu
             // 
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(778, 12);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(56, 35);
-            this.button6.TabIndex = 3;
-            this.button6.Text = "tìm";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.buttonTimChu.BackColor = System.Drawing.Color.Gray;
+            this.buttonTimChu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonTimChu.FlatAppearance.BorderSize = 0;
+            this.buttonTimChu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonTimChu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonTimChu.Location = new System.Drawing.Point(778, 12);
+            this.buttonTimChu.Name = "buttonTimChu";
+            this.buttonTimChu.Size = new System.Drawing.Size(38, 35);
+            this.buttonTimChu.TabIndex = 3;
+            this.buttonTimChu.UseVisualStyleBackColor = false;
+            this.buttonTimChu.Click += new System.EventHandler(this.button6_Click);
             // 
             // panel3
             // 
@@ -135,13 +141,37 @@
             this.panel2.Size = new System.Drawing.Size(308, 711);
             this.panel2.TabIndex = 1;
             // 
+            // button8
+            // 
+            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.Location = new System.Drawing.Point(0, 575);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(308, 68);
+            this.button8.TabIndex = 7;
+            this.button8.Text = "Tính điểm";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // button7
+            // 
+            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Location = new System.Drawing.Point(0, 641);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(308, 68);
+            this.button7.TabIndex = 6;
+            this.button7.Text = "Admin";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.BackColor = System.Drawing.SystemColors.Control;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Aqua;
             this.label1.Location = new System.Drawing.Point(12, 17);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(274, 31);
+            this.label1.Size = new System.Drawing.Size(274, 37);
             this.label1.TabIndex = 5;
             this.label1.Text = "Tìm Trường Đại Học";
             // 
@@ -198,28 +228,6 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button7
-            // 
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(0, 641);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(308, 68);
-            this.button7.TabIndex = 6;
-            this.button7.Text = "Admin";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // button8
-            // 
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(0, 575);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(308, 68);
-            this.button8.TabIndex = 7;
-            this.button8.Text = "Tính điểm";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
-            // 
             // MainScreen
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -251,7 +259,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.WebBrowser wbMap;
         private System.Windows.Forms.Button buttonMapSearch;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button buttonTimChu;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button7;
