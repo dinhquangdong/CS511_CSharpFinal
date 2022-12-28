@@ -34,14 +34,14 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.wbMap = new System.Windows.Forms.WebBrowser();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -52,7 +52,7 @@
             this.panel1.Controls.Add(this.buttonMapSearch);
             this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.textBoxSearch);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel1.Location = new System.Drawing.Point(308, 0);
             this.panel1.Name = "panel1";
@@ -109,13 +109,13 @@
             this.wbMap.Size = new System.Drawing.Size(1076, 638);
             this.wbMap.TabIndex = 0;
             // 
-            // textBox1
+            // textBoxSearch
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(216, 13);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(538, 35);
-            this.textBox1.TabIndex = 0;
+            this.textBoxSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxSearch.Location = new System.Drawing.Point(216, 13);
+            this.textBoxSearch.Name = "textBoxSearch";
+            this.textBoxSearch.Size = new System.Drawing.Size(538, 35);
+            this.textBoxSearch.TabIndex = 0;
             // 
             // panel2
             // 
@@ -130,6 +130,16 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(308, 711);
             this.panel2.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(274, 31);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Tìm Trường Đại Học";
             // 
             // button5
             // 
@@ -182,16 +192,6 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(274, 31);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Tìm Trường Đại Học";
-            // 
             // MainScreen
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -212,7 +212,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxSearch;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;

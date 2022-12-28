@@ -39,6 +39,23 @@ namespace Final
 
         private void button6_Click(object sender, EventArgs e)
         {
+            panel1.Visible = true;
+            wbMap.Visible = true;
+            flowLayoutPanel1.Visible = false;
+            try
+            {
+                StringBuilder stringBuilder = new StringBuilder();
+                stringBuilder.Append("http://maps.google.com/maps?q=");
+                if(textBoxSearch.Text != string.Empty)
+                {
+                    stringBuilder.Append(textBoxSearch.Text);
+                }
+                wbMap.Navigate(stringBuilder.ToString());
+            }
+            catch (Exception ex )
+            {
+                MessageBox.Show(ex.Message.ToString(), "Error");
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
