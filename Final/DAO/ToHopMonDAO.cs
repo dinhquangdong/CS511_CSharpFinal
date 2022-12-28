@@ -19,9 +19,9 @@ namespace Final.DAO
         private ToHopMonDAO() { }
 
 
-        public DataTable GetListTruong()
+        public DataTable GetListTHM()
         {
-            return DataProvider.Instance.ExcuteQuery("Select TenToHopMon from TOHOPMON");
+            return DataProvider.Instance.ExcuteQuery("Select MaToHopMon, TenMonHoc from TOHOPMON");
         }
 
 

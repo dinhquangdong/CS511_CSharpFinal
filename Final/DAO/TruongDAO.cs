@@ -1,11 +1,4 @@
-﻿using Final.DTO;
-using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿using System.Data;
 namespace Final.DAO
 {
     public class TruongDAO
@@ -19,7 +12,7 @@ namespace Final.DAO
         }
         private TruongDAO() { }
 
-       
+
         public DataTable GetListTruong()
         {
             return DataProvider.Instance.ExcuteQuery("Select TenTruong,AnhTruong from TRUONG");
@@ -28,8 +21,7 @@ namespace Final.DAO
         public DataTable TimKiem(string text)
         {
             DataTable dt = new DataTable();
-            dt = DataProvider.Instance.ExcuteQuery($"Select TenTruong, AnhTruong from TRUONG where TenTruong like N'%{text}%'");
-
+            dt = DataProvider.Instance.ExcuteQuery($"Select TenTruong, AnhTruong from TRUONG where dbo.fuConvertToUnsign1(TenTruong) like N'%'+dbo.fuConvertToUnsign1('{text}')+'%'");
             return dt;
         }
     }

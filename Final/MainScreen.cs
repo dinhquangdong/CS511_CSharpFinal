@@ -115,5 +115,24 @@ namespace Final
             wbMap.Visible = true;
             wbMap.Navigate("http://maps.google.com/maps?q=");
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            flowLayoutPanel1.Controls.Clear();
+            flowLayoutPanel1.Visible = true;
+            wbMap.Visible = false;
+
+            DataTable dt = new DataTable();
+            dt = ToHopMonDAO.Instance.GetListTHM();
+
+            foreach (DataRow row in dt.Rows)
+            {
+                UserControlToHopMon t = new UserControlToHopMon();
+                t.MaTHM = row[0].ToString();
+                t.TenTHM = row[1].ToString();
+
+                flowLayoutPanel1.Controls.Add(t);
+            }
+        }
     }
 }
