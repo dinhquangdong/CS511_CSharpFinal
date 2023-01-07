@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace mapgoogle
+namespace Final
 {
     public partial class InsertData : Form
     {
@@ -78,6 +78,43 @@ namespace mapgoogle
             }
         }
 
+        private void btnXoaTruong_Click(object sender, EventArgs e)
+        {
+            string MaTruong = txbMaTruong.Text;
+            string TenTruong = txbTenTruong.Text;
+            if (TruongDAO.Instance.deleteTruongFromMaOrTen(MaTruong, TenTruong))
+            {
+                MessageBox.Show("Xóa trường thành công");
+            }
+            else
+            {
+                MessageBox.Show("Xóa trường THẤT BẠI", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnXoaCTTHM_Click(object sender, EventArgs e)
+        {
+            if (txbMaNganh.Text == "")
+            {
+                MessageBox.Show(txbMaNganh.Text);
+
+            }
+        }
+
+        private void btnXoaNganh_Click(object sender, EventArgs e)
+        {
+            string MaNganh = txbMaNganh.Text;
+            string TenNganh = txbTenNganh.Text;
+            if (NganhDAO.Instance.deleteNganhFromMaOrTen(MaNganh, TenNganh))
+            {
+                MessageBox.Show("Xóa ngành thành công");
+            }
+            else
+            {
+                MessageBox.Show("Xóa ngành THẤT BẠI", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         public bool insertTruong()
         {
             string MaTruong = txbMaTruong.Text;
@@ -98,6 +135,9 @@ namespace mapgoogle
             catch{}
             return results > 0;
         }
+
+
+
         public bool insertToHopMon()
         {
             string MaToHopMon = txbMaToHopMon.Text;
@@ -112,6 +152,21 @@ namespace mapgoogle
             catch { }
             return results > 0;
         }
+
+        private void btnXoaTHM_Click(object sender, EventArgs e)
+        {
+            string MaToHopMon = txbMaToHopMon.Text;
+            string TenToHopMon = txbTenCacToHop.Text;
+            if (ToHopMonDAO.Instance.deleteToHopFromMaOrTen(MaToHopMon, TenToHopMon))
+            {
+                MessageBox.Show("Xóa tổ hợp môn thành công");
+            }
+            else
+            {
+                MessageBox.Show("Xóa tổ hợp môn THẤT BẠI", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         public bool insertNganh()
         {
             int MaNganh = int.Parse(txbMaNganh.Text);
@@ -156,5 +211,7 @@ namespace mapgoogle
             catch { }
             return results > 0;
         }
+
+        
     }
 }

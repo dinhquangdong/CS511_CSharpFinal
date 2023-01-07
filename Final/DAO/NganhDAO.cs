@@ -24,6 +24,20 @@ namespace Final.DAO
             return DataProvider.Instance.ExcuteQuery("Select TenNganh from NGANHHOC");
         }
 
+        public bool deleteNganhFromMaOrTen(string ma, string ten)
+        {
+            CTNganhHocDAO.Instance.deleteCTNganhFromMaTruongAndMaNghanh("", ma);
+            CTToHopMonDAO.Instance.deleteCTToHopMonFromMaNghanhAndMaToHopMon(ma, "");
+
+            if (ma == "" && ten == "")
+            {
+                return false;
+            }
+            string query = "Delete NGANHHOC where " + (ma != "" ? " MaNganh = " + ma : " ") + ((ma == "" && ten != "")||(ma != "" && ten == "") ? " " : " or ")
+                    + (ten != "" ? " TenNganh = N'" + ten + "'" : "");
+            int result = DataProvider.Instance.ExcuteNonQuery(query);
+            return result > 0;
+        }
 
     }
 }

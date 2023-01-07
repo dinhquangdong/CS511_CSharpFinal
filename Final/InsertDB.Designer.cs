@@ -1,4 +1,4 @@
-﻿namespace mapgoogle
+﻿namespace Final
 {
     partial class InsertData
     {
@@ -72,6 +72,16 @@
             this.label13 = new System.Windows.Forms.Label();
             this.txbMaTruongCT_NH = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
+            this.btnSuaNganh = new System.Windows.Forms.Button();
+            this.btnXoaNganh = new System.Windows.Forms.Button();
+            this.btnXoaTHM = new System.Windows.Forms.Button();
+            this.btnSuaTHM = new System.Windows.Forms.Button();
+            this.btnXoaTruong = new System.Windows.Forms.Button();
+            this.btnSuaTruong = new System.Windows.Forms.Button();
+            this.btnXoaCTTHM = new System.Windows.Forms.Button();
+            this.btnSuaCTTHM = new System.Windows.Forms.Button();
+            this.btnXoaCTN = new System.Windows.Forms.Button();
+            this.btnSuaCTN = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -90,6 +100,8 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.btnXoaTruong);
+            this.splitContainer1.Panel1.Controls.Add(this.btnSuaTruong);
             this.splitContainer1.Panel1.Controls.Add(this.btnThemTruong);
             this.splitContainer1.Panel1.Controls.Add(this.groupBox1);
             this.splitContainer1.Panel1.Controls.Add(this.NGANH);
@@ -134,6 +146,8 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.groupBox1.Controls.Add(this.btnXoaTHM);
+            this.groupBox1.Controls.Add(this.btnSuaTHM);
             this.groupBox1.Controls.Add(this.btnThemToHopMon);
             this.groupBox1.Controls.Add(this.txbTenCacToHop);
             this.groupBox1.Controls.Add(this.label11);
@@ -199,6 +213,8 @@
             // NGANH
             // 
             this.NGANH.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.NGANH.Controls.Add(this.btnXoaNganh);
+            this.NGANH.Controls.Add(this.btnSuaNganh);
             this.NGANH.Controls.Add(this.btnThemNganh);
             this.NGANH.Controls.Add(this.txbTenNganh);
             this.NGANH.Controls.Add(this.label10);
@@ -413,6 +429,8 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.groupBox3.Controls.Add(this.btnXoaCTTHM);
+            this.groupBox3.Controls.Add(this.btnSuaCTTHM);
             this.groupBox3.Controls.Add(this.btnThemCTToHopMon);
             this.groupBox3.Controls.Add(this.txbMaToHopMonCT_THM);
             this.groupBox3.Controls.Add(this.label16);
@@ -479,6 +497,8 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.groupBox2.Controls.Add(this.btnXoaCTN);
+            this.groupBox2.Controls.Add(this.btnSuaCTN);
             this.groupBox2.Controls.Add(this.btnCTNganhHoc);
             this.groupBox2.Controls.Add(this.txbDiemChuanCT_NH);
             this.groupBox2.Controls.Add(this.label15);
@@ -562,6 +582,130 @@
             this.label14.TabIndex = 1;
             this.label14.Text = "Mã trường";
             // 
+            // btnSuaNganh
+            // 
+            this.btnSuaNganh.BackColor = System.Drawing.Color.Cyan;
+            this.btnSuaNganh.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSuaNganh.ForeColor = System.Drawing.Color.Black;
+            this.btnSuaNganh.Location = new System.Drawing.Point(115, 147);
+            this.btnSuaNganh.Name = "btnSuaNganh";
+            this.btnSuaNganh.Size = new System.Drawing.Size(77, 38);
+            this.btnSuaNganh.TabIndex = 20;
+            this.btnSuaNganh.Text = "Sửa ngành";
+            this.btnSuaNganh.UseVisualStyleBackColor = false;
+            // 
+            // btnXoaNganh
+            // 
+            this.btnXoaNganh.BackColor = System.Drawing.Color.Cyan;
+            this.btnXoaNganh.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoaNganh.ForeColor = System.Drawing.Color.Black;
+            this.btnXoaNganh.Location = new System.Drawing.Point(32, 146);
+            this.btnXoaNganh.Name = "btnXoaNganh";
+            this.btnXoaNganh.Size = new System.Drawing.Size(77, 38);
+            this.btnXoaNganh.TabIndex = 21;
+            this.btnXoaNganh.Text = "Xóa ngành";
+            this.btnXoaNganh.UseVisualStyleBackColor = false;
+            this.btnXoaNganh.Click += new System.EventHandler(this.btnXoaNganh_Click);
+            // 
+            // btnXoaTHM
+            // 
+            this.btnXoaTHM.BackColor = System.Drawing.Color.Cyan;
+            this.btnXoaTHM.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoaTHM.ForeColor = System.Drawing.Color.Black;
+            this.btnXoaTHM.Location = new System.Drawing.Point(32, 131);
+            this.btnXoaTHM.Name = "btnXoaTHM";
+            this.btnXoaTHM.Size = new System.Drawing.Size(77, 38);
+            this.btnXoaTHM.TabIndex = 23;
+            this.btnXoaTHM.Text = "Xóa THM";
+            this.btnXoaTHM.UseVisualStyleBackColor = false;
+            this.btnXoaTHM.Click += new System.EventHandler(this.btnXoaTHM_Click);
+            // 
+            // btnSuaTHM
+            // 
+            this.btnSuaTHM.BackColor = System.Drawing.Color.Cyan;
+            this.btnSuaTHM.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSuaTHM.ForeColor = System.Drawing.Color.Black;
+            this.btnSuaTHM.Location = new System.Drawing.Point(115, 132);
+            this.btnSuaTHM.Name = "btnSuaTHM";
+            this.btnSuaTHM.Size = new System.Drawing.Size(77, 38);
+            this.btnSuaTHM.TabIndex = 22;
+            this.btnSuaTHM.Text = "Sửa THM";
+            this.btnSuaTHM.UseVisualStyleBackColor = false;
+            // 
+            // btnXoaTruong
+            // 
+            this.btnXoaTruong.BackColor = System.Drawing.Color.Cyan;
+            this.btnXoaTruong.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoaTruong.ForeColor = System.Drawing.Color.Black;
+            this.btnXoaTruong.Location = new System.Drawing.Point(380, 751);
+            this.btnXoaTruong.Name = "btnXoaTruong";
+            this.btnXoaTruong.Size = new System.Drawing.Size(77, 38);
+            this.btnXoaTruong.TabIndex = 23;
+            this.btnXoaTruong.Text = "Xóa trường";
+            this.btnXoaTruong.UseVisualStyleBackColor = false;
+            this.btnXoaTruong.Click += new System.EventHandler(this.btnXoaTruong_Click);
+            // 
+            // btnSuaTruong
+            // 
+            this.btnSuaTruong.BackColor = System.Drawing.Color.Cyan;
+            this.btnSuaTruong.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSuaTruong.ForeColor = System.Drawing.Color.Black;
+            this.btnSuaTruong.Location = new System.Drawing.Point(463, 751);
+            this.btnSuaTruong.Name = "btnSuaTruong";
+            this.btnSuaTruong.Size = new System.Drawing.Size(77, 38);
+            this.btnSuaTruong.TabIndex = 22;
+            this.btnSuaTruong.Text = "Sửa trường";
+            this.btnSuaTruong.UseVisualStyleBackColor = false;
+            // 
+            // btnXoaCTTHM
+            // 
+            this.btnXoaCTTHM.BackColor = System.Drawing.Color.Cyan;
+            this.btnXoaCTTHM.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoaCTTHM.ForeColor = System.Drawing.Color.Black;
+            this.btnXoaCTTHM.Location = new System.Drawing.Point(6, 247);
+            this.btnXoaCTTHM.Name = "btnXoaCTTHM";
+            this.btnXoaCTTHM.Size = new System.Drawing.Size(77, 38);
+            this.btnXoaCTTHM.TabIndex = 23;
+            this.btnXoaCTTHM.Text = "Xóa CTTHM";
+            this.btnXoaCTTHM.UseVisualStyleBackColor = false;
+            this.btnXoaCTTHM.Click += new System.EventHandler(this.btnXoaCTTHM_Click);
+            // 
+            // btnSuaCTTHM
+            // 
+            this.btnSuaCTTHM.BackColor = System.Drawing.Color.Cyan;
+            this.btnSuaCTTHM.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSuaCTTHM.ForeColor = System.Drawing.Color.Black;
+            this.btnSuaCTTHM.Location = new System.Drawing.Point(89, 248);
+            this.btnSuaCTTHM.Name = "btnSuaCTTHM";
+            this.btnSuaCTTHM.Size = new System.Drawing.Size(77, 38);
+            this.btnSuaCTTHM.TabIndex = 22;
+            this.btnSuaCTTHM.Text = "Sửa CTTHM";
+            this.btnSuaCTTHM.UseVisualStyleBackColor = false;
+            // 
+            // btnXoaCTN
+            // 
+            this.btnXoaCTN.BackColor = System.Drawing.Color.Cyan;
+            this.btnXoaCTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoaCTN.ForeColor = System.Drawing.Color.Black;
+            this.btnXoaCTN.Location = new System.Drawing.Point(6, 242);
+            this.btnXoaCTN.Name = "btnXoaCTN";
+            this.btnXoaCTN.Size = new System.Drawing.Size(77, 38);
+            this.btnXoaCTN.TabIndex = 25;
+            this.btnXoaCTN.Text = "Xóa CTN";
+            this.btnXoaCTN.UseVisualStyleBackColor = false;
+            // 
+            // btnSuaCTN
+            // 
+            this.btnSuaCTN.BackColor = System.Drawing.Color.Cyan;
+            this.btnSuaCTN.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSuaCTN.ForeColor = System.Drawing.Color.Black;
+            this.btnSuaCTN.Location = new System.Drawing.Point(89, 243);
+            this.btnSuaCTN.Name = "btnSuaCTN";
+            this.btnSuaCTN.Size = new System.Drawing.Size(77, 38);
+            this.btnSuaCTN.TabIndex = 24;
+            this.btnSuaCTN.Text = "Sửa CTN";
+            this.btnSuaCTN.UseVisualStyleBackColor = false;
+            // 
             // InsertData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -633,5 +777,15 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txbMaTruongCT_NH;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Button btnXoaTruong;
+        private System.Windows.Forms.Button btnSuaTruong;
+        private System.Windows.Forms.Button btnXoaTHM;
+        private System.Windows.Forms.Button btnSuaTHM;
+        private System.Windows.Forms.Button btnXoaNganh;
+        private System.Windows.Forms.Button btnSuaNganh;
+        private System.Windows.Forms.Button btnXoaCTTHM;
+        private System.Windows.Forms.Button btnSuaCTTHM;
+        private System.Windows.Forms.Button btnXoaCTN;
+        private System.Windows.Forms.Button btnSuaCTN;
     }
 }

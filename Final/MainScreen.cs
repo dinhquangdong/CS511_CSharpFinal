@@ -100,7 +100,10 @@ namespace Final
 
         private void button7_Click(object sender, EventArgs e)
         {
-
+            InsertData ins = new InsertData();
+            this.Hide();
+            ins.ShowDialog();
+            this.Show();
         }
 
         private void button8_Click(object sender, EventArgs e)

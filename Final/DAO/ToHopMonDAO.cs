@@ -24,6 +24,19 @@ namespace Final.DAO
             return DataProvider.Instance.ExcuteQuery("Select MaToHopMon, TenMonHoc from TOHOPMON");
         }
 
+        public bool deleteToHopFromMaOrTen(string mathm, string tenthm)
+        {
+            CTToHopMonDAO.Instance.deleteCTToHopMonFromMaNghanhAndMaToHopMon("", mathm);
+
+            if (mathm == "" && tenthm == "")
+            {
+                return false;
+            }
+            string query = "Delete TOHOPMON where " + (mathm != "" ? " MaToHopMon = N'" + mathm + "'" : " ") + ((mathm == "" && tenthm != "") || (mathm != "" && tenthm == "") ? " " : " or ")
+                    + (tenthm != "" ? " TenMonHoc = N'" + tenthm + "'" : "");
+            int result = DataProvider.Instance.ExcuteNonQuery(query);
+            return result > 0;
+        }
 
     }
 }
