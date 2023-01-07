@@ -26,7 +26,7 @@ namespace mapgoogle
             }
             else
             {
-                MessageBox.Show("Thêm trường THẤT BẠI");
+                MessageBox.Show("Thêm trường THẤT BẠI", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -38,7 +38,7 @@ namespace mapgoogle
             }
             else
             {
-                MessageBox.Show("Thêm tổ hợp môn THẤT BẠI");
+                MessageBox.Show("Thêm tổ hợp môn THẤT BẠI","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
         }
 
@@ -50,7 +50,7 @@ namespace mapgoogle
             }
             else
             {
-                MessageBox.Show("Thêm ngành THẤT BẠI");
+                MessageBox.Show("Thêm ngành THẤT BẠI", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -62,7 +62,7 @@ namespace mapgoogle
             }
             else
             {
-                MessageBox.Show("Thêm chi tiết tổ hợp môn THẤT BẠI");
+                MessageBox.Show("Thêm chi tiết tổ hợp môn THẤT BẠI", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -74,7 +74,7 @@ namespace mapgoogle
             }
             else
             {
-                MessageBox.Show("Thêm chi tiết ngành THẤT BẠI");
+                MessageBox.Show("Thêm chi tiết ngành THẤT BẠI", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
