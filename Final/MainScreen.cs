@@ -138,5 +138,23 @@ namespace Final
                 flowLayoutPanel1.Controls.Add(t);
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            flowLayoutPanel1.Controls.Clear();
+            flowLayoutPanel1.Visible = true;
+            wbMap.Visible = false;
+
+            DataTable dt = new DataTable();
+            dt = NganhDAO.Instance.GetListNganh();
+
+            foreach (DataRow row in dt.Rows)
+            {
+                UserControlNganh n = new UserControlNganh();
+                n.TenNganh = row[0].ToString();
+
+                flowLayoutPanel1.Controls.Add(n);
+            }
+        }
     }
 }
