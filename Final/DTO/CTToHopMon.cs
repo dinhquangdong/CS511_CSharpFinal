@@ -1,29 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 
 namespace Final.DTO
 {
-    public class Nganh
+    public class CTToHopMon
     {
-        public Nganh(int MaNganh, string TenNganh)
+        public CTToHopMon(int MaNganh, string matohopmon)
         {
             this.MaNganh = MaNganh;
-            this.TenNganh = TenNganh;
+            this.MaToHopMon = matohopmon;
         }
-        public Nganh(DataRow row)
+        public CTToHopMon(DataRow row)
         {
             this.MaNganh = (int)row["MaNganh"];
-            this.TenNganh = row["TenNganh"].ToString();
+            this.MaToHopMon = row["MaToHopMon"].ToString();
         }
 
         private int maNganh;
-        private string tenNganh;
+        private string maToHopMon;
 
         public int MaNganh { get => maNganh; set => maNganh = value; }
-        public string TenNganh { get => tenNganh; set => tenNganh = value; }
+        public string MaToHopMon { get => maToHopMon; set => maToHopMon = value; }
     }
 }
