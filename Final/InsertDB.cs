@@ -90,7 +90,12 @@ namespace mapgoogle
             string AnhTruong = txbAnhTruong.Text;
             string query = string.Format("insert into TRUONG values (N'{0}',N'{1}',N'{2}',N'{3}',N'{4}',{5},N'{6}',N'{7}')",
                 MaTruong, TenTruong, LinkWebTruong, DiaChi, SDT, SaoDanhGia, ReView, AnhTruong);
-            int results = DataProvider.Instance.ExcuteNonQuery(query);
+            int results = 0;
+            try
+            {
+                results = DataProvider.Instance.ExcuteNonQuery(query);
+            }
+            catch{}
             return results > 0;
         }
         public bool insertToHopMon()
@@ -99,7 +104,12 @@ namespace mapgoogle
             string TenToHopMon = txbTenCacToHop.Text;
             string query = string.Format("insert into TOHOPMON values (N'{0}',N'{1}')",
                 MaToHopMon, TenToHopMon);
-            int results = DataProvider.Instance.ExcuteNonQuery(query);
+            int results = 0;
+            try
+            {
+                results = DataProvider.Instance.ExcuteNonQuery(query);
+            }
+            catch { }
             return results > 0;
         }
         public bool insertNganh()
@@ -108,7 +118,12 @@ namespace mapgoogle
             string TenNganh = txbTenNganh.Text;
             string query = string.Format("insert into NGANHHOC values ({0},N'{1}')",
                 MaNganh, TenNganh);
-            int results = DataProvider.Instance.ExcuteNonQuery(query);
+            int results = 0;
+            try
+            {
+                results = DataProvider.Instance.ExcuteNonQuery(query);
+            }
+            catch { }
             return results > 0;
         }
         public bool insertCTNganh()
@@ -118,7 +133,12 @@ namespace mapgoogle
             float DiemChuan = float.Parse(txbDiemChuanCT_NH.Text);
             string query = string.Format("insert into CTNGANHHOC values (N'{0}',{1},{2})",
                 MaTruong, MaNganh, DiemChuan);
-            int results = DataProvider.Instance.ExcuteNonQuery(query);
+            int results = 0;
+            try
+            {
+                results = DataProvider.Instance.ExcuteNonQuery(query);
+            }
+            catch { }
             return results > 0;
         }
 
@@ -128,7 +148,12 @@ namespace mapgoogle
             string MaToHopMon = txbMaToHopMonCT_THM.Text;
             string query = string.Format("insert into CTTOHOPMON values ({0},N'{1}')",
                  MaNganh, MaToHopMon);
-            int results = DataProvider.Instance.ExcuteNonQuery(query);
+            int results = 0;
+            try
+            {
+                results = DataProvider.Instance.ExcuteNonQuery(query);
+            }
+            catch { }
             return results > 0;
         }
     }
