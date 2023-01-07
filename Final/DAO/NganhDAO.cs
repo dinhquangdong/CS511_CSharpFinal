@@ -21,7 +21,7 @@ namespace Final.DAO
 
         public DataTable GetListNganh()
         {
-            return DataProvider.Instance.ExcuteQuery("Select TenNganh from NGANH");
+            return DataProvider.Instance.ExcuteQuery("Select TenNganh from NGANHHOC");
         }
 
 
