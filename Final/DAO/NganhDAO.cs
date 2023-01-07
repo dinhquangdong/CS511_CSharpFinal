@@ -19,7 +19,7 @@ namespace Final.DAO
         private NganhDAO() { }
 
 
-        public DataTable GetListTruong()
+        public DataTable GetListNganh()
         {
             return DataProvider.Instance.ExcuteQuery("Select TenNganh from NGANH");
         }
