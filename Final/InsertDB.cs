@@ -26,7 +26,7 @@ namespace mapgoogle
             }
             else
             {
-                MessageBox.Show("Thêm trường thất bại");
+                MessageBox.Show("Thêm trường THẤT BẠI");
             }
         }
 
@@ -38,7 +38,7 @@ namespace mapgoogle
             }
             else
             {
-                MessageBox.Show("Thêm tổ hợp môn thất bại");
+                MessageBox.Show("Thêm tổ hợp môn THẤT BẠI");
             }
         }
 
@@ -50,7 +50,7 @@ namespace mapgoogle
             }
             else
             {
-                MessageBox.Show("Thêm ngành thất bại");
+                MessageBox.Show("Thêm ngành THẤT BẠI");
             }
         }
 
@@ -62,7 +62,7 @@ namespace mapgoogle
             }
             else
             {
-                MessageBox.Show("Thêm chi tiết tổ hợp môn thất bại");
+                MessageBox.Show("Thêm chi tiết tổ hợp môn THẤT BẠI");
             }
         }
 
@@ -74,7 +74,7 @@ namespace mapgoogle
             }
             else
             {
-                MessageBox.Show("Thêm chi tiết ngành thất bại");
+                MessageBox.Show("Thêm chi tiết ngành THẤT BẠI");
             }
         }
 
