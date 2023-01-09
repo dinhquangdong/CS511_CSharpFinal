@@ -24,6 +24,13 @@ namespace Final.DAO
             return DataProvider.Instance.ExcuteQuery("Select TenNganh from NGANHHOC");
         }
 
+        public DataTable TimKiem(string text)
+        {
+            DataTable dt = new DataTable();
+            dt = DataProvider.Instance.ExcuteQuery($"Select TenNganh from NGANHHOc where dbo.fuConvertToUnsign1(TenNganh) like N'%'+dbo.fuConvertToUnsign1('{text}')+'%'");
+            return dt;
+        }
+
         public bool deleteNganhFromMaOrTen(string ma, string ten)
         {
             CTNganhHocDAO.Instance.deleteCTNganhFromMaTruongAndMaNghanh("", ma);

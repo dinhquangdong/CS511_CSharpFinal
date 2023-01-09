@@ -15,6 +15,10 @@ namespace Final
     public partial class MainScreen : Form
     {
         public static MainScreen instance;
+        public bool HienTruong = false;
+        public bool HienNganh = false;
+        public bool HienDiem = false;
+        public bool HienToHopMon = false;
         public MainScreen()
         {
             InitializeComponent();
@@ -39,24 +43,7 @@ namespace Final
 
         private void button6_Click(object sender, EventArgs e)
         {
-            if(flowLayoutPanel1.Visible == true)
-            {
-                flowLayoutPanel1.Controls.Clear();
-                //neu dang hien danh sach cac truong dai hoc
-                DataTable dt = new DataTable();
-                dt = TruongDAO.Instance.TimKiem(textBoxSearch.Text);
-
-                foreach (DataRow row in dt.Rows)
-                {
-                    UserControlTruong t = new UserControlTruong();
-                    t.TenTruong = row[0].ToString();
-                    t.AnhTruong = row[1].ToString();
-
-                    flowLayoutPanel1.Controls.Add(t);
-                }
-            }
-            
-            if(wbMap.Visible == true)
+            if (wbMap.Visible == true)
             {
                 //neu dang hien map
                 try
@@ -74,10 +61,69 @@ namespace Final
                     MessageBox.Show(ex.Message.ToString(), "Error");
                 }
             }
+
+            else if(HienTruong == true)
+            {
+                flowLayoutPanel1.Controls.Clear();
+                //neu dang hien danh sach cac truong dai hoc
+                DataTable dt = new DataTable();
+                dt = TruongDAO.Instance.TimKiem(textBoxSearch.Text);
+
+                foreach (DataRow row in dt.Rows)
+                {
+                    UserControlTruong t = new UserControlTruong();
+                    t.TenTruong = row[0].ToString();
+                    t.AnhTruong = row[1].ToString();
+
+                    flowLayoutPanel1.Controls.Add(t);
+                }
+            }
+
+            else if(HienNganh == true)
+            {
+                flowLayoutPanel1.Controls.Clear();
+                //neu dang hien danh sach cac nganh
+                DataTable dt = new DataTable();
+                dt = NganhDAO.Instance.TimKiem(textBoxSearch.Text);
+
+                foreach (DataRow row in dt.Rows)
+                {
+                    UserControlNganh t = new UserControlNganh();
+                    t.TenNganh = row[0].ToString();
+                    flowLayoutPanel1.Controls.Add(t);
+                }
+            }
+
+            else if (HienDiem == true)
+            {
+
+            }
+
+            else if (HienToHopMon == true)
+            {
+                flowLayoutPanel1.Controls.Clear();
+                //neu dang hien danh sach cac to hop mon
+                DataTable dt = new DataTable();
+                dt = ToHopMonDAO.Instance.TimKiem(textBoxSearch.Text);
+
+                foreach (DataRow row in dt.Rows)
+                {
+                    UserControlToHopMon t = new UserControlToHopMon();
+                    t.MaTHM = row[0].ToString();
+                    t.TenTHM = row[1].ToString();
+                    flowLayoutPanel1.Controls.Add(t);
+                }
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //Khi ấn vào tất cả các trường
+            HienTruong = true;
+            HienDiem = false;
+            HienNganh = false;
+            HienToHopMon = false;
+
             wbMap.Visible = false;
             flowLayoutPanel1.Visible = true;
             DataTable dt = new DataTable();
@@ -125,6 +171,12 @@ namespace Final
 
         private void button4_Click(object sender, EventArgs e)
         {
+            HienTruong = false;
+            HienDiem = false;
+            HienNganh = false;
+            HienToHopMon = true;
+
+
             flowLayoutPanel1.Controls.Clear();
             flowLayoutPanel1.Visible = true;
             wbMap.Visible = false;
@@ -144,6 +196,12 @@ namespace Final
 
         private void button3_Click(object sender, EventArgs e)
         {
+            //Khi ấn vào tất cả các ngành
+            HienTruong = false;
+            HienDiem = false;
+            HienNganh = true;
+            HienToHopMon = false;
+
             flowLayoutPanel1.Controls.Clear();
             flowLayoutPanel1.Visible = true;
             wbMap.Visible = false;
@@ -158,6 +216,21 @@ namespace Final
 
                 flowLayoutPanel1.Controls.Add(n);
             }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            HienTruong = false;
+            HienDiem = true;
+            HienNganh = false;
+            HienToHopMon = false;
+
+            flowLayoutPanel1.Controls.Clear();
+            flowLayoutPanel1.Visible = true;
+            wbMap.Visible = false;
+
+
+
         }
     }
 }

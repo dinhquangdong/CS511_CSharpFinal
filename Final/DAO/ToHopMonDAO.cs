@@ -24,6 +24,13 @@ namespace Final.DAO
             return DataProvider.Instance.ExcuteQuery("Select MaToHopMon, TenMonHoc from TOHOPMON");
         }
 
+        public DataTable TimKiem(string text)
+        {
+            DataTable dt = new DataTable();
+            dt = DataProvider.Instance.ExcuteQuery($"Select MaToHopMon, TenMonHoc from TOHOPMON where dbo.fuConvertToUnsign1(TenMonHoc) like N'%'+dbo.fuConvertToUnsign1('{text}')+'%'");
+            return dt;
+        }
+
         public bool deleteToHopFromMaOrTen(string mathm, string tenthm)
         {
             CTToHopMonDAO.Instance.deleteCTToHopMonFromMaNghanhAndMaToHopMon("", mathm);
