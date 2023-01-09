@@ -23,6 +23,7 @@ namespace Final
         {
             InitializeComponent();
             instance = this;
+            pblogo.BackgroundImage = Image.FromFile("./Images/logo.png");
         }
 
         private void buttonMapSearch_Click(object sender, EventArgs e)
