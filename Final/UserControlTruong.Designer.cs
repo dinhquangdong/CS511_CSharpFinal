@@ -44,6 +44,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(124, 133);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.UserControlTruong_Click);
             // 
             // labelName
             // 
@@ -55,6 +56,7 @@
             this.labelName.TabIndex = 1;
             this.labelName.Text = "Đại học Công nghệ thông tin";
             this.labelName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelName.Click += new System.EventHandler(this.UserControlTruong_Click);
             // 
             // UserControlTruong
             // 
