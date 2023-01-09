@@ -352,6 +352,7 @@
             this.txbDiemCong.Name = "txbDiemCong";
             this.txbDiemCong.Size = new System.Drawing.Size(179, 29);
             this.txbDiemCong.TabIndex = 28;
+            this.txbDiemCong.Text = "0";
             // 
             // label1
             // 
