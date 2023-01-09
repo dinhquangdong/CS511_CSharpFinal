@@ -238,7 +238,13 @@ namespace Final
             flowLayoutPanel1.Visible = true;
             wbMap.Visible = false;
 
-
+            for(int i=0; i<=2; i++)
+            {
+                UserControlDiem t = new UserControlDiem();
+                t.From = 15 + 5 * i;
+                t.To = 20 + 5 * i;
+                flowLayoutPanel1.Controls.Add(t);
+            }
 
         }
     }

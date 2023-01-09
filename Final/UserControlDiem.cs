@@ -12,9 +12,18 @@ namespace Final
 {
     public partial class UserControlDiem : UserControl
     {
+        public int From, To;
+
+        private void UserControlDiem_Load(object sender, EventArgs e)
+        {
+            labelFrom.Text = From.ToString();
+            labelTo.Text = To.ToString();
+        }
+
         public UserControlDiem()
         {
             InitializeComponent();
+            
         }
     }
 }
