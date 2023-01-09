@@ -83,6 +83,12 @@
     <Compile Include="UserControlNganh.Designer.cs">
       <DependentUpon>UserControlNganh.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlTinhDiem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlTinhDiem.Designer.cs">
+      <DependentUpon>UserControlTinhDiem.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControlToHopMon.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -115,6 +121,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlNganh.resx">
       <DependentUpon>UserControlNganh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlTinhDiem.resx">
+      <DependentUpon>UserControlTinhDiem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlToHopMon.resx">
       <DependentUpon>UserControlToHopMon.cs</DependentUpon>
@@ -265,6 +274,11 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Images\search.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\result.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>

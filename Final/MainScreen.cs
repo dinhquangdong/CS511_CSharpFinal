@@ -154,7 +154,11 @@ namespace Final
 
         private void button8_Click(object sender, EventArgs e)
         {
-
+            flowLayoutPanel1.Controls.Clear();
+            flowLayoutPanel1.Visible = true;
+            wbMap.Visible = false;
+            UserControlTinhDiem td = new UserControlTinhDiem();
+            flowLayoutPanel1.Controls.Add(td);
         }
 
         private void MainScreen_Load(object sender, EventArgs e)
