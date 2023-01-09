@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChiTietTruong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChiTietTruong.Designer.cs">
+      <DependentUpon>ChiTietTruong.cs</DependentUpon>
+    </Compile>
     <Compile Include="DAO\CTNganhHocDAO.cs" />
     <Compile Include="DAO\CTToHopMonDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
@@ -107,6 +113,9 @@
     <Compile Include="UserControlTruong.Designer.cs">
       <DependentUpon>UserControlTruong.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ChiTietTruong.resx">
+      <DependentUpon>ChiTietTruong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InsertDB.resx">
       <DependentUpon>InsertDB.cs</DependentUpon>
     </EmbeddedResource>
