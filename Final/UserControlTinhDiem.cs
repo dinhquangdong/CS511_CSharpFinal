@@ -92,7 +92,6 @@ namespace Final
                     txbketqua.Text = (float.Parse(txbDia.Text) + float.Parse(txbToan.Text) + float.Parse(txbNK.Text) + float.Parse(txbDiemCong.Text)).ToString();
                     break;
             }
-            
             txbA00.Text = (float.Parse(txbToan.Text) + float.Parse(txbLy.Text) + float.Parse(txbHoa.Text) + float.Parse(txbDiemCong.Text)).ToString();
             txbA01.Text = (float.Parse(txbToan.Text) + float.Parse(txbLy.Text) + float.Parse(txbAnhVan.Text) + float.Parse(txbDiemCong.Text)).ToString();
             txbA02.Text = (float.Parse(txbToan.Text) + float.Parse(txbLy.Text) + float.Parse(txbSinh.Text) + float.Parse(txbDiemCong.Text)).ToString();
@@ -111,6 +110,16 @@ namespace Final
             txbT04.Text = (float.Parse(txbLy.Text) + float.Parse(txbToan.Text) + float.Parse(txbNK.Text) + float.Parse(txbDiemCong.Text)).ToString();
             txbT05.Text = (float.Parse(txbGDCD.Text) + float.Parse(txbNguVan.Text) + float.Parse(txbNK.Text) + float.Parse(txbDiemCong.Text)).ToString();
             txbT06.Text = (float.Parse(txbDia.Text) + float.Parse(txbToan.Text) + float.Parse(txbNK.Text) + float.Parse(txbDiemCong.Text)).ToString();
+        }
+
+        private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
+        {
+            pictureBox1.BackColor = Color.FromArgb(100,255,255,255);
+        }
+
+        private void pictureBox1_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox1.BackColor = Color.Transparent;
         }
     }
 }

@@ -95,6 +95,12 @@
     <Compile Include="UserControlToHopMon.Designer.cs">
       <DependentUpon>UserControlToHopMon.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlTrangCaNhan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlTrangCaNhan.Designer.cs">
+      <DependentUpon>UserControlTrangCaNhan.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControlTruong.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -127,6 +133,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlToHopMon.resx">
       <DependentUpon>UserControlToHopMon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlTrangCaNhan.resx">
+      <DependentUpon>UserControlTrangCaNhan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlTruong.resx">
       <DependentUpon>UserControlTruong.cs</DependentUpon>
@@ -279,6 +288,11 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Images\result.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\avatar.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>

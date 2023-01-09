@@ -141,7 +141,11 @@ namespace Final
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            flowLayoutPanel1.Controls.Clear();
+            flowLayoutPanel1.Visible = true;
+            wbMap.Visible = false;
+            UserControlTrangCaNhan td = new UserControlTrangCaNhan();
+            flowLayoutPanel1.Controls.Add(td);
         }
 
         private void button7_Click(object sender, EventArgs e)
