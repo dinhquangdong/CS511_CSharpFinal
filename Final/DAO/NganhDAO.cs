@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Final.DTO;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -31,17 +32,22 @@ namespace Final.DAO
             return dt;
         }
 
+        public DataTable GetListNganhFromMaTruong(string MaTruong)
+        {
+            DataTable dt = new DataTable();
+            dt = DataProvider.Instance.ExcuteQuery("select NGANHHOC.MaNganh as N'Mã Ngành', NGANHHOC.TenNganh as N'Tên Ngành', DiemChuan as N'Điểm chuẩn' from CTNGANHHOC , NGANHHOC where CTNGANHHOC.MaTruong = N'" + MaTruong+"' and NGANHHOC.MaNganh = CTNGANHHOC.MaNganh");
+            return dt;
+        }
         public bool deleteNganhFromMaOrTen(string ma, string ten)
         {
             CTNganhHocDAO.Instance.deleteCTNganhFromMaTruongAndMaNghanh("", ma);
             CTToHopMonDAO.Instance.deleteCTToHopMonFromMaNghanhAndMaToHopMon(ma, "");
-
             if (ma == "" && ten == "")
             {
                 return false;
             }
             string query = "Delete NGANHHOC where " + (ma != "" ? " MaNganh = " + ma : " ") + ((ma == "" && ten != "")||(ma != "" && ten == "") ? " " : " or ")
-                    + (ten != "" ? " TenNganh = N'" + ten + "'" : "");
+            + (ten != "" ? " TenNganh = N'" + ten + "'" : "");
             int result = DataProvider.Instance.ExcuteNonQuery(query);
             return result > 0;
         }

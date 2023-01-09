@@ -29,8 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChiTietTruong));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
-            this.labelName = new System.Windows.Forms.Label();
+            this.labelTenTruong = new System.Windows.Forms.Label();
             this.labelMaTruong = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.linkLabel = new System.Windows.Forms.LinkLabel();
@@ -55,16 +57,16 @@
             this.pictureBoxLogo.TabIndex = 0;
             this.pictureBoxLogo.TabStop = false;
             // 
-            // labelName
+            // labelTenTruong
             // 
-            this.labelName.AutoSize = true;
-            this.labelName.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelName.ForeColor = System.Drawing.Color.Blue;
-            this.labelName.Location = new System.Drawing.Point(483, 35);
-            this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(571, 37);
-            this.labelName.TabIndex = 1;
-            this.labelName.Text = "Trường Đại học Công nghệ thông tin";
+            this.labelTenTruong.AutoSize = true;
+            this.labelTenTruong.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTenTruong.ForeColor = System.Drawing.Color.Blue;
+            this.labelTenTruong.Location = new System.Drawing.Point(483, 35);
+            this.labelTenTruong.Name = "labelTenTruong";
+            this.labelTenTruong.Size = new System.Drawing.Size(571, 37);
+            this.labelTenTruong.TabIndex = 1;
+            this.labelTenTruong.Text = "Trường Đại học Công nghệ thông tin";
             // 
             // labelMaTruong
             // 
@@ -134,7 +136,7 @@
             this.richTextBox1.Location = new System.Drawing.Point(490, 100);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(849, 265);
+            this.richTextBox1.Size = new System.Drawing.Size(849, 240);
             this.richTextBox1.TabIndex = 8;
             this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
             // 
@@ -151,7 +153,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(484, 399);
+            this.label2.Location = new System.Drawing.Point(481, 353);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(276, 31);
             this.label2.TabIndex = 11;
@@ -159,10 +161,30 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(493, 445);
+            this.dataGridView1.Location = new System.Drawing.Point(490, 399);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(845, 246);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidth = 100;
+            this.dataGridView1.Size = new System.Drawing.Size(845, 275);
             this.dataGridView1.TabIndex = 12;
             // 
             // ChiTietTruong
@@ -180,10 +202,11 @@
             this.Controls.Add(this.linkLabel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.labelMaTruong);
-            this.Controls.Add(this.labelName);
+            this.Controls.Add(this.labelTenTruong);
             this.Controls.Add(this.pictureBoxLogo);
             this.Name = "ChiTietTruong";
             this.Text = "ChiTietTruong";
+            this.Load += new System.EventHandler(this.ChiTietTruong_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -194,7 +217,7 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBoxLogo;
-        private System.Windows.Forms.Label labelName;
+        private System.Windows.Forms.Label labelTenTruong;
         private System.Windows.Forms.Label labelMaTruong;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.LinkLabel linkLabel;

@@ -18,6 +18,25 @@ namespace Final.DAO
             return DataProvider.Instance.ExcuteQuery("Select TenTruong,AnhTruong from TRUONG");
         }
 
+        public DataTable GetThongTinTruongFromMaTruong(string MaTruong)
+        {
+            return DataProvider.Instance.ExcuteQuery("Select * from TRUONG where MaTruong=N'" + MaTruong + "'");
+        }
+
+        
+
+        public string GetMaTruong(string TenTruong)
+        {
+            DataTable dt = new DataTable();
+            dt =  DataProvider.Instance.ExcuteQuery("Select MaTruong from TRUONG where TenTruong=N'"+TenTruong+"'");
+            string a = "";
+            foreach(DataRow d in dt.Rows)
+            {
+                a = d[0].ToString();
+            }
+            return a;
+        }
+
         public DataTable TimKiem(string text)
         {
             DataTable dt = new DataTable();

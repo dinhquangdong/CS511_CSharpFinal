@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Final.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,6 +26,17 @@ namespace Final
         {
             pictureBox1.BackgroundImage = Image.FromFile("Images/" + AnhTruong);
             labelName.Text = TenTruong;
+        }
+
+        private void UserControlTruong_Click(object sender, EventArgs e)
+        {
+            string MaTruong = TruongDAO.Instance.GetMaTruong(TenTruong);
+            DataTable dt = new DataTable();
+            dt = TruongDAO.Instance.GetThongTinTruongFromMaTruong(MaTruong);
+            ChiTietTruong ctt = new ChiTietTruong();
+            ctt.ThongTinTruong = dt;
+
+            ctt.ShowDialog();
         }
     }
 }
