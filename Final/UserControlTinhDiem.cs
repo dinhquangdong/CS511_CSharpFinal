@@ -38,60 +38,79 @@ namespace Final
             switch (comboBoxSelect.Text)
             {
                 case "A00":
-                    txbKetQua.Text = (float.Parse(txbToan.Text) + float.Parse(txbLy.Text) + float.Parse(txbHoa.Text) + float.Parse(txbDiemCong.Text)).ToString();
+                    txbketqua.Text = (float.Parse(txbToan.Text) + float.Parse(txbLy.Text) + float.Parse(txbHoa.Text) + float.Parse(txbDiemCong.Text)).ToString();
                     break;
                 case "A01": //tla
-                    txbKetQua.Text = (float.Parse(txbToan.Text) + float.Parse(txbLy.Text) + float.Parse(txbAnhVan.Text) + float.Parse(txbDiemCong.Text)).ToString();
+                    txbketqua.Text = (float.Parse(txbToan.Text) + float.Parse(txbLy.Text) + float.Parse(txbAnhVan.Text) + float.Parse(txbDiemCong.Text)).ToString();
                     break;
                 case "A02": //tls
-                    txbKetQua.Text = (float.Parse(txbToan.Text) + float.Parse(txbLy.Text) + float.Parse(txbSinh.Text) + float.Parse(txbDiemCong.Text)).ToString();
+                    txbketqua.Text = (float.Parse(txbToan.Text) + float.Parse(txbLy.Text) + float.Parse(txbSinh.Text) + float.Parse(txbDiemCong.Text)).ToString();
                     break;
                 case "B00": //ths
-                    txbKetQua.Text = (float.Parse(txbToan.Text) + float.Parse(txbHoa.Text) + float.Parse(txbSinh.Text) + float.Parse(txbDiemCong.Text)).ToString();
+                    txbketqua.Text = (float.Parse(txbToan.Text) + float.Parse(txbHoa.Text) + float.Parse(txbSinh.Text) + float.Parse(txbDiemCong.Text)).ToString();
                     break;
                 case "B01": //tSinhsu
-                    txbKetQua.Text = (float.Parse(txbToan.Text) + float.Parse(txbSinh.Text) + float.Parse(txbSu.Text) + float.Parse(txbDiemCong.Text)).ToString();
+                    txbketqua.Text = (float.Parse(txbToan.Text) + float.Parse(txbSinh.Text) + float.Parse(txbSu.Text) + float.Parse(txbDiemCong.Text)).ToString();
                     break;
                 case "B02": //tsinhdia
-                    txbKetQua.Text = (float.Parse(txbToan.Text) + float.Parse(txbSinh.Text) + float.Parse(txbDia.Text) + float.Parse(txbDiemCong.Text)).ToString();
+                    txbketqua.Text = (float.Parse(txbToan.Text) + float.Parse(txbSinh.Text) + float.Parse(txbDia.Text) + float.Parse(txbDiemCong.Text)).ToString();
                     break;
                 case "C00": //vansusia
-                    txbKetQua.Text = (float.Parse(txbNguVan.Text) + float.Parse(txbSu.Text) + float.Parse(txbDia.Text) + float.Parse(txbDiemCong.Text)).ToString();
+                    txbketqua.Text = (float.Parse(txbNguVan.Text) + float.Parse(txbSu.Text) + float.Parse(txbDia.Text) + float.Parse(txbDiemCong.Text)).ToString();
                     break;
                 case "C01": //vantoanli
-                    txbKetQua.Text = (float.Parse(txbNguVan.Text) + float.Parse(txbToan.Text) + float.Parse(txbLy.Text) + float.Parse(txbDiemCong.Text)).ToString();
+                    txbketqua.Text = (float.Parse(txbNguVan.Text) + float.Parse(txbToan.Text) + float.Parse(txbLy.Text) + float.Parse(txbDiemCong.Text)).ToString();
                     break;
                 case "C02": //vantoanhoa
-                    txbKetQua.Text = (float.Parse(txbNguVan.Text) + float.Parse(txbToan.Text) + float.Parse(txbHoa.Text) + float.Parse(txbDiemCong.Text)).ToString();
+                    txbketqua.Text = (float.Parse(txbNguVan.Text) + float.Parse(txbToan.Text) + float.Parse(txbHoa.Text) + float.Parse(txbDiemCong.Text)).ToString();
                     break;
                 case "C03": //vantoansu
-                    txbKetQua.Text = (float.Parse(txbNguVan.Text) + float.Parse(txbToan.Text) + float.Parse(txbSu.Text) + float.Parse(txbDiemCong.Text)).ToString();
+                    txbketqua.Text = (float.Parse(txbNguVan.Text) + float.Parse(txbToan.Text) + float.Parse(txbSu.Text) + float.Parse(txbDiemCong.Text)).ToString();
                     break;
                 case "D01": //vantoananh
-                    txbKetQua.Text = (float.Parse(txbNguVan.Text) + float.Parse(txbToan.Text) + float.Parse(txbAnhVan.Text) + float.Parse(txbDiemCong.Text)).ToString();
+                    txbketqua.Text = (float.Parse(txbNguVan.Text) + float.Parse(txbToan.Text) + float.Parse(txbAnhVan.Text) + float.Parse(txbDiemCong.Text)).ToString();
                     break;
                 case "D07": //toanhoaanh
-                    txbKetQua.Text = (float.Parse(txbAnhVan.Text) + float.Parse(txbToan.Text) + float.Parse(txbHoa.Text) + float.Parse(txbDiemCong.Text)).ToString();
+                    txbketqua.Text = (float.Parse(txbAnhVan.Text) + float.Parse(txbToan.Text) + float.Parse(txbHoa.Text) + float.Parse(txbDiemCong.Text)).ToString();
                     break;
                 case "H00": //toanhoaanh
-                    txbKetQua.Text = (float.Parse(txbNguVan.Text) + float.Parse(txbHinhHoa.Text) + float.Parse(txbBoCuc.Text) + float.Parse(txbDiemCong.Text)).ToString();
+                    txbketqua.Text = (float.Parse(txbNguVan.Text) + float.Parse(txbHinhHoa.Text) + float.Parse(txbBoCuc.Text) + float.Parse(txbDiemCong.Text)).ToString();
                     break;
                 case "T00": //toanhoaanh
-                    txbKetQua.Text = (float.Parse(txbSinh.Text) + float.Parse(txbToan.Text) + float.Parse(txbNK.Text) + float.Parse(txbDiemCong.Text)).ToString();
+                    txbketqua.Text = (float.Parse(txbSinh.Text) + float.Parse(txbToan.Text) + float.Parse(txbNK.Text) + float.Parse(txbDiemCong.Text)).ToString();
                     break;
                 case "T03": //toanhoaanh
-                    txbKetQua.Text = (float.Parse(txbSinh.Text) + float.Parse(txbNguVan.Text) + float.Parse(txbNK.Text) + float.Parse(txbDiemCong.Text)).ToString();
+                    txbketqua.Text = (float.Parse(txbSinh.Text) + float.Parse(txbNguVan.Text) + float.Parse(txbNK.Text) + float.Parse(txbDiemCong.Text)).ToString();
                     break;
                 case "T04": //toanhoaanh
-                    txbKetQua.Text = (float.Parse(txbLy.Text) + float.Parse(txbToan.Text) + float.Parse(txbNK.Text) + float.Parse(txbDiemCong.Text)).ToString();
+                    txbketqua.Text = (float.Parse(txbLy.Text) + float.Parse(txbToan.Text) + float.Parse(txbNK.Text) + float.Parse(txbDiemCong.Text)).ToString();
                     break;
                 case "T05": //toanhoaanh
-                    txbKetQua.Text = (float.Parse(txbGDCD.Text) + float.Parse(txbNguVan.Text) + float.Parse(txbNK.Text) + float.Parse(txbDiemCong.Text)).ToString();
+                    txbketqua.Text = (float.Parse(txbGDCD.Text) + float.Parse(txbNguVan.Text) + float.Parse(txbNK.Text) + float.Parse(txbDiemCong.Text)).ToString();
                     break;
                 case "T06": //toanhoaanh
-                    txbKetQua.Text = (float.Parse(txbDia.Text) + float.Parse(txbToan.Text) + float.Parse(txbNK.Text) + float.Parse(txbDiemCong.Text)).ToString();
+                    txbketqua.Text = (float.Parse(txbDia.Text) + float.Parse(txbToan.Text) + float.Parse(txbNK.Text) + float.Parse(txbDiemCong.Text)).ToString();
                     break;
             }
+            
+            txbA00.Text = (float.Parse(txbToan.Text) + float.Parse(txbLy.Text) + float.Parse(txbHoa.Text) + float.Parse(txbDiemCong.Text)).ToString();
+            txbA01.Text = (float.Parse(txbToan.Text) + float.Parse(txbLy.Text) + float.Parse(txbAnhVan.Text) + float.Parse(txbDiemCong.Text)).ToString();
+            txbA02.Text = (float.Parse(txbToan.Text) + float.Parse(txbLy.Text) + float.Parse(txbSinh.Text) + float.Parse(txbDiemCong.Text)).ToString();
+            txbB00.Text = (float.Parse(txbToan.Text) + float.Parse(txbHoa.Text) + float.Parse(txbSinh.Text) + float.Parse(txbDiemCong.Text)).ToString();
+            txbB01.Text = (float.Parse(txbToan.Text) + float.Parse(txbSinh.Text) + float.Parse(txbSu.Text) + float.Parse(txbDiemCong.Text)).ToString();
+            txbB02.Text = (float.Parse(txbToan.Text) + float.Parse(txbSinh.Text) + float.Parse(txbDia.Text) + float.Parse(txbDiemCong.Text)).ToString();
+            txbC00.Text = (float.Parse(txbNguVan.Text) + float.Parse(txbSu.Text) + float.Parse(txbDia.Text) + float.Parse(txbDiemCong.Text)).ToString();
+            txbC01.Text = (float.Parse(txbNguVan.Text) + float.Parse(txbToan.Text) + float.Parse(txbLy.Text) + float.Parse(txbDiemCong.Text)).ToString();
+            txbC02.Text = (float.Parse(txbNguVan.Text) + float.Parse(txbToan.Text) + float.Parse(txbHoa.Text) + float.Parse(txbDiemCong.Text)).ToString();
+            txbC03.Text = (float.Parse(txbNguVan.Text) + float.Parse(txbToan.Text) + float.Parse(txbSu.Text) + float.Parse(txbDiemCong.Text)).ToString();
+            txbD01.Text = (float.Parse(txbNguVan.Text) + float.Parse(txbToan.Text) + float.Parse(txbAnhVan.Text) + float.Parse(txbDiemCong.Text)).ToString();
+            txbD07.Text = (float.Parse(txbAnhVan.Text) + float.Parse(txbToan.Text) + float.Parse(txbHoa.Text) + float.Parse(txbDiemCong.Text)).ToString();
+            txbH00.Text = (float.Parse(txbNguVan.Text) + float.Parse(txbHinhHoa.Text) + float.Parse(txbBoCuc.Text) + float.Parse(txbDiemCong.Text)).ToString();
+            txbT00.Text = (float.Parse(txbSinh.Text) + float.Parse(txbToan.Text) + float.Parse(txbNK.Text) + float.Parse(txbDiemCong.Text)).ToString();
+            txbT03.Text = (float.Parse(txbSinh.Text) + float.Parse(txbNguVan.Text) + float.Parse(txbNK.Text) + float.Parse(txbDiemCong.Text)).ToString();
+            txbT04.Text = (float.Parse(txbLy.Text) + float.Parse(txbToan.Text) + float.Parse(txbNK.Text) + float.Parse(txbDiemCong.Text)).ToString();
+            txbT05.Text = (float.Parse(txbGDCD.Text) + float.Parse(txbNguVan.Text) + float.Parse(txbNK.Text) + float.Parse(txbDiemCong.Text)).ToString();
+            txbT06.Text = (float.Parse(txbDia.Text) + float.Parse(txbToan.Text) + float.Parse(txbNK.Text) + float.Parse(txbDiemCong.Text)).ToString();
         }
     }
 }
