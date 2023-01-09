@@ -36,6 +36,7 @@ namespace Final
             ChiTietTruong ctt = new ChiTietTruong();
             ctt.ThongTinTruong = dt;
             ctt.ShowDialog();
+            MainScreen.instance.MainScreen_Load1();
         }
     }
 }

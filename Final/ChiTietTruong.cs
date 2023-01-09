@@ -27,12 +27,12 @@ namespace Final
         private void ChiTietTruong_Load(object sender, EventArgs e)
         {
             DataRow r = ThongTinTruong.Rows[0];
-            labelMaTruong.Text = "Mã trường: "+r[0].ToString();
+            labelMaTruong.Text = "Mã trường: " + r[0].ToString();
             labelTenTruong.Text = r[1].ToString();
             linkLabel.Text = r[2].ToString();
-            labelDiaChi.Text = "Địa chỉ: "+r[3].ToString();
-            labelSoDienThoai.Text = "Điện thoại: "+r[4].ToString();
-            labelSaoDanhGia.Text = "Đánh giá: "+ r[5].ToString() + "/5";
+            labelDiaChi.Text = "Địa chỉ: " + r[3].ToString();
+            labelSoDienThoai.Text = "Điện thoại: " + r[4].ToString();
+            labelSaoDanhGia.Text = "Đánh giá: " + r[5].ToString() + "/5";
             richTextBox1.Text = r[6].ToString();
             pictureBoxLogo.BackgroundImage = Image.FromFile("Images/" + r[7].ToString());
 
@@ -49,7 +49,8 @@ namespace Final
         private void button1_Click(object sender, EventArgs e)
         {
             string DiaChi = ThongTinTruong.Rows[0][3].ToString();
-            MainScreen.instance.DiaChiCanDen = DiaChi;
+            string TenTruong = ThongTinTruong.Rows[0][1].ToString();
+            MainScreen.instance.DiaChiCanDen = TenTruong + " , " + DiaChi;
 
             this.Close();
         }

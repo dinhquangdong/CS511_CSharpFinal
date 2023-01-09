@@ -65,7 +65,7 @@ namespace Final
                 }
             }
 
-            else if(HienTruong == true)
+            else if (HienTruong == true)
             {
                 flowLayoutPanel1.Controls.Clear();
                 //neu dang hien danh sach cac truong dai hoc
@@ -82,7 +82,7 @@ namespace Final
                 }
             }
 
-            else if(HienNganh == true)
+            else if (HienNganh == true)
             {
                 flowLayoutPanel1.Controls.Clear();
                 //neu dang hien danh sach cac nganh
@@ -132,7 +132,7 @@ namespace Final
             DataTable dt = new DataTable();
             dt = TruongDAO.Instance.GetListTruong();
             flowLayoutPanel1.Controls.Clear();
-            foreach(DataRow row in dt.Rows)
+            foreach (DataRow row in dt.Rows)
             {
                 UserControlTruong t = new UserControlTruong();
                 t.TenTruong = row[0].ToString();
@@ -175,6 +175,24 @@ namespace Final
             wbMap.Visible = true;
             wbMap.Navigate("http://maps.google.com/maps?q=");
             buttonMapSearch.BackgroundImage = Image.FromFile("Images/map.png");
+            buttonMapSearch.BackColor = Color.Transparent;
+            buttonTimChu.BackColor = Color.Transparent;
+            buttonTimChu.BackgroundImage = Image.FromFile("Images/search.png");
+        }
+
+        public void MainScreen_Load1()
+        {
+            if(DiaChiCanDen != null)
+            {
+                flowLayoutPanel1.Visible = false;
+                panel1.Visible = true;
+                wbMap.Visible = true;
+                string url = Uri.EscapeDataString(DiaChiCanDen);
+                wbMap.Navigate("http://maps.google.com/maps?q=" + url);
+                buttonMapSearch.BackgroundImage = Image.FromFile("Images/map.png");
+            }
+
+            
             buttonMapSearch.BackColor = Color.Transparent;
             buttonTimChu.BackColor = Color.Transparent;
             buttonTimChu.BackgroundImage = Image.FromFile("Images/search.png");
@@ -240,14 +258,13 @@ namespace Final
             flowLayoutPanel1.Visible = true;
             wbMap.Visible = false;
 
-            for(int i=0; i<=2; i++)
+            for (int i = 0; i <= 2; i++)
             {
                 UserControlDiem t = new UserControlDiem();
                 t.From = 15 + 5 * i;
                 t.To = 20 + 5 * i;
                 flowLayoutPanel1.Controls.Add(t);
             }
-
         }
     }
 }

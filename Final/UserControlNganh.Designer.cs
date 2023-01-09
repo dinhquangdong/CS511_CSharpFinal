@@ -33,6 +33,7 @@
             // 
             // labelTenNganh
             // 
+            this.labelTenNganh.BackColor = System.Drawing.Color.LightBlue;
             this.labelTenNganh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelTenNganh.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTenNganh.Location = new System.Drawing.Point(9, 11);
@@ -46,7 +47,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackColor = System.Drawing.Color.LightBlue;
             this.Controls.Add(this.labelTenNganh);
             this.Name = "UserControlNganh";
             this.Size = new System.Drawing.Size(205, 130);
