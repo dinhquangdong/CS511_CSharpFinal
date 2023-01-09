@@ -5375,4 +5375,60 @@
   <data name="richTextBox1.Text" xml:space="preserve">
     <value>Đại học Công Nghệ Thông Tin TPHCM được xem là một trong những trường đại học trọng điểm quốc gia. Những năm trở lại đây, UIT đã tạo ra không ít nguồn nhân lực chất lượng cho khu vực phía Nam. Trong tương lai, trường hứa hẹn sẽ ngày càng củng cố CSVC, phát triển năng lực đội ngũ giảng viên và sinh viên, xây dựng môi trường đào tạo lý tưởng cho nước nhà.</value>
   </data>
+  <data name="button1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
+  </data>
 </root>

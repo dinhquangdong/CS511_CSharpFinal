@@ -19,6 +19,8 @@ namespace Final
         public bool HienNganh = false;
         public bool HienDiem = false;
         public bool HienToHopMon = false;
+        public string DiaChiCanDen;
+
         public MainScreen()
         {
             InitializeComponent();

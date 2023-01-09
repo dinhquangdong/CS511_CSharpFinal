@@ -35,7 +35,6 @@ namespace Final
             dt = TruongDAO.Instance.GetThongTinTruongFromMaTruong(MaTruong);
             ChiTietTruong ctt = new ChiTietTruong();
             ctt.ThongTinTruong = dt;
-
             ctt.ShowDialog();
         }
     }

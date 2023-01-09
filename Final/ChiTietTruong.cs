@@ -39,5 +39,19 @@ namespace Final
             dataGridView1.Controls.Clear();
             dataGridView1.DataSource = NganhDAO.Instance.GetListNganhFromMaTruong(r[0].ToString());
         }
+
+        private void linkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.linkLabel.LinkVisited = true;
+            System.Diagnostics.Process.Start(linkLabel.Text);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string DiaChi = ThongTinTruong.Rows[0][3].ToString();
+            MainScreen.instance.DiaChiCanDen = DiaChi;
+
+            this.Close();
+        }
     }
 }
