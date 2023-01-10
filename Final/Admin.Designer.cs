@@ -110,6 +110,8 @@
             this.dtgvCTTHM = new System.Windows.Forms.DataGridView();
             this.tpTaiKhoang = new System.Windows.Forms.TabPage();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.txbLoaiTK = new System.Windows.Forms.TextBox();
+            this.txbGioiTinh = new System.Windows.Forms.TextBox();
             this.txbIdNguoiDung = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
@@ -124,8 +126,6 @@
             this.txbTimTK = new System.Windows.Forms.TextBox();
             this.panel12 = new System.Windows.Forms.Panel();
             this.dtgvDanhSachTaiKhoang = new System.Windows.Forms.DataGridView();
-            this.txbGioiTinh = new System.Windows.Forms.TextBox();
-            this.txbLoaiTK = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tpTruong.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -180,7 +180,7 @@
             this.tpTruong.Controls.Add(this.panel1);
             this.tpTruong.Location = new System.Drawing.Point(4, 29);
             this.tpTruong.Name = "tpTruong";
-            this.tpTruong.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tpTruong.Padding = new System.Windows.Forms.Padding(3);
             this.tpTruong.Size = new System.Drawing.Size(1071, 641);
             this.tpTruong.TabIndex = 0;
             this.tpTruong.Text = "Trường";
@@ -400,6 +400,7 @@
             this.btnThemTruong.TabIndex = 1;
             this.btnThemTruong.Text = "Thêm";
             this.btnThemTruong.UseVisualStyleBackColor = true;
+            this.btnThemTruong.Click += new System.EventHandler(this.btnThemTruong_Click);
             // 
             // panel1
             // 
@@ -428,7 +429,7 @@
             this.tpNganh.Controls.Add(this.panel3);
             this.tpNganh.Location = new System.Drawing.Point(4, 29);
             this.tpNganh.Name = "tpNganh";
-            this.tpNganh.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tpNganh.Padding = new System.Windows.Forms.Padding(3);
             this.tpNganh.Size = new System.Drawing.Size(1071, 641);
             this.tpNganh.TabIndex = 1;
             this.tpNganh.Text = "Ngành";
@@ -552,7 +553,7 @@
             this.tpToHopMon.Controls.Add(this.panel6);
             this.tpToHopMon.Location = new System.Drawing.Point(4, 29);
             this.tpToHopMon.Name = "tpToHopMon";
-            this.tpToHopMon.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tpToHopMon.Padding = new System.Windows.Forms.Padding(3);
             this.tpToHopMon.Size = new System.Drawing.Size(1071, 641);
             this.tpToHopMon.TabIndex = 2;
             this.tpToHopMon.Text = "Tổ hợp môn";
@@ -676,7 +677,7 @@
             this.tpCTNganh.Controls.Add(this.panel8);
             this.tpCTNganh.Location = new System.Drawing.Point(4, 29);
             this.tpCTNganh.Name = "tpCTNganh";
-            this.tpCTNganh.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tpCTNganh.Padding = new System.Windows.Forms.Padding(3);
             this.tpCTNganh.Size = new System.Drawing.Size(1071, 641);
             this.tpCTNganh.TabIndex = 3;
             this.tpCTNganh.Text = "Chi tiết ngành";
@@ -820,7 +821,7 @@
             this.tpCTTHM.Controls.Add(this.panel10);
             this.tpCTTHM.Location = new System.Drawing.Point(4, 29);
             this.tpCTTHM.Name = "tpCTTHM";
-            this.tpCTTHM.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tpCTTHM.Padding = new System.Windows.Forms.Padding(3);
             this.tpCTTHM.Size = new System.Drawing.Size(1071, 641);
             this.tpCTTHM.TabIndex = 4;
             this.tpCTTHM.Text = "Chi tiết tổ hợp môn";
@@ -943,7 +944,7 @@
             this.tpTaiKhoang.Controls.Add(this.panel12);
             this.tpTaiKhoang.Location = new System.Drawing.Point(4, 29);
             this.tpTaiKhoang.Name = "tpTaiKhoang";
-            this.tpTaiKhoang.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tpTaiKhoang.Padding = new System.Windows.Forms.Padding(3);
             this.tpTaiKhoang.Size = new System.Drawing.Size(1071, 641);
             this.tpTaiKhoang.TabIndex = 5;
             this.tpTaiKhoang.Text = "Tài khoản";
@@ -966,11 +967,29 @@
             this.panel11.Size = new System.Drawing.Size(479, 560);
             this.panel11.TabIndex = 40;
             // 
+            // txbLoaiTK
+            // 
+            this.txbLoaiTK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbLoaiTK.Location = new System.Drawing.Point(168, 141);
+            this.txbLoaiTK.Margin = new System.Windows.Forms.Padding(2);
+            this.txbLoaiTK.Name = "txbLoaiTK";
+            this.txbLoaiTK.Size = new System.Drawing.Size(307, 26);
+            this.txbLoaiTK.TabIndex = 20;
+            // 
+            // txbGioiTinh
+            // 
+            this.txbGioiTinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbGioiTinh.Location = new System.Drawing.Point(168, 104);
+            this.txbGioiTinh.Margin = new System.Windows.Forms.Padding(2);
+            this.txbGioiTinh.Name = "txbGioiTinh";
+            this.txbGioiTinh.Size = new System.Drawing.Size(307, 26);
+            this.txbGioiTinh.TabIndex = 19;
+            // 
             // txbIdNguoiDung
             // 
             this.txbIdNguoiDung.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbIdNguoiDung.Location = new System.Drawing.Point(168, 8);
-            this.txbIdNguoiDung.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbIdNguoiDung.Margin = new System.Windows.Forms.Padding(2);
             this.txbIdNguoiDung.Name = "txbIdNguoiDung";
             this.txbIdNguoiDung.Size = new System.Drawing.Size(307, 26);
             this.txbIdNguoiDung.TabIndex = 18;
@@ -1012,7 +1031,7 @@
             // 
             this.txbTenHienThi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbTenHienThi.Location = new System.Drawing.Point(168, 69);
-            this.txbTenHienThi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbTenHienThi.Margin = new System.Windows.Forms.Padding(2);
             this.txbTenHienThi.Name = "txbTenHienThi";
             this.txbTenHienThi.Size = new System.Drawing.Size(307, 26);
             this.txbTenHienThi.TabIndex = 12;
@@ -1032,7 +1051,7 @@
             // 
             this.txbTenNguoiDung.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbTenNguoiDung.Location = new System.Drawing.Point(168, 37);
-            this.txbTenNguoiDung.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbTenNguoiDung.Margin = new System.Windows.Forms.Padding(2);
             this.txbTenNguoiDung.Name = "txbTenNguoiDung";
             this.txbTenNguoiDung.Size = new System.Drawing.Size(307, 26);
             this.txbTenNguoiDung.TabIndex = 10;
@@ -1098,24 +1117,6 @@
             this.dtgvDanhSachTaiKhoang.Name = "dtgvDanhSachTaiKhoang";
             this.dtgvDanhSachTaiKhoang.Size = new System.Drawing.Size(575, 553);
             this.dtgvDanhSachTaiKhoang.TabIndex = 0;
-            // 
-            // txbGioiTinh
-            // 
-            this.txbGioiTinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbGioiTinh.Location = new System.Drawing.Point(168, 104);
-            this.txbGioiTinh.Margin = new System.Windows.Forms.Padding(2);
-            this.txbGioiTinh.Name = "txbGioiTinh";
-            this.txbGioiTinh.Size = new System.Drawing.Size(307, 26);
-            this.txbGioiTinh.TabIndex = 19;
-            // 
-            // txbLoaiTK
-            // 
-            this.txbLoaiTK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbLoaiTK.Location = new System.Drawing.Point(168, 141);
-            this.txbLoaiTK.Margin = new System.Windows.Forms.Padding(2);
-            this.txbLoaiTK.Name = "txbLoaiTK";
-            this.txbLoaiTK.Size = new System.Drawing.Size(307, 26);
-            this.txbLoaiTK.TabIndex = 20;
             // 
             // Admin
             // 
