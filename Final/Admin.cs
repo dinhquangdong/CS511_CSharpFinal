@@ -107,7 +107,6 @@ namespace Final
             txbMaNganhCT_NH.DataBindings.Add("Text", dtgvDanhSachCTNganh.DataSource, "MaNganh");
             txbMaTruongCT_NH.DataBindings.Add("Text", dtgvDanhSachCTNganh.DataSource, "MaTruong");
             txbDiemChuanCT_NH.DataBindings.Add("Text", dtgvDanhSachCTNganh.DataSource, "DiemChuan");
-
         }
         void addCTTHMBinding()
         {
@@ -118,7 +117,6 @@ namespace Final
         {
             txbTenNguoiDung.DataBindings.Add("Text", dtgvDanhSachTaiKhoang.DataSource, "UserName");
             txbTenHienThi.DataBindings.Add("Text", dtgvDanhSachTaiKhoang.DataSource, "DisplayName");
-
         }
 
         void LoadTypetoComboBox(ComboBox cb)
@@ -131,6 +129,5 @@ namespace Final
             cb.DataSource = AccountDAO.Instance.GetListAccount();
             cb.DisplayMember = "Name";
         }
-
     }
 }
