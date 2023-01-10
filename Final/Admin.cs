@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -119,6 +120,17 @@ namespace Final
             txbLoaiTK.DataBindings.Add("Text", dtgvDanhSachTaiKhoang.DataSource, "Type");
         }
 
+        private void btnThemTruong_Click(object sender, EventArgs e)
+        {
+            if (TruongDAO.Instance.ThemTruong(txbMaTruong.Text, txbTenTruong.Text, txbLink.Text, txbDiaChi.Text, txbSDT.Text, float.Parse(txbSaoDanhGia.Text, CultureInfo.InvariantCulture.NumberFormat), txbReview.Text, txbAnhTruong.Text))
+            {
+                MessageBox.Show("Thêm trường thành công");
+            }
+            else
+            {
+                MessageBox.Show("Thêm trường thất bại");
+            }
+        }
         List<Truong> SearchListTruongByTenOrMaTruong(string name)
         {
             List<Truong> truongs = TruongDAO.Instance.SearchListTruongbyByTenOrMaTruong(name);
