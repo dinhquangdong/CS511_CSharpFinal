@@ -95,5 +95,13 @@ namespace Final.DAO
             int result = DataProvider.Instance.ExcuteNonQuery(query);
             return result > 0;
         }
+
+
+        public bool DeleteAccountFromId(int id)
+        {
+            string query = $"delete ACCOUNT where Id = {id}";
+            int result = DataProvider.Instance.ExcuteNonQuery(query);
+            return result > 0;
+        }
     }
 }

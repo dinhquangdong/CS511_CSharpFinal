@@ -383,6 +383,7 @@
             this.btnXoaTruong.TabIndex = 3;
             this.btnXoaTruong.Text = "Xóa";
             this.btnXoaTruong.UseVisualStyleBackColor = true;
+            this.btnXoaTruong.Click += new System.EventHandler(this.btnXoaTruong_Click);
             // 
             // btnSuaTruong
             // 
@@ -491,6 +492,7 @@
             this.btnXoaNganh.TabIndex = 11;
             this.btnXoaNganh.Text = "Xóa";
             this.btnXoaNganh.UseVisualStyleBackColor = true;
+            this.btnXoaNganh.Click += new System.EventHandler(this.btnXoaNganh_Click);
             // 
             // btnSuaNganh
             // 
@@ -617,6 +619,7 @@
             this.btnXoaToHopMon.TabIndex = 18;
             this.btnXoaToHopMon.Text = "Xóa";
             this.btnXoaToHopMon.UseVisualStyleBackColor = true;
+            this.btnXoaToHopMon.Click += new System.EventHandler(this.btnXoaToHopMon_Click);
             // 
             // btnSuaToHopMon
             // 
@@ -763,6 +766,7 @@
             this.btnXoaCTNganh.TabIndex = 25;
             this.btnXoaCTNganh.Text = "Xóa";
             this.btnXoaCTNganh.UseVisualStyleBackColor = true;
+            this.btnXoaCTNganh.Click += new System.EventHandler(this.btnXoaCTNganh_Click);
             // 
             // btnSuaCTNganh
             // 
@@ -889,6 +893,7 @@
             this.btnXoaCTTHM.TabIndex = 32;
             this.btnXoaCTTHM.Text = "Xóa";
             this.btnXoaCTTHM.UseVisualStyleBackColor = true;
+            this.btnXoaCTTHM.Click += new System.EventHandler(this.btnXoaCTTHM_Click);
             // 
             // btnSuaCTTHM
             // 
@@ -1084,6 +1089,7 @@
             this.btnXoaTK.TabIndex = 39;
             this.btnXoaTK.Text = "Xóa";
             this.btnXoaTK.UseVisualStyleBackColor = true;
+            this.btnXoaTK.Click += new System.EventHandler(this.btnXoaTK_Click);
             // 
             // btnThemTK
             // 

@@ -258,5 +258,77 @@ namespace Final
         {
             accountlist.DataSource = SearchListAccountbyByUserOrDisplayName(txbTimTK.Text);
         }
+
+        private void btnXoaTruong_Click(object sender, EventArgs e)
+        {
+            if (TruongDAO.Instance.deleteTruongFromMaOrTen(txbMaTruong.Text, txbTenTruong.Text))
+            {
+                MessageBox.Show("Xoá trường thành công");
+            }
+            else
+            {
+                MessageBox.Show("Xoá trường thất bại");
+            }
+        }
+
+        private void btnXoaNganh_Click(object sender, EventArgs e)
+        {
+            if (NganhDAO.Instance.deleteNganhFromMaOrTen(txbMaNganh.Text, txbTenNganh.Text))
+            {
+                MessageBox.Show("Xoá ngành thành công");
+            }
+            else
+            {
+                MessageBox.Show("Xoá ngành thất bại");
+            }
+        }
+
+        private void btnXoaToHopMon_Click(object sender, EventArgs e)
+        {
+            if (ToHopMonDAO.Instance.deleteToHopFromMaOrTen(txbMaToHopMon.Text, txbTenCacToHop.Text))
+            {
+                MessageBox.Show("Xoá tổ hợp môn thành công");
+            }
+            else
+            {
+                MessageBox.Show("Xoá tổ hợp môn thất bại");
+            }
+        }
+
+        private void btnXoaCTNganh_Click(object sender, EventArgs e)
+        {
+            if (CTNganhHocDAO.Instance.deleteCTNganhFromMaTruongAndMaNghanh(txbMaTruongCT_NH.Text, txbMaNganhCT_NH.Text))
+            {
+                MessageBox.Show("Xoá chi tiết ngành thành công");
+            }
+            else
+            {
+                MessageBox.Show("Xoá chi tiết ngành thất bại");
+            }
+        }
+
+        private void btnXoaCTTHM_Click(object sender, EventArgs e)
+        {
+            if (CTToHopMonDAO.Instance.deleteCTToHopMonFromMaNghanhAndMaToHopMon(txbMaNganhCT_THM.Text, txbMaToHopMonCT_THM.Text))
+            {
+                MessageBox.Show("Xoá chi tiết tổ hợp môn thành công");
+            }
+            else
+            {
+                MessageBox.Show("Xoá chi tiết tổ hợp môn thất bại");
+            }
+        }
+
+        private void btnXoaTK_Click(object sender, EventArgs e)
+        {
+            if (AccountDAO.Instance.DeleteAccountFromId(int.Parse(txbIdNguoiDung.Text)))
+            {
+                MessageBox.Show("Xoá người dùng thành công");
+            }
+            else
+            {
+                MessageBox.Show("Xoá người dùng thất bại");
+            }
+        }
     }
 }
