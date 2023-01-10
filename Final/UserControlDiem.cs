@@ -20,6 +20,14 @@ namespace Final
             labelTo.Text = To.ToString();
         }
 
+        private void UserControlDiem_Click(object sender, EventArgs e)
+        {
+            NganhTheoDiem ntd = new NganhTheoDiem();
+            ntd.From = From;
+            ntd.To = To;
+            ntd.ShowDialog();
+        }
+
         public UserControlDiem()
         {
             InitializeComponent();

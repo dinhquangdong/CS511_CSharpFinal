@@ -24,7 +24,10 @@ namespace Final.DAO
             return DataProvider.Instance.ExcuteQuery("Select * from CTNGANHHOC");
         }
 
-      
+        public DataTable GetListDiemChuanFromDiem(int From, int To)
+        {
+            return DataProvider.Instance.ExcuteQuery("select TenTruong as N'Tên Trường', TenNganh as N'Tên Ngành', DiemChuan as N'Điểm chuẩn' From TRUONG,NGANHHOC, CTNGANHHOC where TRUONG.MaTruong = CTNGANHHOC.MaTruong and NGANHHOC.MaNganh = CTNGANHHOC.MaNganh and DiemChuan between " + From + " and " + To);
+        }
 
         public bool deleteCTNganhFromMaTruongAndMaNghanh(string maT, string maN)
         {
@@ -33,7 +36,7 @@ namespace Final.DAO
             {
                 return false;
             }
-            string query = "Delete CTNGANHHOC where" + (maN != "" ? " MaNganh = " + maN : " ") + ((maN == "" && maT != "") ||(maN != "" && maT =="") ? " " : " or ")
+            string query = "Delete CTNGANHHOC where" + (maN != "" ? " MaNganh = " + maN : " ") + ((maN == "" && maT != "") || (maN != "" && maT == "") ? " " : " or ")
                     + (maT != "" ? " MaTruong = N'" + maT + "'" : "");
             int result = DataProvider.Instance.ExcuteNonQuery(query);
             return result > 0;

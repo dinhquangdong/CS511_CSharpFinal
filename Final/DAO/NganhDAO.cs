@@ -38,6 +38,15 @@ namespace Final.DAO
             dt = DataProvider.Instance.ExcuteQuery("select NGANHHOC.MaNganh as N'Mã Ngành', NGANHHOC.TenNganh as N'Tên Ngành', DiemChuan as N'Điểm chuẩn' from CTNGANHHOC , NGANHHOC where CTNGANHHOC.MaTruong = N'" + MaTruong+"' and NGANHHOC.MaNganh = CTNGANHHOC.MaNganh");
             return dt;
         }
+
+        public DataTable GetListNganhFromMaTHM(string MaTHM)
+        {
+            DataTable dt = new DataTable();
+            dt = DataProvider.Instance.ExcuteQuery("select NGANHHOC.MaNganh, TenNganh from CTTOHOPMON, NGANHHOC where CTTOHOPMON.MaToHopMon = N'"+MaTHM+"' and NGANHHOC.MaNganh = CTTOHOPMON.MaNganh");
+
+            return dt;
+        }
+
         public bool deleteNganhFromMaOrTen(string ma, string ten)
         {
             CTNganhHocDAO.Instance.deleteCTNganhFromMaTruongAndMaNghanh("", ma);
