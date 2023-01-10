@@ -89,5 +89,11 @@ namespace Final.DAO
             return listTruong;
         }
 
+        public bool ThemTaiKhoan(int id, string userName, string displayName, string gender, int type)
+        {
+            string query = $"INSERT INTO ACCOUNT values ({id}, N'{userName}', N'{displayName}', N'0', {type}, N'{gender}', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);";
+            int result = DataProvider.Instance.ExcuteNonQuery(query);
+            return result > 0;
+        }
     }
 }

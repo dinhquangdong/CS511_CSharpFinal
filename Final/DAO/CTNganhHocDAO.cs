@@ -48,6 +48,12 @@ namespace Final.DAO
             return result > 0;
         }
 
+        public bool ThemChiTietNganh(string matruong, int manganh, float diemchuan)
+        {
+            string query = $"INSERT INTO CTNGANHHOC (MaTruong, MaNganh, DiemChuan) values (N'{matruong}', {manganh}, {diemchuan});";
+            int result = DataProvider.Instance.ExcuteNonQuery(query);
+            return result > 0;
+        }
         public List<CTNganhHoc> SearchListCTNganhbyByMaTruongOrMaNganh(string name)
         {
             List<CTNganhHoc> listthm = new List<CTNganhHoc>();
