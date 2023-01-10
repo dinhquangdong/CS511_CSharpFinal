@@ -116,6 +116,7 @@
             this.txbToan.Name = "txbToan";
             this.txbToan.Size = new System.Drawing.Size(95, 29);
             this.txbToan.TabIndex = 1;
+            this.txbToan.Text = "8";
             // 
             // txbLy
             // 
@@ -124,6 +125,7 @@
             this.txbLy.Name = "txbLy";
             this.txbLy.Size = new System.Drawing.Size(95, 29);
             this.txbLy.TabIndex = 3;
+            this.txbLy.Text = "8";
             // 
             // lbLy
             // 
@@ -142,6 +144,7 @@
             this.txbHoa.Name = "txbHoa";
             this.txbHoa.Size = new System.Drawing.Size(95, 29);
             this.txbHoa.TabIndex = 5;
+            this.txbHoa.Text = "8";
             // 
             // lbHoa
             // 
@@ -160,6 +163,7 @@
             this.txbNK.Name = "txbNK";
             this.txbNK.Size = new System.Drawing.Size(95, 29);
             this.txbNK.TabIndex = 7;
+            this.txbNK.Text = "8";
             // 
             // lbNK
             // 
@@ -178,6 +182,7 @@
             this.txbAnhVan.Name = "txbAnhVan";
             this.txbAnhVan.Size = new System.Drawing.Size(95, 29);
             this.txbAnhVan.TabIndex = 9;
+            this.txbAnhVan.Text = "8";
             // 
             // lbAnhVan
             // 
@@ -196,6 +201,7 @@
             this.txbHinhHoa.Name = "txbHinhHoa";
             this.txbHinhHoa.Size = new System.Drawing.Size(95, 29);
             this.txbHinhHoa.TabIndex = 11;
+            this.txbHinhHoa.Text = "8";
             // 
             // lbHinhHoa
             // 
@@ -214,6 +220,7 @@
             this.txbBoCuc.Name = "txbBoCuc";
             this.txbBoCuc.Size = new System.Drawing.Size(95, 29);
             this.txbBoCuc.TabIndex = 13;
+            this.txbBoCuc.Text = "8";
             // 
             // lbBoCuc
             // 
@@ -231,6 +238,7 @@
             this.txbGDCD.Name = "txbGDCD";
             this.txbGDCD.Size = new System.Drawing.Size(95, 29);
             this.txbGDCD.TabIndex = 15;
+            this.txbGDCD.Text = "8";
             // 
             // lbGDCD
             // 
@@ -249,6 +257,7 @@
             this.txbDia.Name = "txbDia";
             this.txbDia.Size = new System.Drawing.Size(95, 29);
             this.txbDia.TabIndex = 17;
+            this.txbDia.Text = "8";
             // 
             // lbDia
             // 
@@ -267,6 +276,7 @@
             this.txbSu.Name = "txbSu";
             this.txbSu.Size = new System.Drawing.Size(95, 29);
             this.txbSu.TabIndex = 19;
+            this.txbSu.Text = "8";
             // 
             // lbSu
             // 
@@ -285,6 +295,7 @@
             this.txbNguVan.Name = "txbNguVan";
             this.txbNguVan.Size = new System.Drawing.Size(95, 29);
             this.txbNguVan.TabIndex = 21;
+            this.txbNguVan.Text = "8";
             // 
             // lbNguVan
             // 
@@ -303,6 +314,7 @@
             this.txbSinh.Name = "txbSinh";
             this.txbSinh.Size = new System.Drawing.Size(95, 29);
             this.txbSinh.TabIndex = 23;
+            this.txbSinh.Text = "8";
             // 
             // lbSinh
             // 

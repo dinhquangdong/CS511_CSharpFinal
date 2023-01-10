@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Final.DAO;
+using Final.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +21,24 @@ namespace Final
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            string userName = txbTK.Text;
+            string passWord = txbMK.Text;
+            if (Login(userName, passWord))
+            {
+                Account loginAccount = AccountDAO.Instance.GetAccountbyUserName(userName);
+                MainScreen c = new MainScreen(loginAccount);
+                this.Hide();
+                c.ShowDialog();
+                this.Show();
+            }
+            else
+            {
+                MessageBox.Show("Wrong User name or Password!");
+            }
+        }
+        bool Login(string userName, string passWord)
+        {
+            return AccountDAO.Instance.Login(userName, passWord);
         }
     }
 }

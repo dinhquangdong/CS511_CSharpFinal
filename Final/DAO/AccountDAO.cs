@@ -21,11 +21,10 @@ namespace Final.DAO
 
         public bool Login(string userName, string passWord)
         {
-            string query = String.Format("select *from dbo.Account where UserName=N'{0}' and Password=N'{1}'", userName, passWord);
+            string query = String.Format("select *from dbo.ACCOUNT where UserName=N'{0}' and Password=N'{1}'", userName, passWord);
             DataTable result = DataProvider.Instance.ExcuteQuery(query);
             return result.Rows.Count > 0;
         }
-
 
         public Account GetAccountbyUserName(string userName)
         {
@@ -35,11 +34,34 @@ namespace Final.DAO
                 return new Account(item);
             }
             return null;
+        } 
+
+        public DataTable GetAccountbyId(int Id)
+        {
+            DataTable data = DataProvider.Instance.ExcuteQuery("select * from ACCOUNT where Id='" + Id + "'");
+            return data;
         }
 
         public DataTable GetListAccount()
         {
-            return DataProvider.Instance.ExcuteQuery("Select UserName,Displayname,Type from Account");
+            return DataProvider.Instance.ExcuteQuery("Select UserName,Displayname,Type from ACCOUNT");
         }
+
+        public bool UpdateAccount(int Id, float A00, float A01, float A02, float B00, float B01, float B02, float C00, float C01,
+            float C02, float C03, float D01, float D07, float H00, float T00, float T03, float T04, float T05, float T06)
+        {
+            string query = string.Format("update ACCOUNT set A00 = {0},  A01 = {1},  A02 = {2},  B00 = {3},  B01 = {4},  B02 = {5},  C00 = {6},  C01 = {7}, C02 = {8},  C03 = {9},  D01 = {10},  D07 = {11},  H00 = {12},  T00 = {13},  T03 = {14},  T04 = {15},  T05 = {16},  T06 = {17} where Id = {18}",
+                A00, A01, A02, B00, B01, B02, C00, C01, C02, C03, D01, D07, H00, T00, T03, T04, T05, T06, Id);
+            int result = DataProvider.Instance.ExcuteNonQuery(query);
+            return result > 0;
+        }
+        public bool UpdateAccountById(string mk ,int Id)
+        {
+            string query = string.Format("update ACCOUNT set Password = N'{0}' where Id = {1}",
+                mk,Id);
+            int result = DataProvider.Instance.ExcuteNonQuery(query);
+            return result > 0;
+        }
+
     }
 }

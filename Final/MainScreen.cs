@@ -20,14 +20,28 @@ namespace Final
         public bool HienDiem = false;
         public bool HienToHopMon = false;
         public string DiaChiCanDen;
-
-        public MainScreen()
+        public int Id;
+        public string matkhau;
+        public int type;
+        private Account loginAccount;
+        public Account LoginAccount
+        {
+            get { return loginAccount; }
+            set
+            {
+                loginAccount = value;
+            }
+        }
+        public MainScreen(Account acc)
         {
             InitializeComponent();
             instance = this;
+            this.LoginAccount = acc;
+            Id = acc.Id;
+            type = acc.Type;
+            matkhau = acc.Password;
             pblogo.BackgroundImage = Image.FromFile("./Images/logo.png");
         }
-
         private void buttonMapSearch_Click(object sender, EventArgs e)
         {
             flowLayoutPanel1.Visible = false;
@@ -170,6 +184,10 @@ namespace Final
 
         private void MainScreen_Load(object sender, EventArgs e)
         {
+            if (type == 0)
+            {
+                button7.Visible = false;
+            }
             flowLayoutPanel1.Visible = false;
             panel1.Visible = true;
             wbMap.Visible = true;
@@ -190,6 +208,7 @@ namespace Final
                 string url = Uri.EscapeDataString(DiaChiCanDen);
                 wbMap.Navigate("http://maps.google.com/maps?q=" + url);
                 buttonMapSearch.BackgroundImage = Image.FromFile("Images/map.png");
+                DiaChiCanDen = null;
             }
 
             

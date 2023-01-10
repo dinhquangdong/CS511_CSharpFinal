@@ -123,6 +123,31 @@ namespace Final
             txbT04.Text = (float.Parse(txbLy.Text) + float.Parse(txbToan.Text) + float.Parse(txbNK.Text) + float.Parse(txbDiemCong.Text)).ToString();
             txbT05.Text = (float.Parse(txbGDCD.Text) + float.Parse(txbNguVan.Text) + float.Parse(txbNK.Text) + float.Parse(txbDiemCong.Text)).ToString();
             txbT06.Text = (float.Parse(txbDia.Text) + float.Parse(txbToan.Text) + float.Parse(txbNK.Text) + float.Parse(txbDiemCong.Text)).ToString();
+
+
+
+
+            AccountDAO.Instance.UpdateAccount(MainScreen.instance.Id,
+                float.Parse(txbA00.Text),
+                float.Parse(txbA01.Text),
+                float.Parse(txbA02.Text),
+                float.Parse(txbB00.Text),
+                float.Parse(txbB01.Text),
+                float.Parse(txbB02.Text),
+                float.Parse(txbC00.Text),
+                float.Parse(txbC01.Text),
+                float.Parse(txbC02.Text),
+                float.Parse(txbC03.Text),
+                float.Parse(txbD01.Text),
+                float.Parse(txbD07.Text),
+                float.Parse(txbH00.Text),
+                float.Parse(txbT00.Text),
+                float.Parse(txbT03.Text),
+                float.Parse(txbT04.Text),
+                float.Parse(txbT05.Text),
+                float.Parse(txbT06.Text)
+                );
+
         }
 
         private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
