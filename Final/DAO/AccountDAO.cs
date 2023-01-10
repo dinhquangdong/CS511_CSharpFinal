@@ -44,7 +44,7 @@ namespace Final.DAO
 
         public DataTable GetListAccount()
         {
-            return DataProvider.Instance.ExcuteQuery("Select UserName,Displayname,Type from ACCOUNT");
+            return DataProvider.Instance.ExcuteQuery("Select Id ,UserName ,DisplayName ,Type ,Gender from ACCOUNT");
         }
 
         public bool UpdateAccount(int Id, float A00, float A01, float A02, float B00, float B01, float B02, float C00, float C01,

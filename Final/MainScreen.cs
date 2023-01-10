@@ -149,8 +149,8 @@ namespace Final
             foreach (DataRow row in dt.Rows)
             {
                 UserControlTruong t = new UserControlTruong();
-                t.TenTruong = row[0].ToString();
-                t.AnhTruong = row[1].ToString();
+                t.TenTruong = row[1].ToString();
+                t.AnhTruong = row[7].ToString();
 
                 flowLayoutPanel1.Controls.Add(t);
             }
@@ -260,8 +260,8 @@ namespace Final
             foreach (DataRow row in dt.Rows)
             {
                 UserControlNganh n = new UserControlNganh();
-                n.TenNganh = row[0].ToString();
-                n.MaNganh = (int)row[1];
+                n.TenNganh = row[1].ToString();
+                n.MaNganh = (int)row[0];
 
                 flowLayoutPanel1.Controls.Add(n);
             }

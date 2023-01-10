@@ -15,7 +15,7 @@ namespace Final.DAO
 
         public DataTable GetListTruong()
         {
-            return DataProvider.Instance.ExcuteQuery("Select TenTruong,AnhTruong from TRUONG");
+            return DataProvider.Instance.ExcuteQuery("Select * from TRUONG");
         }
 
         public DataTable GetThongTinTruongFromMaTruong(string MaTruong)

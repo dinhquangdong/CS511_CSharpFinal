@@ -40,25 +40,27 @@
             // 
             this.txbTK.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbTK.Location = new System.Drawing.Point(118, 87);
-            this.txbTK.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbTK.Margin = new System.Windows.Forms.Padding(2);
             this.txbTK.Name = "txbTK";
             this.txbTK.Size = new System.Drawing.Size(205, 38);
             this.txbTK.TabIndex = 0;
+            this.txbTK.Text = "tvchinh";
             // 
             // txbMK
             // 
             this.txbMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbMK.Location = new System.Drawing.Point(118, 129);
-            this.txbMK.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbMK.Margin = new System.Windows.Forms.Padding(2);
             this.txbMK.Name = "txbMK";
             this.txbMK.PasswordChar = '*';
             this.txbMK.Size = new System.Drawing.Size(205, 38);
             this.txbMK.TabIndex = 1;
+            this.txbMK.Text = "123";
             // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(125, 173);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(159, 41);
             this.button1.TabIndex = 3;
@@ -109,7 +111,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txbMK);
             this.Controls.Add(this.txbTK);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "DangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập";

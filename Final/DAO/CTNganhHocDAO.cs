@@ -19,7 +19,7 @@ namespace Final.DAO
         private CTNganhHocDAO() { }
 
 
-        public DataTable GetListCTToHopMon()
+        public DataTable GetListCTNganh()
         {
             return DataProvider.Instance.ExcuteQuery("Select * from CTNGANHHOC");
         }
