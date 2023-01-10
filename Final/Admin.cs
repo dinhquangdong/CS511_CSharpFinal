@@ -130,7 +130,7 @@ namespace Final
 
         private void btnTimTruong_Click(object sender, EventArgs e)
         {
-            dtgvDanhSachTruong.DataSource = SearchListTruongByTenOrMaTruong(txbTimTruong.Text);
+            truonglist.DataSource = SearchListTruongByTenOrMaTruong(txbTimTruong.Text);
         }
 
         private void btnThemTruong_Click(object sender, EventArgs e)
@@ -212,7 +212,7 @@ namespace Final
 
         private void btnTimNganh_Click(object sender, EventArgs e)
         {
-            dtgvDanhSachNganh.DataSource = SearchListNganhByTenOrMaNganh(txbTimNganh.Text);
+            nganhtlist.DataSource = SearchListNganhByTenOrMaNganh(txbTimNganh.Text);
         }
 
         List<ToHopMon> SearchListToHopMonByTenOrMaTHM(string name)
@@ -223,7 +223,7 @@ namespace Final
 
         private void btnTimToHopMon_Click(object sender, EventArgs e)
         {
-            dtgvDanhSachToHopMon.DataSource = SearchListToHopMonByTenOrMaTHM(txbTimToHopMon.Text);
+            tohopmonlist.DataSource = SearchListToHopMonByTenOrMaTHM(txbTimToHopMon.Text);
         }
 
         List<CTToHopMon> SearchListCTTHMbyByMaTHMOrMaNganh(string name)
@@ -246,17 +246,17 @@ namespace Final
 
         private void btnTimCTNganh_Click(object sender, EventArgs e)
         {
-            dtgvDanhSachCTNganh.DataSource = SearchListCTNganhbyByMaTruongOrMaNganh(txbTimCTNganh.Text);
+            ctnganhlist.DataSource = SearchListCTNganhbyByMaTruongOrMaNganh(txbTimCTNganh.Text);
         }
 
         private void btnTimCTTHM_Click(object sender, EventArgs e)
         {
-            dtgvCTTHM.DataSource = SearchListCTTHMbyByMaTHMOrMaNganh(txbTimCTTHM.Text);
+            ctthmlist.DataSource = SearchListCTTHMbyByMaTHMOrMaNganh(txbTimCTTHM.Text);
         }
 
         private void btnTimTK_Click(object sender, EventArgs e)
         {
-            dtgvDanhSachTaiKhoang.DataSource = SearchListAccountbyByUserOrDisplayName(txbTimTK.Text);
+            accountlist.DataSource = SearchListAccountbyByUserOrDisplayName(txbTimTK.Text);
         }
     }
 }
