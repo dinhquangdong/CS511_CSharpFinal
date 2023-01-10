@@ -76,5 +76,18 @@ namespace Final.DAO
             return listcategorie;
         }
 
+        public List<Account> SearchListAccountbyByUserOrDisplayName(string name)
+        {
+            List<Account> listTruong = new List<Account>();
+            string query = string.Format("select * from ACCOUNT where dbo.fuConvertToUnsign1(UserName) like N'%'+dbo.fuConvertToUnsign1('{0}')+'%' or dbo.fuConvertToUnsign1(DisplayName) like N'%'+dbo.fuConvertToUnsign1('{0}')+'%' ", name);
+            DataTable data = DataProvider.Instance.ExcuteQuery(query);
+            foreach (DataRow item in data.Rows)
+            {
+                Account food = new Account(item);
+                listTruong.Add(food);
+            }
+            return listTruong;
+        }
+
     }
 }

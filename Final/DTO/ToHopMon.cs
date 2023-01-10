@@ -18,7 +18,7 @@ namespace Final.DTO
         public ToHopMon(DataRow row)
         {
             this.MaToHopMon = row["MaToHopMon"].ToString();
-            this.TenMonHoc = row["TenTruong"].ToString();
+            this.TenMonHoc = row["TenMonHoc"].ToString();
             
         }
 

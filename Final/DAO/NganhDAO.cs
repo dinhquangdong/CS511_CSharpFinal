@@ -60,6 +60,17 @@ namespace Final.DAO
             int result = DataProvider.Instance.ExcuteNonQuery(query);
             return result > 0;
         }
-
+        public List<Nganh> SearchListNganhbyByTenOrMaNganh(string name)
+        {
+            List<Nganh> listTruong = new List<Nganh>();
+            string query = string.Format("select * from NGANHHOC where dbo.fuConvertToUnsign1(TenNganh) like N'%'+dbo.fuConvertToUnsign1('{0}')+'%' or dbo.fuConvertToUnsign1(MaNganh) like N'%'+dbo.fuConvertToUnsign1('{0}')+'%' ", name);
+            DataTable data = DataProvider.Instance.ExcuteQuery(query);
+            foreach (DataRow item in data.Rows)
+            {
+                Nganh food = new Nganh(item);
+                listTruong.Add(food);
+            }
+            return listTruong;
+        }
     }
 }

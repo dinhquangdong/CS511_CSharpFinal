@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Final.DTO;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -43,6 +44,19 @@ namespace Final.DAO
                     + (tenthm != "" ? " TenMonHoc = N'" + tenthm + "'" : "");
             int result = DataProvider.Instance.ExcuteNonQuery(query);
             return result > 0;
+        }
+
+        public List<ToHopMon> SearchListTHMhbyByTenOrMaTHM(string name)
+        {
+            List<ToHopMon> listthm= new List<ToHopMon>();
+            string query = string.Format("select * from TOHOPMON where dbo.fuConvertToUnsign1(TenMonHoc) like N'%'+dbo.fuConvertToUnsign1('{0}')+'%' or dbo.fuConvertToUnsign1(MaToHopMon) like N'%'+dbo.fuConvertToUnsign1('{0}')+'%' ", name);
+            DataTable data = DataProvider.Instance.ExcuteQuery(query);
+            foreach (DataRow item in data.Rows)
+            {
+                ToHopMon thm = new ToHopMon(item);
+                listthm.Add(thm);
+            }
+            return listthm;
         }
 
     }

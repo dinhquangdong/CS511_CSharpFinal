@@ -141,5 +141,60 @@ namespace Final
         {
             dtgvDanhSachTruong.DataSource = SearchListTruongByTenOrMaTruong(txbTimTruong.Text);
         }
+
+        List<Nganh> SearchListNganhByTenOrMaNganh(string name)
+        {
+            List<Nganh> nganhs = NganhDAO.Instance.SearchListNganhbyByTenOrMaNganh(name);
+            return nganhs;
+        }
+
+        private void btnTimNganh_Click(object sender, EventArgs e)
+        {
+            dtgvDanhSachNganh.DataSource = SearchListNganhByTenOrMaNganh(txbTimNganh.Text);
+        }
+
+        List<ToHopMon> SearchListToHopMonByTenOrMaTHM(string name)
+        {
+            List<ToHopMon> thms = ToHopMonDAO.Instance.SearchListTHMhbyByTenOrMaTHM(name);
+            return thms;
+        }
+
+        private void btnTimToHopMon_Click(object sender, EventArgs e)
+        {
+            dtgvDanhSachToHopMon.DataSource = SearchListToHopMonByTenOrMaTHM(txbTimToHopMon.Text);
+        }
+
+        List<CTToHopMon> SearchListCTTHMbyByMaTHMOrMaNganh(string name)
+        {
+            List<CTToHopMon> thms = CTToHopMonDAO.Instance.SearchListCTTHMbyByMaTHMOrMaNganh(name);
+            return thms;
+        }
+
+        List<CTNganhHoc> SearchListCTNganhbyByMaTruongOrMaNganh(string name)
+        {
+            List<CTNganhHoc> thms = CTNganhHocDAO.Instance.SearchListCTNganhbyByMaTruongOrMaNganh(name);
+            return thms;
+        }
+
+        List<Account> SearchListAccountbyByUserOrDisplayName(string name)
+        {
+            List<Account> thms = AccountDAO.Instance.SearchListAccountbyByUserOrDisplayName(name);
+            return thms;
+        }
+
+        private void btnTimCTNganh_Click(object sender, EventArgs e)
+        {
+            dtgvDanhSachCTNganh.DataSource = SearchListCTNganhbyByMaTruongOrMaNganh(txbTimCTNganh.Text);
+        }
+
+        private void btnTimCTTHM_Click(object sender, EventArgs e)
+        {
+            dtgvCTTHM.DataSource = SearchListCTTHMbyByMaTHMOrMaNganh(txbTimCTTHM.Text);
+        }
+
+        private void btnTimTK_Click(object sender, EventArgs e)
+        {
+            dtgvDanhSachTaiKhoang.DataSource = SearchListAccountbyByUserOrDisplayName(txbTimTK.Text);
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Final.DTO;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -47,5 +48,17 @@ namespace Final.DAO
             return result > 0;
         }
 
+        public List<CTNganhHoc> SearchListCTNganhbyByMaTruongOrMaNganh(string name)
+        {
+            List<CTNganhHoc> listthm = new List<CTNganhHoc>();
+            string query = string.Format("select * from CTNGANHHOC where MaNganh = {0} or dbo.fuConvertToUnsign1(MaTruong) like N'%'+dbo.fuConvertToUnsign1('{0}')+'%' ", name);
+            DataTable data = DataProvider.Instance.ExcuteQuery(query);
+            foreach (DataRow item in data.Rows)
+            {
+                CTNganhHoc thm = new CTNganhHoc(item);
+                listthm.Add(thm);
+            }
+            return listthm;
+        }
     }
 }

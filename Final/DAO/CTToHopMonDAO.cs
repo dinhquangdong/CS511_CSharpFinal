@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Final.DTO;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -35,6 +36,19 @@ namespace Final.DAO
                     + (maTHM != "" ? " MaToHopMon = N'" + maTHM + "'" : "");
             int result = DataProvider.Instance.ExcuteNonQuery(query);
             return result > 0;
+        }
+
+        public List<CTToHopMon> SearchListCTTHMbyByMaTHMOrMaNganh(string name)
+        {
+            List<CTToHopMon> listthm = new List<CTToHopMon>();
+            string query = string.Format("select * from CTTOHOPMON where MaNganh = {0} or dbo.fuConvertToUnsign1(MaToHopMon) like N'%'+dbo.fuConvertToUnsign1('{0}')+'%' ", name);
+            DataTable data = DataProvider.Instance.ExcuteQuery(query);
+            foreach (DataRow item in data.Rows)
+            {
+                CTToHopMon thm = new CTToHopMon(item);
+                listthm.Add(thm);
+            }
+            return listthm;
         }
     }
 }

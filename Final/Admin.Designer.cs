@@ -518,6 +518,7 @@
             this.btnTimNganh.TabIndex = 8;
             this.btnTimNganh.Text = "Tìm";
             this.btnTimNganh.UseVisualStyleBackColor = true;
+            this.btnTimNganh.Click += new System.EventHandler(this.btnTimNganh_Click);
             // 
             // txbTimNganh
             // 
@@ -642,6 +643,7 @@
             this.btnTimToHopMon.TabIndex = 15;
             this.btnTimToHopMon.Text = "Tìm";
             this.btnTimToHopMon.UseVisualStyleBackColor = true;
+            this.btnTimToHopMon.Click += new System.EventHandler(this.btnTimToHopMon_Click);
             // 
             // txbTimToHopMon
             // 
@@ -786,6 +788,7 @@
             this.btnTimCTNganh.TabIndex = 22;
             this.btnTimCTNganh.Text = "Tìm";
             this.btnTimCTNganh.UseVisualStyleBackColor = true;
+            this.btnTimCTNganh.Click += new System.EventHandler(this.btnTimCTNganh_Click);
             // 
             // txbTimCTNganh
             // 
@@ -910,6 +913,7 @@
             this.btnTimCTTHM.TabIndex = 29;
             this.btnTimCTTHM.Text = "Tìm";
             this.btnTimCTTHM.UseVisualStyleBackColor = true;
+            this.btnTimCTTHM.Click += new System.EventHandler(this.btnTimCTTHM_Click);
             // 
             // txbTimCTTHM
             // 
@@ -1094,6 +1098,7 @@
             this.btnTimTK.TabIndex = 36;
             this.btnTimTK.Text = "Tìm";
             this.btnTimTK.UseVisualStyleBackColor = true;
+            this.btnTimTK.Click += new System.EventHandler(this.btnTimTK_Click);
             // 
             // txbTimTK
             // 
