@@ -35,6 +35,19 @@ namespace Final
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            if (txbToan.Text == "") txbToan.Text = "0";
+            if (txbLy.Text == "") txbLy.Text = "0";
+            if (txbHoa.Text == "") txbHoa.Text = "0";
+            if (txbAnhVan.Text == "") txbAnhVan.Text = "0";
+            if (txbSinh.Text == "") txbSinh.Text = "0";
+            if (txbSu.Text == "") txbSu.Text = "0";
+            if (txbDia.Text == "") txbDia.Text = "0";
+            if (txbNguVan.Text == "") txbNguVan.Text = "0";
+            if (txbHinhHoa.Text == "") txbHinhHoa.Text = "0";
+            if (txbBoCuc.Text == "") txbBoCuc.Text = "0";
+            if (txbGDCD.Text == "") txbGDCD.Text = "0";
+            if (txbNK.Text == "") txbNK.Text = "0";
+
             switch (comboBoxSelect.Text)
             {
                 case "A00":
