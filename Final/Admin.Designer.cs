@@ -1225,7 +1225,6 @@
             this.txbIdNguoiDung.Name = "txbIdNguoiDung";
             this.txbIdNguoiDung.Size = new System.Drawing.Size(307, 26);
             this.txbIdNguoiDung.TabIndex = 18;
-            this.txbIdNguoiDung.TextChanged += new System.EventHandler(this.cbGioiTinh_TextChanged);
             // 
             // Admin
             // 
