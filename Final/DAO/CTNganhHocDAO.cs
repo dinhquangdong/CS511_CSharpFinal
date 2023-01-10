@@ -29,6 +29,11 @@ namespace Final.DAO
             return DataProvider.Instance.ExcuteQuery("select TenTruong as N'Tên Trường', TenNganh as N'Tên Ngành', DiemChuan as N'Điểm chuẩn' From TRUONG,NGANHHOC, CTNGANHHOC where TRUONG.MaTruong = CTNGANHHOC.MaTruong and NGANHHOC.MaNganh = CTNGANHHOC.MaNganh and DiemChuan between " + From + " and " + To);
         }
 
+        public DataTable GetListDiemChuanFromTenTruong(int From, int To, string TenTruong)
+        {
+            return DataProvider.Instance.ExcuteQuery("select TenTruong as N'Tên Trường', TenNganh as N'Tên Ngành', DiemChuan as N'Điểm chuẩn' From TRUONG,NGANHHOC, CTNGANHHOC where TRUONG.MaTruong = CTNGANHHOC.MaTruong and NGANHHOC.MaNganh = CTNGANHHOC.MaNganh and TRUONG.TenTruong = N'"+TenTruong+"' and DiemChuan between " + From + " and " + To);
+        }
+
         public bool deleteCTNganhFromMaTruongAndMaNghanh(string maT, string maN)
         {
 
