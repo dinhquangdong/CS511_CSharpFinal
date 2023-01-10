@@ -153,7 +153,7 @@ namespace Final
 
         private void button7_Click(object sender, EventArgs e)
         {
-            InsertData ins = new InsertData();
+            Admin ins = new Admin();
             this.Hide();
             ins.ShowDialog();
             this.Show();

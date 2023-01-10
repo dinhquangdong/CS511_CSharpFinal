@@ -36,6 +36,8 @@
             this.wbMap = new System.Windows.Forms.WebBrowser();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pblogo = new System.Windows.Forms.PictureBox();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -43,8 +45,6 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.pblogo = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -144,10 +144,32 @@
             this.panel2.Size = new System.Drawing.Size(308, 711);
             this.panel2.TabIndex = 1;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Aqua;
+            this.label1.Location = new System.Drawing.Point(12, 5);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(274, 37);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Tìm Trường Đại Học";
+            // 
+            // pblogo
+            // 
+            this.pblogo.BackColor = System.Drawing.Color.Transparent;
+            this.pblogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pblogo.Location = new System.Drawing.Point(19, 45);
+            this.pblogo.Name = "pblogo";
+            this.pblogo.Size = new System.Drawing.Size(267, 194);
+            this.pblogo.TabIndex = 8;
+            this.pblogo.TabStop = false;
+            // 
             // button8
             // 
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(0, 575);
+            this.button8.Location = new System.Drawing.Point(0, 511);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(308, 68);
             this.button8.TabIndex = 7;
@@ -169,7 +191,7 @@
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(0, 444);
+            this.button5.Location = new System.Drawing.Point(0, 447);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(308, 68);
             this.button5.TabIndex = 4;
@@ -180,7 +202,7 @@
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(0, 378);
+            this.button4.Location = new System.Drawing.Point(0, 383);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(308, 68);
             this.button4.TabIndex = 3;
@@ -191,7 +213,7 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(0, 314);
+            this.button3.Location = new System.Drawing.Point(0, 319);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(308, 68);
             this.button3.TabIndex = 2;
@@ -202,7 +224,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(0, 507);
+            this.button2.Location = new System.Drawing.Point(0, 576);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(308, 68);
             this.button2.TabIndex = 1;
@@ -213,35 +235,13 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(0, 249);
+            this.button1.Location = new System.Drawing.Point(0, 257);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(308, 68);
             this.button1.TabIndex = 0;
             this.button1.Text = "Tất cả các trường";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // pblogo
-            // 
-            this.pblogo.BackColor = System.Drawing.Color.Transparent;
-            this.pblogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pblogo.Location = new System.Drawing.Point(19, 45);
-            this.pblogo.Name = "pblogo";
-            this.pblogo.Size = new System.Drawing.Size(267, 192);
-            this.pblogo.TabIndex = 8;
-            this.pblogo.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Aqua;
-            this.label1.Location = new System.Drawing.Point(12, 5);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(274, 37);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Tìm Trường Đại Học";
             // 
             // MainScreen
             // 
