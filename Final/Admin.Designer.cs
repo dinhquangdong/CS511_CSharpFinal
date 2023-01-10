@@ -124,8 +124,6 @@
             this.txbTimTK = new System.Windows.Forms.TextBox();
             this.panel12 = new System.Windows.Forms.Panel();
             this.dtgvDanhSachTaiKhoang = new System.Windows.Forms.DataGridView();
-            this.label21 = new System.Windows.Forms.Label();
-            this.cbGioiTinh = new System.Windows.Forms.ComboBox();
             this.label22 = new System.Windows.Forms.Label();
             this.txbIdNguoiDung = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
@@ -1062,17 +1060,6 @@
             this.cbGioiTinh.Size = new System.Drawing.Size(191, 28);
             this.cbGioiTinh.TabIndex = 16;
             // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(19, 127);
-            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(76, 20);
-            this.label21.TabIndex = 15;
-            this.label21.Text = "Giới tính";
-            // 
             // cbLoaiTaiKhoang
             // 
             this.cbLoaiTaiKhoang.FormattingEnabled = true;
@@ -1196,17 +1183,6 @@
             this.label21.Size = new System.Drawing.Size(76, 20);
             this.label21.TabIndex = 15;
             this.label21.Text = "Giới tính";
-            // 
-            // cbGioiTinh
-            // 
-            this.cbGioiTinh.FormattingEnabled = true;
-            this.cbGioiTinh.Items.AddRange(new object[] {
-            "0",
-            "1"});
-            this.cbGioiTinh.Location = new System.Drawing.Point(166, 124);
-            this.cbGioiTinh.Name = "cbGioiTinh";
-            this.cbGioiTinh.Size = new System.Drawing.Size(144, 28);
-            this.cbGioiTinh.TabIndex = 16;
             // 
             // label22
             // 
