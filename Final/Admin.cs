@@ -38,6 +38,9 @@ namespace Final
             dtgvDanhSachCTNganh.DataSource = ctnganhlist;
             dtgvDanhSachTaiKhoang.DataSource = accountlist;
 
+            LoadTypetoComboBox(cbLoaiTaiKhoang);
+            LoadGendertoComboBox(cbGioiTinh);
+
             loadlistTruong();
             loadlistNganh();
             loadlistToHopMon();
@@ -91,23 +94,42 @@ namespace Final
         }
         void addNganhBinding()
         {
-
+            txbMaNganh.DataBindings.Add("Text", dtgvDanhSachNganh.DataSource, "MaNganh");
+            txbTenNganh.DataBindings.Add("Text", dtgvDanhSachNganh.DataSource, "TenNganh");
         }
         void addToHopMonBinding()
         {
-
+            txbMaToHopMon.DataBindings.Add("Text", dtgvDanhSachToHopMon.DataSource, "MaToHopMon");
+            txbTenCacToHop.DataBindings.Add("Text", dtgvDanhSachToHopMon.DataSource, "TenMonHoc");
         }
         void addCTNganhBinding()
         {
+            txbMaNganhCT_NH.DataBindings.Add("Text", dtgvDanhSachCTNganh.DataSource, "MaNganh");
+            txbMaTruongCT_NH.DataBindings.Add("Text", dtgvDanhSachCTNganh.DataSource, "MaTruong");
+            txbDiemChuanCT_NH.DataBindings.Add("Text", dtgvDanhSachCTNganh.DataSource, "DiemChuan");
 
         }
         void addCTTHMBinding()
         {
-
+            txbMaNganhCT_THM.DataBindings.Add("Text", dtgvCTTHM.DataSource, "MaNganh");
+            txbMaToHopMonCT_THM.DataBindings.Add("Text", dtgvCTTHM.DataSource, "MaToHopMon");
         }
         void addAccountBinding()
         {
+            txbTenNguoiDung.DataBindings.Add("Text", dtgvDanhSachTaiKhoang.DataSource, "UserName");
+            txbTenHienThi.DataBindings.Add("Text", dtgvDanhSachTaiKhoang.DataSource, "DisplayName");
 
+        }
+
+        void LoadTypetoComboBox(ComboBox cb)
+        {
+            cb.DataSource = AccountDAO.Instance.GetListAccount();
+            cb.DisplayMember = "Name";
+        }
+        void LoadGendertoComboBox(ComboBox cb)
+        {
+            cb.DataSource = AccountDAO.Instance.GetListAccount();
+            cb.DisplayMember = "Name";
         }
 
     }

@@ -112,7 +112,7 @@
             this.panel11 = new System.Windows.Forms.Panel();
             this.cbLoaiTaiKhoang = new System.Windows.Forms.ComboBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.txbMatKhau = new System.Windows.Forms.TextBox();
+            this.txbTenHienThi = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.txbTenNguoiDung = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
@@ -122,6 +122,8 @@
             this.txbTimTK = new System.Windows.Forms.TextBox();
             this.panel12 = new System.Windows.Forms.Panel();
             this.dtgvDanhSachTaiKhoang = new System.Windows.Forms.DataGridView();
+            this.label21 = new System.Windows.Forms.Label();
+            this.cbGioiTinh = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tpTruong.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -176,7 +178,7 @@
             this.tpTruong.Controls.Add(this.panel1);
             this.tpTruong.Location = new System.Drawing.Point(4, 29);
             this.tpTruong.Name = "tpTruong";
-            this.tpTruong.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tpTruong.Padding = new System.Windows.Forms.Padding(3);
             this.tpTruong.Size = new System.Drawing.Size(1071, 641);
             this.tpTruong.TabIndex = 0;
             this.tpTruong.Text = "Trường";
@@ -424,7 +426,7 @@
             this.tpNganh.Controls.Add(this.panel3);
             this.tpNganh.Location = new System.Drawing.Point(4, 29);
             this.tpNganh.Name = "tpNganh";
-            this.tpNganh.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tpNganh.Padding = new System.Windows.Forms.Padding(3);
             this.tpNganh.Size = new System.Drawing.Size(1071, 641);
             this.tpNganh.TabIndex = 1;
             this.tpNganh.Text = "Ngành";
@@ -548,7 +550,7 @@
             this.tpToHopMon.Controls.Add(this.panel6);
             this.tpToHopMon.Location = new System.Drawing.Point(4, 29);
             this.tpToHopMon.Name = "tpToHopMon";
-            this.tpToHopMon.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tpToHopMon.Padding = new System.Windows.Forms.Padding(3);
             this.tpToHopMon.Size = new System.Drawing.Size(1071, 641);
             this.tpToHopMon.TabIndex = 2;
             this.tpToHopMon.Text = "Tổ hợp môn";
@@ -672,7 +674,7 @@
             this.tpCTNganh.Controls.Add(this.panel8);
             this.tpCTNganh.Location = new System.Drawing.Point(4, 29);
             this.tpCTNganh.Name = "tpCTNganh";
-            this.tpCTNganh.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tpCTNganh.Padding = new System.Windows.Forms.Padding(3);
             this.tpCTNganh.Size = new System.Drawing.Size(1071, 641);
             this.tpCTNganh.TabIndex = 3;
             this.tpCTNganh.Text = "Chi tiết ngành";
@@ -816,7 +818,7 @@
             this.tpCTTHM.Controls.Add(this.panel10);
             this.tpCTTHM.Location = new System.Drawing.Point(4, 29);
             this.tpCTTHM.Name = "tpCTTHM";
-            this.tpCTTHM.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tpCTTHM.Padding = new System.Windows.Forms.Padding(3);
             this.tpCTTHM.Size = new System.Drawing.Size(1071, 641);
             this.tpCTTHM.TabIndex = 4;
             this.tpCTTHM.Text = "Chi tiết tổ hợp môn";
@@ -939,7 +941,7 @@
             this.tpTaiKhoang.Controls.Add(this.panel12);
             this.tpTaiKhoang.Location = new System.Drawing.Point(4, 29);
             this.tpTaiKhoang.Name = "tpTaiKhoang";
-            this.tpTaiKhoang.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tpTaiKhoang.Padding = new System.Windows.Forms.Padding(3);
             this.tpTaiKhoang.Size = new System.Drawing.Size(1071, 641);
             this.tpTaiKhoang.TabIndex = 5;
             this.tpTaiKhoang.Text = "Tài khoản";
@@ -947,9 +949,11 @@
             // 
             // panel11
             // 
+            this.panel11.Controls.Add(this.cbGioiTinh);
+            this.panel11.Controls.Add(this.label21);
             this.panel11.Controls.Add(this.cbLoaiTaiKhoang);
             this.panel11.Controls.Add(this.label20);
-            this.panel11.Controls.Add(this.txbMatKhau);
+            this.panel11.Controls.Add(this.txbTenHienThi);
             this.panel11.Controls.Add(this.label19);
             this.panel11.Controls.Add(this.txbTenNguoiDung);
             this.panel11.Controls.Add(this.label18);
@@ -964,28 +968,28 @@
             this.cbLoaiTaiKhoang.Items.AddRange(new object[] {
             "0",
             "1"});
-            this.cbLoaiTaiKhoang.Location = new System.Drawing.Point(166, 99);
+            this.cbLoaiTaiKhoang.Location = new System.Drawing.Point(166, 140);
             this.cbLoaiTaiKhoang.Name = "cbLoaiTaiKhoang";
-            this.cbLoaiTaiKhoang.Size = new System.Drawing.Size(53, 28);
+            this.cbLoaiTaiKhoang.Size = new System.Drawing.Size(144, 28);
             this.cbLoaiTaiKhoang.TabIndex = 14;
             // 
             // label20
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(14, 107);
+            this.label20.Location = new System.Drawing.Point(14, 148);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(122, 20);
             this.label20.TabIndex = 13;
             this.label20.Text = "Loại tài khoản";
             // 
-            // txbMatKhau
+            // txbTenHienThi
             // 
-            this.txbMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbMatKhau.Location = new System.Drawing.Point(166, 56);
-            this.txbMatKhau.Name = "txbMatKhau";
-            this.txbMatKhau.Size = new System.Drawing.Size(307, 26);
-            this.txbMatKhau.TabIndex = 12;
+            this.txbTenHienThi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbTenHienThi.Location = new System.Drawing.Point(166, 56);
+            this.txbTenHienThi.Name = "txbTenHienThi";
+            this.txbTenHienThi.Size = new System.Drawing.Size(307, 26);
+            this.txbTenHienThi.TabIndex = 12;
             // 
             // label19
             // 
@@ -993,9 +997,9 @@
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.Location = new System.Drawing.Point(14, 59);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(83, 20);
+            this.label19.Size = new System.Drawing.Size(103, 20);
             this.label19.TabIndex = 11;
-            this.label19.Text = "Mật khẩu";
+            this.label19.Text = "Tên hiển thị";
             // 
             // txbTenNguoiDung
             // 
@@ -1065,6 +1069,27 @@
             this.dtgvDanhSachTaiKhoang.Name = "dtgvDanhSachTaiKhoang";
             this.dtgvDanhSachTaiKhoang.Size = new System.Drawing.Size(575, 553);
             this.dtgvDanhSachTaiKhoang.TabIndex = 0;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(14, 103);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(76, 20);
+            this.label21.TabIndex = 15;
+            this.label21.Text = "Giới tính";
+            // 
+            // cbGioiTinh
+            // 
+            this.cbGioiTinh.FormattingEnabled = true;
+            this.cbGioiTinh.Items.AddRange(new object[] {
+            "0",
+            "1"});
+            this.cbGioiTinh.Location = new System.Drawing.Point(166, 95);
+            this.cbGioiTinh.Name = "cbGioiTinh";
+            this.cbGioiTinh.Size = new System.Drawing.Size(144, 28);
+            this.cbGioiTinh.TabIndex = 16;
             // 
             // Admin
             // 
@@ -1201,7 +1226,7 @@
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.ComboBox cbLoaiTaiKhoang;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox txbMatKhau;
+        private System.Windows.Forms.TextBox txbTenHienThi;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox txbTenNguoiDung;
         private System.Windows.Forms.Label label18;
@@ -1211,5 +1236,7 @@
         private System.Windows.Forms.TextBox txbTimTK;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.DataGridView dtgvDanhSachTaiKhoang;
+        private System.Windows.Forms.ComboBox cbGioiTinh;
+        private System.Windows.Forms.Label label21;
     }
 }
