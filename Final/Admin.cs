@@ -38,9 +38,6 @@ namespace Final
             dtgvDanhSachCTNganh.DataSource = ctnganhlist;
             dtgvDanhSachTaiKhoang.DataSource = accountlist;
 
-            LoadTypetoComboBox(cbLoaiTaiKhoang);
-            LoadGendertoComboBox(cbGioiTinh);
-
             loadlistTruong();
             loadlistNganh();
             loadlistToHopMon();
@@ -118,17 +115,8 @@ namespace Final
             txbIdNguoiDung.DataBindings.Add("Text", dtgvDanhSachTaiKhoang.DataSource, "Id");
             txbTenNguoiDung.DataBindings.Add("Text", dtgvDanhSachTaiKhoang.DataSource, "UserName");
             txbTenHienThi.DataBindings.Add("Text", dtgvDanhSachTaiKhoang.DataSource, "DisplayName");
-        }
-
-        void LoadTypetoComboBox(ComboBox cb)
-        {
-            cb.DataSource = AccountDAO.Instance.GetListAccount_();
-            cb.DisplayMember = "Name";
-        }
-        void LoadGendertoComboBox(ComboBox cb)
-        {
-            cb.DataSource = AccountDAO.Instance.GetListAccount_();
-            cb.DisplayMember = "Name";
+            txbGioiTinh.DataBindings.Add("Text", dtgvDanhSachTaiKhoang.DataSource, "Gender");
+            txbLoaiTK.DataBindings.Add("Text", dtgvDanhSachTaiKhoang.DataSource, "Type");
         }
 
     }
