@@ -330,5 +330,30 @@ namespace Final
                 MessageBox.Show("Xoá người dùng thất bại");
             }
         }
+
+        private void btnSuaTruong_Click(object sender, EventArgs e)
+        {
+            loadlistTruong();
+        }
+
+        private void btnSuaNganh_Click(object sender, EventArgs e)
+        {
+            loadlistNganh();
+        }
+
+        private void btnSuaToHopMon_Click(object sender, EventArgs e)
+        {
+            loadlistToHopMon();
+        }
+
+        private void btnSuaCTNganh_Click(object sender, EventArgs e)
+        {
+            loadlistCTNganh();
+        }
+
+        private void btnSuaCTTHM_Click(object sender, EventArgs e)
+        {
+            loadlistCTTHM();
+        }
     }
 }

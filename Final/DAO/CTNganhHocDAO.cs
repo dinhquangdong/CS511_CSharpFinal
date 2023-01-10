@@ -54,6 +54,13 @@ namespace Final.DAO
             int result = DataProvider.Instance.ExcuteNonQuery(query);
             return result > 0;
         }
+
+        public bool SuaChiTietNganh(string matruong, int manganh, float diemchuan)
+        {
+            string query = $"update CTNGANHHOC set MaTruong = N'{matruong}', MaNganh = {manganh}, DiemChuan = {diemchuan} where MaTruong = N'{matruong}'";
+            int result = DataProvider.Instance.ExcuteNonQuery(query);
+            return result > 0;
+        }
         public List<CTNganhHoc> SearchListCTNganhbyByMaTruongOrMaNganh(string name)
         {
             List<CTNganhHoc> listthm = new List<CTNganhHoc>();

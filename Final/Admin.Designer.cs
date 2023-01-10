@@ -377,7 +377,7 @@
             // 
             // btnXoaTruong
             // 
-            this.btnXoaTruong.Location = new System.Drawing.Point(869, 19);
+            this.btnXoaTruong.Location = new System.Drawing.Point(839, 21);
             this.btnXoaTruong.Name = "btnXoaTruong";
             this.btnXoaTruong.Size = new System.Drawing.Size(82, 33);
             this.btnXoaTruong.TabIndex = 3;
@@ -387,16 +387,17 @@
             // 
             // btnSuaTruong
             // 
-            this.btnSuaTruong.Location = new System.Drawing.Point(781, 19);
+            this.btnSuaTruong.Location = new System.Drawing.Point(936, 21);
             this.btnSuaTruong.Name = "btnSuaTruong";
             this.btnSuaTruong.Size = new System.Drawing.Size(82, 33);
             this.btnSuaTruong.TabIndex = 2;
-            this.btnSuaTruong.Text = "Sửa";
+            this.btnSuaTruong.Text = "Reload";
             this.btnSuaTruong.UseVisualStyleBackColor = true;
+            this.btnSuaTruong.Click += new System.EventHandler(this.btnSuaTruong_Click);
             // 
             // btnThemTruong
             // 
-            this.btnThemTruong.Location = new System.Drawing.Point(693, 19);
+            this.btnThemTruong.Location = new System.Drawing.Point(751, 21);
             this.btnThemTruong.Name = "btnThemTruong";
             this.btnThemTruong.Size = new System.Drawing.Size(82, 33);
             this.btnThemTruong.TabIndex = 1;
@@ -486,7 +487,7 @@
             // 
             // btnXoaNganh
             // 
-            this.btnXoaNganh.Location = new System.Drawing.Point(876, 22);
+            this.btnXoaNganh.Location = new System.Drawing.Point(824, 22);
             this.btnXoaNganh.Name = "btnXoaNganh";
             this.btnXoaNganh.Size = new System.Drawing.Size(82, 33);
             this.btnXoaNganh.TabIndex = 11;
@@ -496,16 +497,17 @@
             // 
             // btnSuaNganh
             // 
-            this.btnSuaNganh.Location = new System.Drawing.Point(788, 22);
+            this.btnSuaNganh.Location = new System.Drawing.Point(912, 22);
             this.btnSuaNganh.Name = "btnSuaNganh";
             this.btnSuaNganh.Size = new System.Drawing.Size(82, 33);
             this.btnSuaNganh.TabIndex = 10;
-            this.btnSuaNganh.Text = "Sửa";
+            this.btnSuaNganh.Text = "Reload";
             this.btnSuaNganh.UseVisualStyleBackColor = true;
+            this.btnSuaNganh.Click += new System.EventHandler(this.btnSuaNganh_Click);
             // 
             // btnThemNganh
             // 
-            this.btnThemNganh.Location = new System.Drawing.Point(700, 22);
+            this.btnThemNganh.Location = new System.Drawing.Point(736, 22);
             this.btnThemNganh.Name = "btnThemNganh";
             this.btnThemNganh.Size = new System.Drawing.Size(82, 33);
             this.btnThemNganh.TabIndex = 9;
@@ -613,7 +615,7 @@
             // 
             // btnXoaToHopMon
             // 
-            this.btnXoaToHopMon.Location = new System.Drawing.Point(868, 23);
+            this.btnXoaToHopMon.Location = new System.Drawing.Point(861, 23);
             this.btnXoaToHopMon.Name = "btnXoaToHopMon";
             this.btnXoaToHopMon.Size = new System.Drawing.Size(82, 33);
             this.btnXoaToHopMon.TabIndex = 18;
@@ -623,16 +625,17 @@
             // 
             // btnSuaToHopMon
             // 
-            this.btnSuaToHopMon.Location = new System.Drawing.Point(780, 23);
+            this.btnSuaToHopMon.Location = new System.Drawing.Point(949, 23);
             this.btnSuaToHopMon.Name = "btnSuaToHopMon";
             this.btnSuaToHopMon.Size = new System.Drawing.Size(82, 33);
             this.btnSuaToHopMon.TabIndex = 17;
-            this.btnSuaToHopMon.Text = "Sửa";
+            this.btnSuaToHopMon.Text = "Reload";
             this.btnSuaToHopMon.UseVisualStyleBackColor = true;
+            this.btnSuaToHopMon.Click += new System.EventHandler(this.btnSuaToHopMon_Click);
             // 
             // btnThemToHopMon
             // 
-            this.btnThemToHopMon.Location = new System.Drawing.Point(692, 23);
+            this.btnThemToHopMon.Location = new System.Drawing.Point(773, 23);
             this.btnThemToHopMon.Name = "btnThemToHopMon";
             this.btnThemToHopMon.Size = new System.Drawing.Size(82, 33);
             this.btnThemToHopMon.TabIndex = 16;
@@ -760,7 +763,7 @@
             // 
             // btnXoaCTNganh
             // 
-            this.btnXoaCTNganh.Location = new System.Drawing.Point(864, 23);
+            this.btnXoaCTNganh.Location = new System.Drawing.Point(838, 23);
             this.btnXoaCTNganh.Name = "btnXoaCTNganh";
             this.btnXoaCTNganh.Size = new System.Drawing.Size(82, 33);
             this.btnXoaCTNganh.TabIndex = 25;
@@ -770,16 +773,17 @@
             // 
             // btnSuaCTNganh
             // 
-            this.btnSuaCTNganh.Location = new System.Drawing.Point(776, 23);
+            this.btnSuaCTNganh.Location = new System.Drawing.Point(926, 23);
             this.btnSuaCTNganh.Name = "btnSuaCTNganh";
             this.btnSuaCTNganh.Size = new System.Drawing.Size(82, 33);
             this.btnSuaCTNganh.TabIndex = 24;
-            this.btnSuaCTNganh.Text = "Sửa";
+            this.btnSuaCTNganh.Text = "Reload";
             this.btnSuaCTNganh.UseVisualStyleBackColor = true;
+            this.btnSuaCTNganh.Click += new System.EventHandler(this.btnSuaCTNganh_Click);
             // 
             // btnThemCTNganh
             // 
-            this.btnThemCTNganh.Location = new System.Drawing.Point(688, 23);
+            this.btnThemCTNganh.Location = new System.Drawing.Point(750, 23);
             this.btnThemCTNganh.Name = "btnThemCTNganh";
             this.btnThemCTNganh.Size = new System.Drawing.Size(82, 33);
             this.btnThemCTNganh.TabIndex = 23;
@@ -887,7 +891,7 @@
             // 
             // btnXoaCTTHM
             // 
-            this.btnXoaCTTHM.Location = new System.Drawing.Point(883, 21);
+            this.btnXoaCTTHM.Location = new System.Drawing.Point(849, 23);
             this.btnXoaCTTHM.Name = "btnXoaCTTHM";
             this.btnXoaCTTHM.Size = new System.Drawing.Size(82, 33);
             this.btnXoaCTTHM.TabIndex = 32;
@@ -897,16 +901,17 @@
             // 
             // btnSuaCTTHM
             // 
-            this.btnSuaCTTHM.Location = new System.Drawing.Point(795, 21);
+            this.btnSuaCTTHM.Location = new System.Drawing.Point(937, 23);
             this.btnSuaCTTHM.Name = "btnSuaCTTHM";
             this.btnSuaCTTHM.Size = new System.Drawing.Size(82, 33);
             this.btnSuaCTTHM.TabIndex = 31;
-            this.btnSuaCTTHM.Text = "Sửa";
+            this.btnSuaCTTHM.Text = "Reload";
             this.btnSuaCTTHM.UseVisualStyleBackColor = true;
+            this.btnSuaCTTHM.Click += new System.EventHandler(this.btnSuaCTTHM_Click);
             // 
             // btnThemCTTHM
             // 
-            this.btnThemCTTHM.Location = new System.Drawing.Point(707, 21);
+            this.btnThemCTTHM.Location = new System.Drawing.Point(761, 23);
             this.btnThemCTTHM.Name = "btnThemCTTHM";
             this.btnThemCTTHM.Size = new System.Drawing.Size(82, 33);
             this.btnThemCTTHM.TabIndex = 30;

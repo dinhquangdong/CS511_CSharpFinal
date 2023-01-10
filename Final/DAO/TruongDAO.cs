@@ -84,5 +84,12 @@ namespace Final.DAO
             int result = DataProvider.Instance.ExcuteNonQuery(query);
             return result > 0;
         }
+
+        public bool SuaTruong(string matruong, string tentruong, string linkweb, string diachi, string sdt, float saodanhgia, string review, string anhtruong)
+        {
+            string query = $"INSERT INTO TRUONG (MaTruong, TenTruong, LinkWebTruong, DiaChi, SDT, SaoDanhGia, ReView, AnhTruong) values (N'{matruong}', N'{tentruong}', N'{linkweb}', N'{diachi}', N'{sdt}', {saodanhgia}, N'{review}', N'{anhtruong}');";
+            int result = DataProvider.Instance.ExcuteNonQuery(query);
+            return result > 0;
+        }
     }
 }
