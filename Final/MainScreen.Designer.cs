@@ -116,6 +116,7 @@
             this.wbMap.Location = new System.Drawing.Point(0, 0);
             this.wbMap.MinimumSize = new System.Drawing.Size(20, 20);
             this.wbMap.Name = "wbMap";
+            this.wbMap.ScriptErrorsSuppressed = true;
             this.wbMap.Size = new System.Drawing.Size(1076, 638);
             this.wbMap.TabIndex = 0;
             // 
@@ -250,6 +251,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "MainScreen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.MainScreen_Load);
             this.panel1.ResumeLayout(false);
