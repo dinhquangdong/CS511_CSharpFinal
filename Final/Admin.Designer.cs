@@ -366,6 +366,7 @@
             this.btnTimTruong.TabIndex = 5;
             this.btnTimTruong.Text = "Tìm";
             this.btnTimTruong.UseVisualStyleBackColor = true;
+            this.btnTimTruong.Click += new System.EventHandler(this.btnTimTruong_Click);
             // 
             // txbTimTruong
             // 

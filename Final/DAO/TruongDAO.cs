@@ -1,4 +1,6 @@
-﻿using System.Data;
+﻿using Final.DTO;
+using System.Collections.Generic;
+using System.Data;
 namespace Final.DAO
 {
     public class TruongDAO
@@ -63,6 +65,17 @@ namespace Final.DAO
             return result>0;
         }
 
-
+        public List<Truong> SearchListTruongbyByTenOrMaTruong(string name)
+        {
+            List<Truong> listTruong = new List<Truong>();
+            string query = string.Format("select * from TRUONG where dbo.fuConvertToUnsign1(TenTruong) like N'%'+dbo.fuConvertToUnsign1('{0}')+'%' or dbo.fuConvertToUnsign1(MaTruong) like N'%'+dbo.fuConvertToUnsign1('{0}')+'%' ", name);
+            DataTable data = DataProvider.Instance.ExcuteQuery(query);
+            foreach (DataRow item in data.Rows)
+            {
+                Truong food = new Truong(item);
+                listTruong.Add(food);
+            }
+            return listTruong;
+        }
     }
 }

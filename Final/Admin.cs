@@ -119,5 +119,15 @@ namespace Final
             txbLoaiTK.DataBindings.Add("Text", dtgvDanhSachTaiKhoang.DataSource, "Type");
         }
 
+        List<Truong> SearchListTruongByTenOrMaTruong(string name)
+        {
+            List<Truong> truongs = TruongDAO.Instance.SearchListTruongbyByTenOrMaTruong(name);
+            return truongs;
+        }
+
+        private void btnTimTruong_Click(object sender, EventArgs e)
+        {
+            dtgvDanhSachTruong.DataSource = SearchListTruongByTenOrMaTruong(txbTimTruong.Text);
+        }
     }
 }
