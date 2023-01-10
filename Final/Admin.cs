@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
@@ -120,6 +121,18 @@ namespace Final
             txbLoaiTK.DataBindings.Add("Text", dtgvDanhSachTaiKhoang.DataSource, "Type");
         }
 
+        
+        List<Truong> SearchListTruongByTenOrMaTruong(string name)
+        {
+            List<Truong> truongs = TruongDAO.Instance.SearchListTruongbyByTenOrMaTruong(name);
+            return truongs;
+        }
+
+        private void btnTimTruong_Click(object sender, EventArgs e)
+        {
+            dtgvDanhSachTruong.DataSource = SearchListTruongByTenOrMaTruong(txbTimTruong.Text);
+        }
+
         private void btnThemTruong_Click(object sender, EventArgs e)
         {
             if (TruongDAO.Instance.ThemTruong(txbMaTruong.Text, txbTenTruong.Text, txbLink.Text, txbDiaChi.Text, txbSDT.Text, float.Parse(txbSaoDanhGia.Text, CultureInfo.InvariantCulture.NumberFormat), txbReview.Text, txbAnhTruong.Text))
@@ -131,15 +144,64 @@ namespace Final
                 MessageBox.Show("Thêm trường thất bại");
             }
         }
-        List<Truong> SearchListTruongByTenOrMaTruong(string name)
+        private void btnThemNganh_Click(object sender, EventArgs e)
         {
-            List<Truong> truongs = TruongDAO.Instance.SearchListTruongbyByTenOrMaTruong(name);
-            return truongs;
+            if(NganhDAO.Instance.ThemNganh(int.Parse(txbMaNganh.Text), txbTenNganh.Text))
+            {
+                MessageBox.Show("Thêm ngành thành công");
+            }
+            else
+            {
+                MessageBox.Show("Thêm ngành thất bại");
+            }    
         }
 
-        private void btnTimTruong_Click(object sender, EventArgs e)
+        private void btnThemToHopMon_Click(object sender, EventArgs e)
         {
-            dtgvDanhSachTruong.DataSource = SearchListTruongByTenOrMaTruong(txbTimTruong.Text);
+            if (ToHopMonDAO.Instance.ThemToHopMon(txbMaToHopMon.Text, txbTenCacToHop.Text))
+            {
+                MessageBox.Show("Thêm tổ hợp môn thành công");
+            }
+            else
+            {
+                MessageBox.Show("Thêm tổ hợp môn thất bại");
+            }
+        }
+
+        private void btnThemCTNganh_Click(object sender, EventArgs e)
+        {
+            if (CTNganhHocDAO.Instance.ThemChiTietNganh(txbMaTruongCT_NH.Text, int.Parse(txbMaNganhCT_NH.Text), float.Parse(txbDiemChuanCT_NH.Text, CultureInfo.InvariantCulture.NumberFormat)))
+            {
+                MessageBox.Show("Thêm chi tiết ngành thành công");
+            }
+            else
+            {
+                MessageBox.Show("Thêm chi tiết ngành thất bại");
+            }
+        }
+
+        private void btnThemCTTHM_Click(object sender, EventArgs e)
+        {
+            if (CTToHopMonDAO.Instance.ThemChiTietToHopMon(int.Parse(txbMaNganhCT_THM.Text), txbMaToHopMonCT_THM.Text))
+            {
+                MessageBox.Show("Thêm chi tiết tổ hợp môn thành công");
+            }
+            else
+            {
+                MessageBox.Show("Thêm chi tiết tổ hợp môn thất bại");
+            }
+        }
+
+        private void btnThemTK_Click(object sender, EventArgs e)
+        {
+            if (AccountDAO.Instance.ThemTaiKhoan(int.Parse(txbIdNguoiDung.Text), txbTenNguoiDung.Text, txbTenHienThi.Text, txbGioiTinh.Text, int.Parse(txbLoaiTK.Text)))
+            {
+                MessageBox.Show("Thêm tài khoản thành công");
+            }
+            else
+            {
+                MessageBox.Show("Thêm tài khoản thất bại");
+            }
         }
     }
 }

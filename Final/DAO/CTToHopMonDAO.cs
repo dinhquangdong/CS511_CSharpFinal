@@ -36,5 +36,12 @@ namespace Final.DAO
             int result = DataProvider.Instance.ExcuteNonQuery(query);
             return result > 0;
         }
+
+        public bool ThemChiTietToHopMon(int manganh, string maTHM)
+        {
+            string query = $"INSERT INTO CTTOHOPMON (MaNganh, MaToHopMon) values ({manganh}, N'{maTHM}');";
+            int result = DataProvider.Instance.ExcuteNonQuery(query);
+            return result > 0;
+        }
     }
 }

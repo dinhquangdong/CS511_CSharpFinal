@@ -61,5 +61,12 @@ namespace Final.DAO
             return result > 0;
         }
 
+
+        public bool ThemNganh(int manganh, string tennganh)
+        {
+            string query = $"INSERT INTO NGANHHOC (MaNganh, TenNganh) values ({manganh}, N'{tennganh}');";
+            int result = DataProvider.Instance.ExcuteNonQuery(query);
+            return result > 0;
+        }
     }
 }

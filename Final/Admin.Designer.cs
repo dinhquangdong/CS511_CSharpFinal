@@ -509,6 +509,7 @@
             this.btnThemNganh.TabIndex = 9;
             this.btnThemNganh.Text = "Thêm";
             this.btnThemNganh.UseVisualStyleBackColor = true;
+            this.btnThemNganh.Click += new System.EventHandler(this.btnThemNganh_Click);
             // 
             // btnTimNganh
             // 
@@ -633,6 +634,7 @@
             this.btnThemToHopMon.TabIndex = 16;
             this.btnThemToHopMon.Text = "Thêm";
             this.btnThemToHopMon.UseVisualStyleBackColor = true;
+            this.btnThemToHopMon.Click += new System.EventHandler(this.btnThemToHopMon_Click);
             // 
             // btnTimToHopMon
             // 
@@ -777,6 +779,7 @@
             this.btnThemCTNganh.TabIndex = 23;
             this.btnThemCTNganh.Text = "Thêm";
             this.btnThemCTNganh.UseVisualStyleBackColor = true;
+            this.btnThemCTNganh.Click += new System.EventHandler(this.btnThemCTNganh_Click);
             // 
             // btnTimCTNganh
             // 
@@ -901,6 +904,7 @@
             this.btnThemCTTHM.TabIndex = 30;
             this.btnThemCTTHM.Text = "Thêm";
             this.btnThemCTTHM.UseVisualStyleBackColor = true;
+            this.btnThemCTTHM.Click += new System.EventHandler(this.btnThemCTTHM_Click);
             // 
             // btnTimCTTHM
             // 
@@ -1085,6 +1089,7 @@
             this.btnThemTK.TabIndex = 37;
             this.btnThemTK.Text = "Thêm";
             this.btnThemTK.UseVisualStyleBackColor = true;
+            this.btnThemTK.Click += new System.EventHandler(this.btnThemTK_Click);
             // 
             // btnTimTK
             // 

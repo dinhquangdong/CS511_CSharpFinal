@@ -44,6 +44,11 @@ namespace Final.DAO
             int result = DataProvider.Instance.ExcuteNonQuery(query);
             return result > 0;
         }
-
+        public bool ThemToHopMon(string maTHM, string tenMH)
+        {
+            string query = $"INSERT INTO NGANHHOC (MaToHopMon, TenMonHoc) values (N'{maTHM}', N'{tenMH}');";
+            int result = DataProvider.Instance.ExcuteNonQuery(query);
+            return result > 0;
+        }
     }
 }
