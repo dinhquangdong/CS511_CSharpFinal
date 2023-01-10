@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Final.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +15,7 @@ namespace Final
     {
         public static UserControlNganh Instance;
         public string TenNganh;
+        public int MaNganh;
 
         public UserControlNganh()
         {
@@ -23,7 +25,29 @@ namespace Final
 
         private void UserControlNganh_Load(object sender, EventArgs e)
         {
+            labelMaNganh.Text = "Mã ngành: " + MaNganh;
             labelTenNganh.Text = TenNganh;
+        }
+
+        private void labelTenNganh_Click(object sender, EventArgs e)
+        {
+            MainScreen.instance.HienTruong = true;
+            MainScreen.instance.HienDiem = false;
+            MainScreen.instance.HienNganh = false;
+            MainScreen.instance.HienToHopMon = false;
+
+            DataTable dt = new DataTable();
+            dt = TruongDAO.Instance.GetTruongFromMaNganh(MaNganh);
+            MainScreen.instance.flowLayoutPanel1.Controls.Clear();            
+            foreach (DataRow row in dt.Rows)
+            {
+                UserControlTruong t = new UserControlTruong();
+                t.TenTruong = row[0].ToString();
+                t.AnhTruong = row[1].ToString();
+
+                MainScreen.instance.flowLayoutPanel1.Controls.Add(t);
+            }
+
         }
     }
 }

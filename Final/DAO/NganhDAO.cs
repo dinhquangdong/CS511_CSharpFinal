@@ -22,7 +22,7 @@ namespace Final.DAO
 
         public DataTable GetListNganh()
         {
-            return DataProvider.Instance.ExcuteQuery("Select TenNganh from NGANHHOC");
+            return DataProvider.Instance.ExcuteQuery("Select TenNganh, MaNganh from NGANHHOC");
         }
 
         public DataTable TimKiem(string text)

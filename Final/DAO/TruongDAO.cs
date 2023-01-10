@@ -23,6 +23,11 @@ namespace Final.DAO
             return DataProvider.Instance.ExcuteQuery("Select * from TRUONG where MaTruong=N'" + MaTruong + "'");
         }
 
+        public DataTable GetTruongFromMaNganh(int MaNganh)
+        {
+            return DataProvider.Instance.ExcuteQuery("select TenTruong,AnhTruong  From CTNGANHHOC, TRUONG where MaNganh =" + MaNganh + "  and TRUONG.MaTruong = CTNGANHHOC.MaTruong");
+        }
+
         
 
         public string GetMaTruong(string TenTruong)

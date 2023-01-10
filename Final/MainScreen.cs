@@ -242,6 +242,7 @@ namespace Final
             {
                 UserControlNganh n = new UserControlNganh();
                 n.TenNganh = row[0].ToString();
+                n.MaNganh = (int)row[1];
 
                 flowLayoutPanel1.Controls.Add(n);
             }

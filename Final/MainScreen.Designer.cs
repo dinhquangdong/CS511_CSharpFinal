@@ -276,11 +276,11 @@
         private System.Windows.Forms.WebBrowser wbMap;
         private System.Windows.Forms.Button buttonMapSearch;
         private System.Windows.Forms.Button buttonTimChu;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.PictureBox pblogo;
         private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }
 
