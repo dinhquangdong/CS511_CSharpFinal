@@ -115,19 +115,21 @@ namespace Final
         }
         void addAccountBinding()
         {
+            txbIdNguoiDung.DataBindings.Add("Text", dtgvDanhSachTaiKhoang.DataSource, "Id");
             txbTenNguoiDung.DataBindings.Add("Text", dtgvDanhSachTaiKhoang.DataSource, "UserName");
             txbTenHienThi.DataBindings.Add("Text", dtgvDanhSachTaiKhoang.DataSource, "DisplayName");
         }
 
         void LoadTypetoComboBox(ComboBox cb)
         {
-            cb.DataSource = AccountDAO.Instance.GetListAccount();
+            cb.DataSource = AccountDAO.Instance.GetListAccount_();
             cb.DisplayMember = "Name";
         }
         void LoadGendertoComboBox(ComboBox cb)
         {
-            cb.DataSource = AccountDAO.Instance.GetListAccount();
+            cb.DataSource = AccountDAO.Instance.GetListAccount_();
             cb.DisplayMember = "Name";
         }
+
     }
 }
