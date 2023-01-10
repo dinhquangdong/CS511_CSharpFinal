@@ -63,6 +63,30 @@ namespace Final.DAO
             return result > 0;
         }
 
-
+        public List<Account> GetListAccount_()
+        {
+            List<Account> listcategorie = new List<Account>();
+            string query = "select * from ACCOUNT";
+            DataTable data = DataProvider.Instance.ExcuteQuery(query);
+            foreach (DataRow item in data.Rows)
+            {
+                Account category = new Account(item);
+                listcategorie.Add(category);
+            }
+            return listcategorie;
+        }
+        
+        public Account getGenderById(int id)
+        {
+            Account acc = null;
+            string query = "select * from ACCOUNT where Id=" + id;
+            DataTable data = DataProvider.Instance.ExcuteQuery(query);
+            foreach (DataRow item in data.Rows)
+            {
+                acc = new Account(item);
+                return acc;
+            }
+            return acc;
+        }
     }
 }

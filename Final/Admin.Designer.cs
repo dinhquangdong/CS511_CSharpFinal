@@ -124,6 +124,8 @@
             this.dtgvDanhSachTaiKhoang = new System.Windows.Forms.DataGridView();
             this.label21 = new System.Windows.Forms.Label();
             this.cbGioiTinh = new System.Windows.Forms.ComboBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.txbIdNguoiDung = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tpTruong.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -949,6 +951,8 @@
             // 
             // panel11
             // 
+            this.panel11.Controls.Add(this.txbIdNguoiDung);
+            this.panel11.Controls.Add(this.label22);
             this.panel11.Controls.Add(this.cbGioiTinh);
             this.panel11.Controls.Add(this.label21);
             this.panel11.Controls.Add(this.cbLoaiTaiKhoang);
@@ -968,7 +972,7 @@
             this.cbLoaiTaiKhoang.Items.AddRange(new object[] {
             "0",
             "1"});
-            this.cbLoaiTaiKhoang.Location = new System.Drawing.Point(166, 140);
+            this.cbLoaiTaiKhoang.Location = new System.Drawing.Point(166, 169);
             this.cbLoaiTaiKhoang.Name = "cbLoaiTaiKhoang";
             this.cbLoaiTaiKhoang.Size = new System.Drawing.Size(144, 28);
             this.cbLoaiTaiKhoang.TabIndex = 14;
@@ -977,7 +981,7 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(14, 148);
+            this.label20.Location = new System.Drawing.Point(14, 177);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(122, 20);
             this.label20.TabIndex = 13;
@@ -986,7 +990,7 @@
             // txbTenHienThi
             // 
             this.txbTenHienThi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbTenHienThi.Location = new System.Drawing.Point(166, 56);
+            this.txbTenHienThi.Location = new System.Drawing.Point(166, 85);
             this.txbTenHienThi.Name = "txbTenHienThi";
             this.txbTenHienThi.Size = new System.Drawing.Size(307, 26);
             this.txbTenHienThi.TabIndex = 12;
@@ -995,7 +999,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(14, 59);
+            this.label19.Location = new System.Drawing.Point(14, 88);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(103, 20);
             this.label19.TabIndex = 11;
@@ -1004,7 +1008,7 @@
             // txbTenNguoiDung
             // 
             this.txbTenNguoiDung.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbTenNguoiDung.Location = new System.Drawing.Point(166, 14);
+            this.txbTenNguoiDung.Location = new System.Drawing.Point(166, 43);
             this.txbTenNguoiDung.Name = "txbTenNguoiDung";
             this.txbTenNguoiDung.Size = new System.Drawing.Size(307, 26);
             this.txbTenNguoiDung.TabIndex = 10;
@@ -1013,7 +1017,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(14, 17);
+            this.label18.Location = new System.Drawing.Point(14, 46);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(133, 20);
             this.label18.TabIndex = 9;
@@ -1074,7 +1078,7 @@
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(14, 103);
+            this.label21.Location = new System.Drawing.Point(14, 132);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(76, 20);
             this.label21.TabIndex = 15;
@@ -1086,10 +1090,29 @@
             this.cbGioiTinh.Items.AddRange(new object[] {
             "0",
             "1"});
-            this.cbGioiTinh.Location = new System.Drawing.Point(166, 95);
+            this.cbGioiTinh.Location = new System.Drawing.Point(166, 124);
             this.cbGioiTinh.Name = "cbGioiTinh";
             this.cbGioiTinh.Size = new System.Drawing.Size(144, 28);
             this.cbGioiTinh.TabIndex = 16;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(14, 14);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(25, 20);
+            this.label22.TabIndex = 17;
+            this.label22.Text = "Id";
+            // 
+            // txbIdNguoiDung
+            // 
+            this.txbIdNguoiDung.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbIdNguoiDung.Location = new System.Drawing.Point(166, 11);
+            this.txbIdNguoiDung.Name = "txbIdNguoiDung";
+            this.txbIdNguoiDung.Size = new System.Drawing.Size(307, 26);
+            this.txbIdNguoiDung.TabIndex = 18;
+            this.txbIdNguoiDung.TextChanged += new System.EventHandler(this.cbGioiTinh_TextChanged);
             // 
             // Admin
             // 
@@ -1238,5 +1261,7 @@
         private System.Windows.Forms.DataGridView dtgvDanhSachTaiKhoang;
         private System.Windows.Forms.ComboBox cbGioiTinh;
         private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.TextBox txbIdNguoiDung;
+        private System.Windows.Forms.Label label22;
     }
 }

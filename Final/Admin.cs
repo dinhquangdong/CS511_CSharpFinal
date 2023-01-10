@@ -116,6 +116,7 @@ namespace Final
         }
         void addAccountBinding()
         {
+            txbIdNguoiDung.DataBindings.Add("Text", dtgvDanhSachTaiKhoang.DataSource, "Id");
             txbTenNguoiDung.DataBindings.Add("Text", dtgvDanhSachTaiKhoang.DataSource, "UserName");
             txbTenHienThi.DataBindings.Add("Text", dtgvDanhSachTaiKhoang.DataSource, "DisplayName");
 
@@ -123,14 +124,32 @@ namespace Final
 
         void LoadTypetoComboBox(ComboBox cb)
         {
-            cb.DataSource = AccountDAO.Instance.GetListAccount();
+            cb.DataSource = AccountDAO.Instance.GetListAccount_();
             cb.DisplayMember = "Name";
         }
         void LoadGendertoComboBox(ComboBox cb)
         {
-            cb.DataSource = AccountDAO.Instance.GetListAccount();
+            cb.DataSource = AccountDAO.Instance.GetListAccount_();
             cb.DisplayMember = "Name";
         }
 
+        private void cbGioiTinh_TextChanged(object sender, EventArgs e)
+        {
+            if (dtgvDanhSachTaiKhoang.SelectedCells.Count > 0)
+            {
+                int id = (int)dtgvDanhSachTaiKhoang.SelectedCells[0].OwningRow.Cells["Id"].Value;
+                Account acc = AccountDAO.Instance.getGenderById(id);
+                cbGioiTinh.SelectedItem = acc;
+
+                int index = -1, i = 0;
+                foreach (Account item in cbGioiTinh.Items)
+                {
+                    if (item.Id == acc.Id)
+                        index = i;
+                    i++;
+                }
+                cbGioiTinh.SelectedIndex = index;
+            }
+        }
     }
 }
