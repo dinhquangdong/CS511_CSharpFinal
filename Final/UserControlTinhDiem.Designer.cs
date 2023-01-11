@@ -96,6 +96,7 @@
             this.txbA00 = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.txbT06 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -728,6 +729,17 @@
             this.txbT06.Size = new System.Drawing.Size(95, 29);
             this.txbT06.TabIndex = 66;
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(448, 541);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(156, 46);
+            this.button1.TabIndex = 68;
+            this.button1.Text = "Gợi ý ngành";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // UserControlTinhDiem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -735,6 +747,7 @@
             this.BackColor = System.Drawing.Color.Transparent;
             this.BackgroundImage = global::Final.Properties.Resources.bg_tinhdiem;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.txbT06);
             this.Controls.Add(this.txbA00);
@@ -883,5 +896,6 @@
         private System.Windows.Forms.TextBox txbA00;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox txbT06;
+        private System.Windows.Forms.Button button1;
     }
 }

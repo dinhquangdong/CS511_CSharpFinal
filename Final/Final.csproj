@@ -115,11 +115,23 @@
     <Compile Include="UserControlDiem.Designer.cs">
       <DependentUpon>UserControlDiem.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlGoiYNganh.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlGoiYNganh.Designer.cs">
+      <DependentUpon>UserControlGoiYNganh.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControlNganh.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControlNganh.Designer.cs">
       <DependentUpon>UserControlNganh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlNganhGoiY.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlNganhGoiY.Designer.cs">
+      <DependentUpon>UserControlNganhGoiY.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControlTinhDiem.cs">
       <SubType>UserControl</SubType>
@@ -182,8 +194,14 @@
     <EmbeddedResource Include="UserControlDiem.resx">
       <DependentUpon>UserControlDiem.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControlGoiYNganh.resx">
+      <DependentUpon>UserControlGoiYNganh.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControlNganh.resx">
       <DependentUpon>UserControlNganh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlNganhGoiY.resx">
+      <DependentUpon>UserControlNganhGoiY.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlTinhDiem.resx">
       <DependentUpon>UserControlTinhDiem.cs</DependentUpon>

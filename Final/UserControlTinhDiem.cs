@@ -159,5 +159,12 @@ namespace Final
         {
             pictureBox1.BackColor = Color.Transparent;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            UserControlGoiYNganh u = new UserControlGoiYNganh();
+            this.Hide();
+            MainScreen.instance.flowLayoutPanel1.Controls.Add(u);
+        }
     }
 }

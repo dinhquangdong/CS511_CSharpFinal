@@ -36,6 +36,13 @@ namespace Final.DAO
             return null;
         } 
 
+        public DataTable GetListDiemFromGmail(string gmail)
+        {
+            string query = $"select * from ACCOUNT where Gmail = N'{gmail}'";
+            DataTable dt = DataProvider.Instance.ExcuteQuery(query);
+            return dt;
+        }
+
         public DataTable GetAccountbyId(string Gmail)
         {
             DataTable data = DataProvider.Instance.ExcuteQuery("select * from ACCOUNT where Gmail=N'" + Gmail + "'");
@@ -110,6 +117,5 @@ namespace Final.DAO
             int result = DataProvider.Instance.ExcuteNonQuery(query);
             return result > 0;
         }
-
     }
 }
