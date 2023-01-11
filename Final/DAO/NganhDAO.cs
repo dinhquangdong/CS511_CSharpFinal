@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace Final.DAO
 {
@@ -28,7 +29,7 @@ namespace Final.DAO
         public DataTable TimKiem(string text)
         {
             DataTable dt = new DataTable();
-            dt = DataProvider.Instance.ExcuteQuery($"Select TenNganh from NGANHHOc where dbo.fuConvertToUnsign1(TenNganh) like N'%'+dbo.fuConvertToUnsign1('{text}')+'%'");
+            dt = DataProvider.Instance.ExcuteQuery($"Select TenNganh, MaNganh from NGANHHOC where dbo.fuConvertToUnsign1(TenNganh) like N'%'+dbo.fuConvertToUnsign1('{text}')+'%' or dbo.fuConvertToUnsign1(MaNganh) like N'%'+dbo.fuConvertToUnsign1('{text}')+'%' ");
             return dt;
         }
 

@@ -107,6 +107,7 @@ namespace Final
                 {
                     UserControlNganh t = new UserControlNganh();
                     t.TenNganh = row[0].ToString();
+                    t.MaNganh = int.Parse(row[1].ToString());
                     flowLayoutPanel1.Controls.Add(t);
                 }
             }
