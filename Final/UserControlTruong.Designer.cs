@@ -70,6 +70,8 @@
             this.Size = new System.Drawing.Size(207, 221);
             this.Load += new System.EventHandler(this.UserControlTruong_Load);
             this.Click += new System.EventHandler(this.UserControlTruong_Click);
+            this.MouseEnter += new System.EventHandler(this.UserControlTruong_MouseEnter);
+            this.MouseLeave += new System.EventHandler(this.UserControlTruong_MouseLeave);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
