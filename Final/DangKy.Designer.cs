@@ -234,6 +234,7 @@
             this.Controls.Add(this.txbMK);
             this.Controls.Add(this.txbTK);
             this.Name = "DangKy";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DangKy";
             this.ResumeLayout(false);
             this.PerformLayout();

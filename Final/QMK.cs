@@ -20,6 +20,22 @@ namespace Final
             InitializeComponent();
         }
 
+        public static string GetRandomPassword(int length = 5)
+        {
+            const string chars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+            StringBuilder sb = new StringBuilder();
+            Random rnd = new Random();
+
+            for (int i = 0; i < length; i++)
+            {
+                int index = rnd.Next(chars.Length);
+                sb.Append(chars[index]);
+            }
+
+            return sb.ToString();
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             
@@ -28,7 +44,7 @@ namespace Final
             string email = txbEmail.Text;
             string from = "20521137@gm.uit.edu.vn";
             string password = "vanchinh12042002";
-            string newPass = "123";
+            string newPass = GetRandomPassword();
             MailMessage mailMessage = new MailMessage();
             mailMessage.From = new MailAddress(from);
             mailMessage.To.Add(email);

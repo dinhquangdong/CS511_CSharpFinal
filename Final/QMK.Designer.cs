@@ -99,6 +99,7 @@
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
             this.Name = "QMK";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QMK";
             this.ResumeLayout(false);
             this.PerformLayout();
