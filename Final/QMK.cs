@@ -26,8 +26,8 @@ namespace Final
 
             string TenUser = txbUsername.Text;
             string email = txbEmail.Text;
-            string from = "truongchinh808@gmail.com";
-            string password = "3216549870";
+            string from = "20521137@gm.uit.edu.vn";
+            string password = "vanchinh12042002";
             string newPass = "123";
             MailMessage mailMessage = new MailMessage();
             mailMessage.From = new MailAddress(from);

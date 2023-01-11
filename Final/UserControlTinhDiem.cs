@@ -127,7 +127,7 @@ namespace Final
 
 
 
-            AccountDAO.Instance.UpdateAccount(MainScreen.instance.Id,
+            AccountDAO.Instance.UpdateAccount(MainScreen.instance.Gmail,
                 float.Parse(txbA00.Text),
                 float.Parse(txbA01.Text),
                 float.Parse(txbA02.Text),

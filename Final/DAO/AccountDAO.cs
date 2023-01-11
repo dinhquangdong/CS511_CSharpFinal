@@ -36,29 +36,29 @@ namespace Final.DAO
             return null;
         } 
 
-        public DataTable GetAccountbyId(int Id)
+        public DataTable GetAccountbyId(string Gmail)
         {
-            DataTable data = DataProvider.Instance.ExcuteQuery("select * from ACCOUNT where Id='" + Id + "'");
+            DataTable data = DataProvider.Instance.ExcuteQuery("select * from ACCOUNT where Gmail=N'" + Gmail + "'");
             return data;
         }
 
         public DataTable GetListAccount()
         {
-            return DataProvider.Instance.ExcuteQuery("Select Id ,UserName ,DisplayName ,Type ,Gender from ACCOUNT");
+            return DataProvider.Instance.ExcuteQuery("Select Gmail ,UserName ,DisplayName ,Type ,Gender from ACCOUNT");
         }
 
-        public bool UpdateAccount(int Id, float A00, float A01, float A02, float B00, float B01, float B02, float C00, float C01,
+        public bool UpdateAccount(string gmail, float A00, float A01, float A02, float B00, float B01, float B02, float C00, float C01,
             float C02, float C03, float D01, float D07, float H00, float T00, float T03, float T04, float T05, float T06)
         {
-            string query = string.Format("update ACCOUNT set A00 = {0},  A01 = {1},  A02 = {2},  B00 = {3},  B01 = {4},  B02 = {5},  C00 = {6},  C01 = {7}, C02 = {8},  C03 = {9},  D01 = {10},  D07 = {11},  H00 = {12},  T00 = {13},  T03 = {14},  T04 = {15},  T05 = {16},  T06 = {17} where Id = {18}",
-                A00, A01, A02, B00, B01, B02, C00, C01, C02, C03, D01, D07, H00, T00, T03, T04, T05, T06, Id);
+            string query = string.Format("update ACCOUNT set A00 = {0},  A01 = {1},  A02 = {2},  B00 = {3},  B01 = {4},  B02 = {5},  C00 = {6},  C01 = {7}, C02 = {8},  C03 = {9},  D01 = {10},  D07 = {11},  H00 = {12},  T00 = {13},  T03 = {14},  T04 = {15},  T05 = {16},  T06 = {17} where Gmail = N'{18}'",
+                A00, A01, A02, B00, B01, B02, C00, C01, C02, C03, D01, D07, H00, T00, T03, T04, T05, T06, gmail);
             int result = DataProvider.Instance.ExcuteNonQuery(query);
             return result > 0;
         }
-        public bool UpdateAccountById(string mk ,int Id)
+        public bool UpdateAccountById(string mk ,string Gmail)
         {
-            string query = string.Format("update ACCOUNT set Password = N'{0}' where Id = {1}",
-                mk,Id);
+            string query = string.Format("update ACCOUNT set Password = N'{0}' where Gmail = N'{1}'",
+                mk, Gmail);
             int result = DataProvider.Instance.ExcuteNonQuery(query);
             return result > 0;
         }
@@ -89,24 +89,24 @@ namespace Final.DAO
             return listTruong;
         }
 
-        public bool ThemTaiKhoan(int id, string userName, string displayName, string gender, int type)
+        public bool ThemTaiKhoan(string Gmail, string userName, string displayName,string pass, string gender, int type = 0)
         {
-            string query = $"INSERT INTO ACCOUNT values ({id}, N'{userName}', N'{displayName}', N'0', {type}, N'{gender}', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);";
+            string query = $"INSERT INTO ACCOUNT (Gmail,UserName, DisplayName, Password, Type, Gender) values (N'{Gmail}', N'{userName}', N'{displayName}',N'{pass}', {type}, N'{gender}');";
             int result = DataProvider.Instance.ExcuteNonQuery(query);
             return result > 0;
         }
 
 
-        public bool DeleteAccountFromId(int id)
+        public bool DeleteAccountFromId(string Gmail)
         {
-            string query = $"delete ACCOUNT where Id = {id}";
+            string query = $"delete ACCOUNT where Gmail = N'{Gmail}'";
             int result = DataProvider.Instance.ExcuteNonQuery(query);
             return result > 0;
         }
 
         public bool updatePass(string username, string pass)
         {
-            string query = $"update ACCOUNT set Password = N'{pass}' where UserName = {username}";
+            string query = $"update ACCOUNT set Password = N'{pass}' where UserName = N'{username}'";
             int result = DataProvider.Instance.ExcuteNonQuery(query);
             return result > 0;
         }

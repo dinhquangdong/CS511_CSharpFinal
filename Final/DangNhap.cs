@@ -48,5 +48,13 @@ namespace Final
             qmk.ShowDialog();
             this.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            DangKy dk = new DangKy();
+            dk.ShowDialog();
+            this.Show();
+        }
     }
 }

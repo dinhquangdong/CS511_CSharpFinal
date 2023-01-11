@@ -112,7 +112,7 @@
             this.panel11 = new System.Windows.Forms.Panel();
             this.txbLoaiTK = new System.Windows.Forms.TextBox();
             this.txbGioiTinh = new System.Windows.Forms.TextBox();
-            this.txbIdNguoiDung = new System.Windows.Forms.TextBox();
+            this.txbGmailNguoiDung = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
@@ -973,7 +973,7 @@
             // 
             this.panel11.Controls.Add(this.txbLoaiTK);
             this.panel11.Controls.Add(this.txbGioiTinh);
-            this.panel11.Controls.Add(this.txbIdNguoiDung);
+            this.panel11.Controls.Add(this.txbGmailNguoiDung);
             this.panel11.Controls.Add(this.label22);
             this.panel11.Controls.Add(this.label21);
             this.panel11.Controls.Add(this.label20);
@@ -1004,14 +1004,14 @@
             this.txbGioiTinh.Size = new System.Drawing.Size(307, 26);
             this.txbGioiTinh.TabIndex = 19;
             // 
-            // txbIdNguoiDung
+            // txbGmailNguoiDung
             // 
-            this.txbIdNguoiDung.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbIdNguoiDung.Location = new System.Drawing.Point(168, 8);
-            this.txbIdNguoiDung.Margin = new System.Windows.Forms.Padding(2);
-            this.txbIdNguoiDung.Name = "txbIdNguoiDung";
-            this.txbIdNguoiDung.Size = new System.Drawing.Size(307, 26);
-            this.txbIdNguoiDung.TabIndex = 18;
+            this.txbGmailNguoiDung.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbGmailNguoiDung.Location = new System.Drawing.Point(168, 8);
+            this.txbGmailNguoiDung.Margin = new System.Windows.Forms.Padding(2);
+            this.txbGmailNguoiDung.Name = "txbGmailNguoiDung";
+            this.txbGmailNguoiDung.Size = new System.Drawing.Size(307, 26);
+            this.txbGmailNguoiDung.TabIndex = 18;
             // 
             // label22
             // 
@@ -1020,9 +1020,9 @@
             this.label22.Location = new System.Drawing.Point(10, 11);
             this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(25, 20);
+            this.label22.Size = new System.Drawing.Size(55, 20);
             this.label22.TabIndex = 17;
-            this.label22.Text = "Id";
+            this.label22.Text = "Gmail";
             // 
             // label21
             // 
@@ -1286,7 +1286,7 @@
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.DataGridView dtgvDanhSachTaiKhoang;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox txbIdNguoiDung;
+        private System.Windows.Forms.TextBox txbGmailNguoiDung;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.TextBox txbLoaiTK;
         private System.Windows.Forms.TextBox txbGioiTinh;

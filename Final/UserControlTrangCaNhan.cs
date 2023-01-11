@@ -23,7 +23,7 @@ namespace Final
         private void UserControlTrangCaNhan_Load(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
-            dt = AccountDAO.Instance.GetAccountbyId(MainScreen.instance.Id);
+            dt = AccountDAO.Instance.GetAccountbyId(MainScreen.instance.Gmail);
             foreach(DataRow r in dt.Rows)
             {
                 lbTen.Text = r[2].ToString() + "(" + r[1].ToString() + ")";
@@ -53,7 +53,7 @@ namespace Final
         {
             if (txbMKcu.Text == MainScreen.instance.matkhau)
             {
-                if (AccountDAO.Instance.UpdateAccountById(txbMKmoi.Text, MainScreen.instance.Id))
+                if (AccountDAO.Instance.UpdateAccountById(txbMKmoi.Text, MainScreen.instance.Gmail))
                 {
                     MessageBox.Show("Thay đổi mật khẩu thành công", "Thông báo!");
                 }

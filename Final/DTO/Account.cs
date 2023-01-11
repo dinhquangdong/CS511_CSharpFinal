@@ -10,11 +10,11 @@ namespace Final.DTO
 {
     public class Account
     {
-        public Account(int Id, string UserName, string DisplayName, string Password, int Type, string Gender, 
+        public Account(string gmail, string UserName, string DisplayName, string Password, int Type, string Gender, 
             float A00, float A01, float A02, float B00, float B01, float B02, float C00, float C01,
             float C02, float C03, float D01, float D07, float H00, float T00, float T03, float T04, float T05, float T06)
         {
-            this.Id = Id;
+            this.Gmail = gmail;
             this.UserName = UserName;
             this.DisplayName = DisplayName;
             this.Password = Password;
@@ -42,7 +42,7 @@ namespace Final.DTO
         
         public Account(DataRow row)
         {
-            this.Id = (int)row["ID"];
+            this.Gmail = row["Gmail"].ToString();
             this.UserName = row["UserName"].ToString();
             this.DisplayName = row["DisplayName"].ToString();
             this.Password = row["Password"].ToString();
@@ -68,15 +68,15 @@ namespace Final.DTO
             this.T06 = (float)Convert.ToDouble(row["T06"].ToString());
         }
 
-        private string _UserName, _DisplayName, _Password, _Gender;
-        private int _Id, _Type;
+        private string _UserName, _DisplayName, _Password, _Gender, _Gmail;
+        private int _Type;
         private float _A00, _A01, _A02, _B00, _B01, _B02, _C00, _C01, _C02, _C03, _D01, _D07, _H00, _T00, _T03, _T04, _T05, _T06;
 
         public string UserName { get => _UserName; set => _UserName = value; }
         public string DisplayName { get => _DisplayName; set => _DisplayName = value; }
         public string Password { get => _Password; set => _Password = value; }
         public string Gender { get => _Gender; set => _Gender = value; }
-        public int Id { get => _Id; set => _Id = value; }
+        public string Gmail { get => _Gmail; set => _Gmail = value; }
         public int Type { get => _Type; set => _Type = value;  }
         public float A00 { get => _A00; set => _A00 = value; }
         public float A01 { get => _A01; set => _A01 = value; }

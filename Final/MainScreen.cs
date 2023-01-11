@@ -20,7 +20,7 @@ namespace Final
         public bool HienDiem = false;
         public bool HienToHopMon = false;
         public string DiaChiCanDen;
-        public int Id;
+        public string Gmail;
         public string matkhau;
         public int type;
         private Account loginAccount;
@@ -37,7 +37,7 @@ namespace Final
             InitializeComponent();
             instance = this;
             this.LoginAccount = acc;
-            Id = acc.Id;
+            Gmail = acc.Gmail;
             type = acc.Type;
             matkhau = acc.Password;
             pblogo.BackgroundImage = Image.FromFile("./Images/logo.png");

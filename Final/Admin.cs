@@ -114,7 +114,7 @@ namespace Final
         }
         void addAccountBinding()
         {
-            txbIdNguoiDung.DataBindings.Add("Text", dtgvDanhSachTaiKhoang.DataSource, "Id");
+            txbGmailNguoiDung.DataBindings.Add("Text", dtgvDanhSachTaiKhoang.DataSource, "Gmail");
             txbTenNguoiDung.DataBindings.Add("Text", dtgvDanhSachTaiKhoang.DataSource, "UserName");
             txbTenHienThi.DataBindings.Add("Text", dtgvDanhSachTaiKhoang.DataSource, "DisplayName");
             txbGioiTinh.DataBindings.Add("Text", dtgvDanhSachTaiKhoang.DataSource, "Gender");
@@ -194,7 +194,7 @@ namespace Final
 
         private void btnThemTK_Click(object sender, EventArgs e)
         {
-            if (AccountDAO.Instance.ThemTaiKhoan(int.Parse(txbIdNguoiDung.Text), txbTenNguoiDung.Text, txbTenHienThi.Text, txbGioiTinh.Text, int.Parse(txbLoaiTK.Text)))
+            if (AccountDAO.Instance.ThemTaiKhoan(txbGmailNguoiDung.Text, txbTenNguoiDung.Text, txbTenHienThi.Text,"0", txbGioiTinh.Text, int.Parse(txbLoaiTK.Text)))
             {
                 MessageBox.Show("Thêm tài khoản thành công");
             }
@@ -321,7 +321,7 @@ namespace Final
 
         private void btnXoaTK_Click(object sender, EventArgs e)
         {
-            if (AccountDAO.Instance.DeleteAccountFromId(int.Parse(txbIdNguoiDung.Text)))
+            if (AccountDAO.Instance.DeleteAccountFromId(txbGmailNguoiDung.Text))
             {
                 MessageBox.Show("Xoá người dùng thành công");
             }
