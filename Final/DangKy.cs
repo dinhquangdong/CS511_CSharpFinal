@@ -21,7 +21,7 @@ namespace Final
         private void btnDK_Click(object sender, EventArgs e)
         {
 
-            if (AccountDAO.Instance.ThemTaiKhoan(int.Parse(txbIdNguoiDung.Text), txbTenNguoiDung.Text, txbTenHienThi.Text, txbGioiTinh.Text, int.Parse(txbLoaiTK.Text)))
+            if (AccountDAO.Instance.ThemTaiKhoan(int.Parse(txbIdNguoiDung.Text), txbTK.Text, txbTenHienThi.Text, txbGioiTinh.Text, int.Parse(txbLoaiTK.Text)))
             {
                 MessageBox.Show("Tạo tài khoản thành công");
             }
