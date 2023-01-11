@@ -27,9 +27,10 @@ namespace Final
             float diem = 0;
             DataRow r = dt.Rows[0];
             diem = float.Parse(r[dt.Columns.IndexOf(comboBox1.Text)].ToString());
+            labelDiemCuaBan.Text = diem.ToString();
             dt3 = CTNganhHocDAO.Instance.GetListNganhTruongDiemChuanFromMaToHopMonvaDiem(comboBox1.Text, diem);
 
-            foreach(DataRow dr in dt3.Rows )
+            foreach (DataRow dr in dt3.Rows )
             {
                 UserControlNganhGoiY u = new UserControlNganhGoiY();
                 u.tentruong = dr[0].ToString();
@@ -54,6 +55,8 @@ namespace Final
         private void comboBox1_TextChanged(object sender, EventArgs e)
         {
             flowLayoutPanel1.Controls.Clear();
+            
+
             DataTable dt = new DataTable();
             dt = AccountDAO.Instance.GetListDiemFromGmail(MainScreen.instance.Gmail);
 
@@ -61,7 +64,10 @@ namespace Final
             float diem = 0;
             DataRow r = dt.Rows[0];
             diem = float.Parse(r[dt.Columns.IndexOf(comboBox1.Text)].ToString());
+            labelDiemCuaBan.Text = diem.ToString();
             dt3 = CTNganhHocDAO.Instance.GetListNganhTruongDiemChuanFromMaToHopMonvaDiem(comboBox1.Text, diem);
+
+            
 
             foreach (DataRow dr in dt3.Rows)
             {

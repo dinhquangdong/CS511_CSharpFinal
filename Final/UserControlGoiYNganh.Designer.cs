@@ -31,6 +31,7 @@
             this.btnBackTinhDiem = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.labelDiemCuaBan = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnBackTinhDiem
@@ -57,17 +58,28 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "A00"});
-            this.comboBox1.Location = new System.Drawing.Point(163, 53);
+            this.comboBox1.Location = new System.Drawing.Point(139, 45);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(183, 32);
             this.comboBox1.TabIndex = 2;
             this.comboBox1.Text = "A00";
             this.comboBox1.TextChanged += new System.EventHandler(this.comboBox1_TextChanged);
             // 
+            // labelDiemCuaBan
+            // 
+            this.labelDiemCuaBan.AutoSize = true;
+            this.labelDiemCuaBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDiemCuaBan.Location = new System.Drawing.Point(387, 46);
+            this.labelDiemCuaBan.Name = "labelDiemCuaBan";
+            this.labelDiemCuaBan.Size = new System.Drawing.Size(241, 31);
+            this.labelDiemCuaBan.TabIndex = 3;
+            this.labelDiemCuaBan.Text = "Điểm của bạn: 22";
+            // 
             // UserControlGoiYNganh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.labelDiemCuaBan);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.btnBackTinhDiem);
@@ -75,6 +87,7 @@
             this.Size = new System.Drawing.Size(1066, 628);
             this.Load += new System.EventHandler(this.UserControlGoiYNganh_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -83,5 +96,6 @@
         private System.Windows.Forms.Button btnBackTinhDiem;
         private System.Windows.Forms.ComboBox comboBox1;
         public System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Label labelDiemCuaBan;
     }
 }
