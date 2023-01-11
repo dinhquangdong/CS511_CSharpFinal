@@ -84,7 +84,7 @@
             this.Controls.Add(this.labelTenNganh);
             this.Controls.Add(this.labelTenTruong);
             this.Name = "UserControlNganhGoiY";
-            this.Size = new System.Drawing.Size(1050, 145);
+            this.Size = new System.Drawing.Size(1041, 145);
             this.Load += new System.EventHandler(this.UserControlNganhGoiY_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

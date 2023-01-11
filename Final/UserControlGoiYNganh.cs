@@ -29,6 +29,16 @@ namespace Final
             diem = float.Parse(r[dt.Columns.IndexOf(comboBox1.Text)].ToString());
             dt3 = CTNganhHocDAO.Instance.GetListNganhTruongDiemChuanFromMaToHopMonvaDiem(comboBox1.Text, diem);
 
+            foreach(DataRow dr in dt3.Rows )
+            {
+                UserControlNganhGoiY u = new UserControlNganhGoiY();
+                u.tentruong = dr[0].ToString();
+                u.tennganh = dr[1].ToString();
+                u.manganh = int.Parse(dr[2].ToString());
+                u.diemchuan = float.Parse(dr[3].ToString());
+                flowLayoutPanel1.Controls.Add(u);
+            }
+
             DataTable dt2 = new DataTable();
             dt2 = ToHopMonDAO.Instance.GetListTHM();
             List<string> listTHM = new List<string>();
@@ -39,6 +49,29 @@ namespace Final
             comboBox1.Items.Clear();
             comboBox1.DataSource = listTHM;
             comboBox1.DisplayMember = "Name";
+        }
+
+        private void comboBox1_TextChanged(object sender, EventArgs e)
+        {
+            flowLayoutPanel1.Controls.Clear();
+            DataTable dt = new DataTable();
+            dt = AccountDAO.Instance.GetListDiemFromGmail(MainScreen.instance.Gmail);
+
+            DataTable dt3 = new DataTable();
+            float diem = 0;
+            DataRow r = dt.Rows[0];
+            diem = float.Parse(r[dt.Columns.IndexOf(comboBox1.Text)].ToString());
+            dt3 = CTNganhHocDAO.Instance.GetListNganhTruongDiemChuanFromMaToHopMonvaDiem(comboBox1.Text, diem);
+
+            foreach (DataRow dr in dt3.Rows)
+            {
+                UserControlNganhGoiY u = new UserControlNganhGoiY();
+                u.tentruong = dr[0].ToString();
+                u.tennganh = dr[1].ToString();
+                u.manganh = int.Parse(dr[2].ToString());
+                u.diemchuan = float.Parse(dr[3].ToString());
+                flowLayoutPanel1.Controls.Add(u);
+            }
         }
     }
 }

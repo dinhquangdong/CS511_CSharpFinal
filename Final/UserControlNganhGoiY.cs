@@ -17,9 +17,15 @@ namespace Final
             InitializeComponent();
         }
 
+        public string tentruong, tennganh;
+        public float diemchuan;
+        public int manganh;
         private void UserControlNganhGoiY_Load(object sender, EventArgs e)
         {
-
+            labelTenTruong.Text = tentruong;
+            labelTenNganh.Text = tennganh;
+            labelDiemChuan.Text = "Điểm chuẩn: " + diemchuan.ToString();
+            labelMaNganh.Text = "Mã ngành: " + manganh.ToString();
         }
     }
 }

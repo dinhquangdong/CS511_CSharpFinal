@@ -77,7 +77,7 @@ namespace Final.DAO
 
         public DataTable GetListNganhTruongDiemChuanFromMaToHopMonvaDiem(string MaThm, float diem)
         {
-            string query = $"select TenTruong, TenNganh, DiemChuan from TRUONG, NGANHHOC, CTNGANHHOC, CTTOHOPMON where TRUONG.MaTruong=CTNGANHHOC.MaTruong and NGANHHOC.MaNganh=CTNGANHHOC.MaNganh and DiemChuan<={diem} and CTTOHOPMON.MaNganh = NGANHHOC.MaNganh and CTTOHOPMON.MaToHopMon = N'{MaThm}'";
+            string query = $"select TenTruong, TenNganh, NGANHHOC.MaNganh, DiemChuan from TRUONG, NGANHHOC, CTNGANHHOC, CTTOHOPMON where TRUONG.MaTruong=CTNGANHHOC.MaTruong and NGANHHOC.MaNganh=CTNGANHHOC.MaNganh and DiemChuan<={diem} and CTTOHOPMON.MaNganh = NGANHHOC.MaNganh and CTTOHOPMON.MaToHopMon = N'{MaThm}'";
             DataTable dt = DataProvider.Instance.ExcuteQuery(query);
             return dt;
         }
