@@ -39,12 +39,12 @@ namespace Final
             smtpClient.EnableSsl = true;
             smtpClient.Port = 587;
             smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
-            smtpClient.Credentials = new NetworkCredential(from,newPass);
+            smtpClient.Credentials = new NetworkCredential(from,password);
             
             try
             {
                 smtpClient.Send(mailMessage);
-                AccountDAO.Instance.updatePass(TenUser, password);
+                AccountDAO.Instance.updatePass(TenUser, newPass);
                 MessageBox.Show("Gửi thành công");
 
             }
