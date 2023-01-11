@@ -13,15 +13,14 @@ namespace Final
 {
     public partial class UserControlTrangCaNhan : UserControl
     {
-
         public UserControlTrangCaNhan()
         {
             InitializeComponent();
-            pbAvatar.BackgroundImage = Image.FromFile("./Images/avatar.png");
         }
 
         private void UserControlTrangCaNhan_Load(object sender, EventArgs e)
         {
+            pbAvatar.BackgroundImage = MainScreen.instance.avatar;
             DataTable dt = new DataTable();
             dt = AccountDAO.Instance.GetAccountbyId(MainScreen.instance.Gmail);
             foreach(DataRow r in dt.Rows)
@@ -65,6 +64,16 @@ namespace Final
             else
             {
                 MessageBox.Show("Sai mật khẩu", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnDoiAnhDaiDien_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog o = new OpenFileDialog();
+            if(o.ShowDialog() == DialogResult.OK)
+            {
+                MainScreen.instance.avatar = Image.FromFile(o.FileName.ToString());
+                pbAvatar.BackgroundImage = MainScreen.instance.avatar;
             }
         }
     }

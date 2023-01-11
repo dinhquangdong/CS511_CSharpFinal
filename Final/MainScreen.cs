@@ -15,6 +15,8 @@ namespace Final
     public partial class MainScreen : Form
     {
         public static MainScreen instance;
+        public Image avatar;
+
         public bool HienTruong = false;
         public bool HienNganh = false;
         public bool HienDiem = false;
@@ -41,6 +43,7 @@ namespace Final
             type = acc.Type;
             matkhau = acc.Password;
             pblogo.BackgroundImage = Image.FromFile("./Images/logo.png");
+            avatar = Image.FromFile("Images/avatar.png");
         }
         private void buttonMapSearch_Click(object sender, EventArgs e)
         {
