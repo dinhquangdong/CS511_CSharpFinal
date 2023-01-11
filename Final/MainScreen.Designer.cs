@@ -53,6 +53,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.buttonMapSearch);
             this.panel1.Controls.Add(this.buttonTimChu);
             this.panel1.Controls.Add(this.panel3);
@@ -116,6 +117,7 @@
             this.wbMap.Location = new System.Drawing.Point(0, 0);
             this.wbMap.MinimumSize = new System.Drawing.Size(20, 20);
             this.wbMap.Name = "wbMap";
+            this.wbMap.ScriptErrorsSuppressed = true;
             this.wbMap.Size = new System.Drawing.Size(1076, 638);
             this.wbMap.TabIndex = 0;
             // 
@@ -129,6 +131,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.pblogo);
             this.panel2.Controls.Add(this.button8);
@@ -168,6 +171,11 @@
             // 
             // button8
             // 
+            this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatAppearance.CheckedBackColor = System.Drawing.Color.Cyan;
+            this.button8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
+            this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Aqua;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.Location = new System.Drawing.Point(0, 511);
             this.button8.Name = "button8";
@@ -179,6 +187,11 @@
             // 
             // button7
             // 
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatAppearance.CheckedBackColor = System.Drawing.Color.Cyan;
+            this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
+            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Aqua;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.Location = new System.Drawing.Point(0, 641);
             this.button7.Name = "button7";
@@ -190,6 +203,11 @@
             // 
             // button5
             // 
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatAppearance.CheckedBackColor = System.Drawing.Color.Cyan;
+            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
+            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Aqua;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.Location = new System.Drawing.Point(0, 447);
             this.button5.Name = "button5";
@@ -201,6 +219,11 @@
             // 
             // button4
             // 
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatAppearance.CheckedBackColor = System.Drawing.Color.Cyan;
+            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Aqua;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Location = new System.Drawing.Point(0, 383);
             this.button4.Name = "button4";
@@ -212,6 +235,11 @@
             // 
             // button3
             // 
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatAppearance.CheckedBackColor = System.Drawing.Color.Cyan;
+            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Aqua;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(0, 319);
             this.button3.Name = "button3";
@@ -223,6 +251,11 @@
             // 
             // button2
             // 
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.CheckedBackColor = System.Drawing.Color.Cyan;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Aqua;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(0, 576);
             this.button2.Name = "button2";
@@ -234,8 +267,13 @@
             // 
             // button1
             // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.CheckedBackColor = System.Drawing.Color.Cyan;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Aqua;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(0, 257);
+            this.button1.Location = new System.Drawing.Point(0, 256);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(308, 68);
             this.button1.TabIndex = 0;

@@ -40,5 +40,13 @@ namespace Final
         {
             return AccountDAO.Instance.Login(userName, passWord);
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            QMK qmk = new QMK();
+            this.Hide();
+            qmk.ShowDialog();
+            this.Show();
+        }
     }
 }

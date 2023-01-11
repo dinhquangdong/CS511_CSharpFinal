@@ -103,5 +103,12 @@ namespace Final.DAO
             int result = DataProvider.Instance.ExcuteNonQuery(query);
             return result > 0;
         }
+
+        public bool updatePass(string username, string pass)
+        {
+            string query = $"update ACCOUNT set Password = N'{pass}' where UserName = {username}";
+            int result = DataProvider.Instance.ExcuteNonQuery(query);
+            return result > 0;
+        }
     }
 }
