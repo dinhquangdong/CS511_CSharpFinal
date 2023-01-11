@@ -39,7 +39,7 @@ namespace Final
             smtpClient.EnableSsl = true;
             smtpClient.Port = 587;
             smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
-            smtpClient.Credentials = new NetworkCredential(from,password);
+            smtpClient.Credentials = new NetworkCredential(from,newPass);
             
             try
             {

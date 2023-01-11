@@ -28,7 +28,7 @@ namespace Final.DAO
 
         public Account GetAccountbyUserName(string userName)
         {
-            DataTable data = DataProvider.Instance.ExcuteQuery("select * from Account where UserName='" + userName + "'");
+            DataTable data = DataProvider.Instance.ExcuteQuery("select * from ACCOUNT where UserName='" + userName + "'");
             foreach (DataRow item in data.Rows)
             {
                 return new Account(item);
@@ -110,5 +110,6 @@ namespace Final.DAO
             int result = DataProvider.Instance.ExcuteNonQuery(query);
             return result > 0;
         }
+
     }
 }
