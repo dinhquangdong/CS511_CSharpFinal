@@ -24,10 +24,10 @@ namespace Final
             dt = AccountDAO.Instance.GetListDiemFromGmail(MainScreen.instance.Gmail);
 
             DataTable dt3 = new DataTable();
+            float diem = 0;
             DataRow r = dt.Rows[0];
-            dt3 = CTNganhHocDAO.Instance.GetListNganhTruongDiemChuanFromMaToHopMonvaDiem(comboBox1.Text, float.Parse(r[comboBox1.Text].ToString()));
-
-
+            diem = float.Parse(r[dt.Columns.IndexOf(comboBox1.Text)].ToString());
+            dt3 = CTNganhHocDAO.Instance.GetListNganhTruongDiemChuanFromMaToHopMonvaDiem(comboBox1.Text, diem);
 
             DataTable dt2 = new DataTable();
             dt2 = ToHopMonDAO.Instance.GetListTHM();
