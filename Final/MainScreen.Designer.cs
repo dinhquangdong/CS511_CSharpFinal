@@ -40,11 +40,9 @@
             this.pblogo = new System.Windows.Forms.PictureBox();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.comboBoxFilter = new System.Windows.Forms.ComboBox();
+            this.button5 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -54,6 +52,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.comboBoxFilter);
             this.panel1.Controls.Add(this.buttonMapSearch);
             this.panel1.Controls.Add(this.buttonTimChu);
             this.panel1.Controls.Add(this.panel3);
@@ -71,7 +70,7 @@
             this.buttonMapSearch.FlatAppearance.BorderSize = 0;
             this.buttonMapSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonMapSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonMapSearch.Location = new System.Drawing.Point(851, 13);
+            this.buttonMapSearch.Location = new System.Drawing.Point(958, 12);
             this.buttonMapSearch.Name = "buttonMapSearch";
             this.buttonMapSearch.Size = new System.Drawing.Size(38, 35);
             this.buttonMapSearch.TabIndex = 4;
@@ -85,7 +84,7 @@
             this.buttonTimChu.FlatAppearance.BorderSize = 0;
             this.buttonTimChu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonTimChu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonTimChu.Location = new System.Drawing.Point(778, 12);
+            this.buttonTimChu.Location = new System.Drawing.Point(905, 11);
             this.buttonTimChu.Name = "buttonTimChu";
             this.buttonTimChu.Size = new System.Drawing.Size(38, 35);
             this.buttonTimChu.TabIndex = 3;
@@ -113,7 +112,6 @@
             // 
             // wbMap
             // 
-            this.wbMap.Dock = System.Windows.Forms.DockStyle.Fill;
             this.wbMap.Location = new System.Drawing.Point(0, 0);
             this.wbMap.MinimumSize = new System.Drawing.Size(20, 20);
             this.wbMap.Name = "wbMap";
@@ -124,7 +122,7 @@
             // textBoxSearch
             // 
             this.textBoxSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxSearch.Location = new System.Drawing.Point(216, 13);
+            this.textBoxSearch.Location = new System.Drawing.Point(349, 12);
             this.textBoxSearch.Name = "textBoxSearch";
             this.textBoxSearch.Size = new System.Drawing.Size(538, 35);
             this.textBoxSearch.TabIndex = 0;
@@ -137,10 +135,7 @@
             this.panel2.Controls.Add(this.button8);
             this.panel2.Controls.Add(this.button7);
             this.panel2.Controls.Add(this.button5);
-            this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.button1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
@@ -201,54 +196,6 @@
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
-            // button5
-            // 
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatAppearance.CheckedBackColor = System.Drawing.Color.Cyan;
-            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Aqua;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(0, 447);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(308, 68);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Tìm kiếm theo điểm";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // button4
-            // 
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.CheckedBackColor = System.Drawing.Color.Cyan;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Aqua;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(0, 383);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(308, 68);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Tìm kiếm theo Tổ hợp môn";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button3
-            // 
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.CheckedBackColor = System.Drawing.Color.Cyan;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Aqua;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(0, 319);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(308, 68);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Tìm kiếm theo ngành";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
             // button2
             // 
             this.button2.FlatAppearance.BorderSize = 0;
@@ -265,21 +212,37 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
+            // comboBoxFilter
             // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.CheckedBackColor = System.Drawing.Color.Cyan;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Aqua;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(0, 256);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(308, 68);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Tất cả các trường";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.comboBoxFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxFilter.FormattingEnabled = true;
+            this.comboBoxFilter.Items.AddRange(new object[] {
+            "Trường",
+            "Ngành",
+            "Tổ hợp môn",
+            "Điểm chuẩn"});
+            this.comboBoxFilter.Location = new System.Drawing.Point(83, 13);
+            this.comboBoxFilter.Name = "comboBoxFilter";
+            this.comboBoxFilter.Size = new System.Drawing.Size(235, 32);
+            this.comboBoxFilter.TabIndex = 5;
+            this.comboBoxFilter.Text = "Trường";
+            this.comboBoxFilter.TextChanged += new System.EventHandler(this.comboBoxFilter_TextChanged);
+            // 
+            // button5
+            // 
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatAppearance.CheckedBackColor = System.Drawing.Color.Cyan;
+            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
+            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Aqua;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(0, 447);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(308, 68);
+            this.button5.TabIndex = 4;
+            this.button5.Text = "Tất cả các trường";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // MainScreen
             // 
@@ -306,11 +269,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox textBoxSearch;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.WebBrowser wbMap;
         private System.Windows.Forms.Button buttonMapSearch;
@@ -320,6 +279,8 @@
         private System.Windows.Forms.PictureBox pblogo;
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.ComboBox comboBoxFilter;
+        private System.Windows.Forms.Button button5;
     }
 }
 

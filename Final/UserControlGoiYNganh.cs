@@ -68,7 +68,6 @@ namespace Final
             dt3 = CTNganhHocDAO.Instance.GetListNganhTruongDiemChuanFromMaToHopMonvaDiem(comboBox1.Text, diem);
 
 
-
             foreach (DataRow dr in dt3.Rows)
             {
                 UserControlNganhGoiY u = new UserControlNganhGoiY();

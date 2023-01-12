@@ -137,29 +137,6 @@ namespace Final
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //Khi ấn vào tất cả các trường
-            HienTruong = true;
-            HienDiem = false;
-            HienNganh = false;
-            HienToHopMon = false;
-
-            wbMap.Visible = false;
-            flowLayoutPanel1.Visible = true;
-            DataTable dt = new DataTable();
-            dt = TruongDAO.Instance.GetListTruong();
-            flowLayoutPanel1.Controls.Clear();
-            foreach (DataRow row in dt.Rows)
-            {
-                UserControlTruong t = new UserControlTruong();
-                t.TenTruong = row[1].ToString();
-                t.AnhTruong = row[7].ToString();
-
-                flowLayoutPanel1.Controls.Add(t);
-            }
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             flowLayoutPanel1.Controls.Clear();
@@ -204,7 +181,7 @@ namespace Final
 
         public void MainScreen_Load1()
         {
-            if(DiaChiCanDen != null)
+            if (DiaChiCanDen != null)
             {
                 flowLayoutPanel1.Visible = false;
                 panel1.Visible = true;
@@ -215,79 +192,125 @@ namespace Final
                 DiaChiCanDen = null;
             }
 
-            
+
             buttonMapSearch.BackColor = Color.Transparent;
             buttonTimChu.BackColor = Color.Transparent;
             buttonTimChu.BackgroundImage = Image.FromFile("Images/search.png");
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            HienTruong = false;
-            HienDiem = false;
-            HienNganh = false;
-            HienToHopMon = true;
-
-
-            flowLayoutPanel1.Controls.Clear();
-            flowLayoutPanel1.Visible = true;
-            wbMap.Visible = false;
-
-            DataTable dt = new DataTable();
-            dt = ToHopMonDAO.Instance.GetListTHM();
-
-            foreach (DataRow row in dt.Rows)
-            {
-                UserControlToHopMon t = new UserControlToHopMon();
-                t.MaTHM = row[0].ToString();
-                t.TenTHM = row[1].ToString();
-
-                flowLayoutPanel1.Controls.Add(t);
-            }
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            //Khi ấn vào tất cả các ngành
-            HienTruong = false;
-            HienDiem = false;
-            HienNganh = true;
-            HienToHopMon = false;
-
-            flowLayoutPanel1.Controls.Clear();
-            flowLayoutPanel1.Visible = true;
-            wbMap.Visible = false;
-
-            DataTable dt = new DataTable();
-            dt = NganhDAO.Instance.GetListNganh();
-
-            foreach (DataRow row in dt.Rows)
-            {
-                UserControlNganh n = new UserControlNganh();
-                n.TenNganh = row[1].ToString();
-                n.MaNganh = (int)row[0];
-
-                flowLayoutPanel1.Controls.Add(n);
-            }
-        }
-
         private void button5_Click(object sender, EventArgs e)
         {
-            HienTruong = false;
-            HienDiem = true;
+            //Khi ấn vào tất cả các trường
+            HienTruong = true;
+            HienDiem = false;
             HienNganh = false;
             HienToHopMon = false;
 
-            flowLayoutPanel1.Controls.Clear();
-            flowLayoutPanel1.Visible = true;
             wbMap.Visible = false;
-
-            for (int i = 0; i <= 2; i++)
+            flowLayoutPanel1.Visible = true;
+            DataTable dt = new DataTable();
+            dt = TruongDAO.Instance.GetListTruong();
+            flowLayoutPanel1.Controls.Clear();
+            foreach (DataRow row in dt.Rows)
             {
-                UserControlDiem t = new UserControlDiem();
-                t.From = 15 + 5 * i;
-                t.To = 20 + 5 * i;
+                UserControlTruong t = new UserControlTruong();
+                t.TenTruong = row[1].ToString();
+                t.AnhTruong = row[7].ToString();
+
                 flowLayoutPanel1.Controls.Add(t);
+            }
+        }
+
+        private void comboBoxFilter_TextChanged(object sender, EventArgs e)
+        {
+            if (comboBoxFilter.Text == "Trường")
+            {
+                //Khi ấn vào tất cả các trường
+                HienTruong = true;
+                HienDiem = false;
+                HienNganh = false;
+                HienToHopMon = false;
+
+                wbMap.Visible = false;
+                flowLayoutPanel1.Visible = true;
+                DataTable dt = new DataTable();
+                dt = TruongDAO.Instance.GetListTruong();
+                flowLayoutPanel1.Controls.Clear();
+                foreach (DataRow row in dt.Rows)
+                {
+                    UserControlTruong t = new UserControlTruong();
+                    t.TenTruong = row[1].ToString();
+                    t.AnhTruong = row[7].ToString();
+
+                    flowLayoutPanel1.Controls.Add(t);
+                }
+            }
+            else if (comboBoxFilter.Text == "Ngành")
+            {
+                //Khi ấn vào tất cả các ngành
+                HienTruong = false;
+                HienDiem = false;
+                HienNganh = true;
+                HienToHopMon = false;
+
+                flowLayoutPanel1.Controls.Clear();
+                flowLayoutPanel1.Visible = true;
+                wbMap.Visible = false;
+
+                DataTable dt = new DataTable();
+                dt = NganhDAO.Instance.GetListNganh();
+
+                foreach (DataRow row in dt.Rows)
+                {
+                    UserControlNganh n = new UserControlNganh();
+                    n.TenNganh = row[1].ToString();
+                    n.MaNganh = (int)row[0];
+
+                    flowLayoutPanel1.Controls.Add(n);
+                }
+            }
+            else if (comboBoxFilter.Text == "Tổ hợp môn")
+            {
+                HienTruong = false;
+                HienDiem = false;
+                HienNganh = false;
+                HienToHopMon = true;
+
+
+                flowLayoutPanel1.Controls.Clear();
+                flowLayoutPanel1.Visible = true;
+                wbMap.Visible = false;
+
+                DataTable dt = new DataTable();
+                dt = ToHopMonDAO.Instance.GetListTHM();
+
+                foreach (DataRow row in dt.Rows)
+                {
+                    UserControlToHopMon t = new UserControlToHopMon();
+                    t.MaTHM = row[0].ToString();
+                    t.TenTHM = row[1].ToString();
+
+                    flowLayoutPanel1.Controls.Add(t);
+                }
+            }
+            else if (comboBoxFilter.Text == "Điểm chuẩn")
+            {
+                HienTruong = false;
+                HienDiem = true;
+                HienNganh = false;
+                HienToHopMon = false;
+
+                flowLayoutPanel1.Controls.Clear();
+                flowLayoutPanel1.Visible = true;
+                wbMap.Visible = false;
+
+                for (int i = 0; i <= 2; i++)
+                {
+                    UserControlDiem t = new UserControlDiem();
+                    t.From = 15 + 5 * i;
+                    t.To = 20 + 5 * i;
+                    flowLayoutPanel1.Controls.Add(t);
+                }
             }
         }
     }
