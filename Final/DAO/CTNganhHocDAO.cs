@@ -81,5 +81,17 @@ namespace Final.DAO
             DataTable dt = DataProvider.Instance.ExcuteQuery(query);
             return dt;
         }
+
+        public string getDiemMinMaxFromMaTruong(string matruong)
+        {
+            string query = $"select Min(DiemChuan), MAX(DiemChuan) from CTNGANHHOC where MaTruong = N'{matruong}'";
+            DataTable dt = DataProvider.Instance.ExcuteQuery(query);
+            string result = "";
+            foreach(DataRow row in dt.Rows)
+            {
+                result += row[0].ToString() + " - "+ row[1].ToString() + " điểm";
+            }
+            return result;
+        }
     }
 }

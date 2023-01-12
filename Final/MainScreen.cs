@@ -44,6 +44,7 @@ namespace Final
             matkhau = acc.Password;
             pblogo.BackgroundImage = Image.FromFile("./Images/logo.png");
             avatar = Image.FromFile("Images/avatar.png");
+            placeholderSearch("Nhập từ khóa cần tìm");
         }
         private void buttonMapSearch_Click(object sender, EventArgs e)
         {
@@ -58,6 +59,31 @@ namespace Final
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message.ToString(), "Error");
+            }
+        }
+
+        public void placeholderSearch(string s)
+        {
+            textBoxSearch.Text = s;
+            textBoxSearch.GotFocus += TextBoxSearch_GotFocus;
+            textBoxSearch.LostFocus += TextBoxSearch_LostFocus;
+        }
+        public void TextBoxSearch_LostFocus(object sender, EventArgs e)
+        {
+
+            if (string.IsNullOrWhiteSpace(textBoxSearch.Text))
+            {
+                textBoxSearch.Text = "Nhập từ khóa cần tìm";
+                textBoxSearch.ForeColor = Color.DimGray;
+            }
+        }
+
+        public void TextBoxSearch_GotFocus(object sender, EventArgs e)
+        {
+            if (textBoxSearch.Text == "Nhập từ khóa cần tìm")
+            {
+                textBoxSearch.Text = "";
+                textBoxSearch.ForeColor = Color.FromArgb(60,60,60);
             }
         }
 
@@ -216,7 +242,7 @@ namespace Final
                 UserControlTruong t = new UserControlTruong();
                 t.TenTruong = row[1].ToString();
                 t.AnhTruong = row[7].ToString();
-
+                t.MinMaxDiem = CTNganhHocDAO.Instance.getDiemMinMaxFromMaTruong(row[0].ToString());
                 flowLayoutPanel1.Controls.Add(t);
             }
         }
@@ -241,7 +267,7 @@ namespace Final
                     UserControlTruong t = new UserControlTruong();
                     t.TenTruong = row[1].ToString();
                     t.AnhTruong = row[7].ToString();
-
+                    t.MinMaxDiem = CTNganhHocDAO.Instance.getDiemMinMaxFromMaTruong(row[0].ToString());
                     flowLayoutPanel1.Controls.Add(t);
                 }
             }

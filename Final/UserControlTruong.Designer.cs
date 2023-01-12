@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControlTruong));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelName = new System.Windows.Forms.Label();
+            this.lbMinMaxDiem = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,25 +50,36 @@
             // labelName
             // 
             this.labelName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelName.Location = new System.Drawing.Point(27, 155);
+            this.labelName.Location = new System.Drawing.Point(27, 147);
             this.labelName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(156, 66);
+            this.labelName.Size = new System.Drawing.Size(156, 74);
             this.labelName.TabIndex = 1;
             this.labelName.Text = "Đại học Công nghệ thông tin";
             this.labelName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.labelName.Click += new System.EventHandler(this.UserControlTruong_Click);
+            // 
+            // lbMinMaxDiem
+            // 
+            this.lbMinMaxDiem.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMinMaxDiem.Location = new System.Drawing.Point(3, 221);
+            this.lbMinMaxDiem.Name = "lbMinMaxDiem";
+            this.lbMinMaxDiem.Size = new System.Drawing.Size(201, 18);
+            this.lbMinMaxDiem.TabIndex = 2;
+            this.lbMinMaxDiem.Text = "label1";
+            this.lbMinMaxDiem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // UserControlTruong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
+            this.Controls.Add(this.lbMinMaxDiem);
             this.Controls.Add(this.labelName);
             this.Controls.Add(this.pictureBox1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UserControlTruong";
-            this.Size = new System.Drawing.Size(207, 221);
+            this.Size = new System.Drawing.Size(207, 255);
             this.Load += new System.EventHandler(this.UserControlTruong_Load);
             this.Click += new System.EventHandler(this.UserControlTruong_Click);
             this.MouseEnter += new System.EventHandler(this.UserControlTruong_MouseEnter);
@@ -81,5 +93,6 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label labelName;
+        private System.Windows.Forms.Label lbMinMaxDiem;
     }
 }

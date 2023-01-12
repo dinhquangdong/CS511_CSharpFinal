@@ -16,6 +16,7 @@ namespace Final
         public static UserControlTruong Instance;
         public string TenTruong;
         public string AnhTruong;
+        public string MinMaxDiem;
         public UserControlTruong()
         {
             InitializeComponent();
@@ -26,6 +27,7 @@ namespace Final
         {
             pictureBox1.BackgroundImage = Image.FromFile("Images/" + AnhTruong);
             labelName.Text = TenTruong;
+            lbMinMaxDiem.Text = MinMaxDiem;
         }
 
         private void UserControlTruong_Click(object sender, EventArgs e)
