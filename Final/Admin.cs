@@ -95,6 +95,8 @@ namespace Final
         {
             txbMaNganh.DataBindings.Add("Text", dtgvDanhSachNganh.DataSource, "MaNganh");
             txbTenNganh.DataBindings.Add("Text", dtgvDanhSachNganh.DataSource, "TenNganh");
+            txbGioiThieuNganh.DataBindings.Add("Text", dtgvDanhSachNganh.DataSource, "GioiThieuNganh");
+            txbLinkAnhNganh.DataBindings.Add("Text", dtgvDanhSachNganh.DataSource, "AnhNganh");
         }
         void addToHopMonBinding()
         {
@@ -106,6 +108,8 @@ namespace Final
             txbMaNganhCT_NH.DataBindings.Add("Text", dtgvDanhSachCTNganh.DataSource, "MaNganh");
             txbMaTruongCT_NH.DataBindings.Add("Text", dtgvDanhSachCTNganh.DataSource, "MaTruong");
             txbDiemChuanCT_NH.DataBindings.Add("Text", dtgvDanhSachCTNganh.DataSource, "DiemChuan");
+            txbHocPhi.DataBindings.Add("Text", dtgvDanhSachCTNganh.DataSource, "HocPhi");
+            txbThoiGianDaoTao.DataBindings.Add("Text", dtgvDanhSachCTNganh.DataSource, "ThoiGianDaoTao");
         }
         void addCTTHMBinding()
         {
