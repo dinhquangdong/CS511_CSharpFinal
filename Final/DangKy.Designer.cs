@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DangKy));
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -42,185 +43,137 @@
             this.txbGioiTinh = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txbTenHienThi = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
+            resources.ApplyResources(this.label3, "label3");
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.label3.Location = new System.Drawing.Point(123, 25);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(133)))), ((int)(((byte)(244)))));
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(146, 37);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "Đăng Ký";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
+            resources.ApplyResources(this.label2, "label2");
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(11, 292);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(108)))), ((int)(((byte)(108)))));
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 24);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "Mật khẩu:";
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
+            resources.ApplyResources(this.label1, "label1");
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(11, 105);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(108)))), ((int)(((byte)(108)))));
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 24);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Tài khoản:";
             // 
             // btnDK
             // 
-            this.btnDK.Location = new System.Drawing.Point(144, 377);
-            this.btnDK.Margin = new System.Windows.Forms.Padding(2);
+            resources.ApplyResources(this.btnDK, "btnDK");
+            this.btnDK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(133)))), ((int)(((byte)(244)))));
+            this.btnDK.FlatAppearance.BorderSize = 0;
+            this.btnDK.ForeColor = System.Drawing.Color.White;
             this.btnDK.Name = "btnDK";
-            this.btnDK.Size = new System.Drawing.Size(113, 30);
-            this.btnDK.TabIndex = 10;
-            this.btnDK.Text = "Đăng Ký";
-            this.btnDK.UseVisualStyleBackColor = true;
+            this.btnDK.UseVisualStyleBackColor = false;
             this.btnDK.Click += new System.EventHandler(this.btnDK_Click);
             // 
             // txbMK
             // 
+            resources.ApplyResources(this.txbMK, "txbMK");
             this.txbMK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(246)))), ((int)(((byte)(254)))));
-            this.txbMK.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txbMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbMK.Location = new System.Drawing.Point(180, 283);
-            this.txbMK.Margin = new System.Windows.Forms.Padding(2);
+            this.txbMK.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbMK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.txbMK.Name = "txbMK";
-            this.txbMK.PasswordChar = '*';
-            this.txbMK.Size = new System.Drawing.Size(205, 29);
-            this.txbMK.TabIndex = 9;
-            this.txbMK.Text = "123";
             // 
             // txbTK
             // 
+            resources.ApplyResources(this.txbTK, "txbTK");
             this.txbTK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(246)))), ((int)(((byte)(254)))));
-            this.txbTK.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txbTK.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbTK.Location = new System.Drawing.Point(180, 96);
-            this.txbTK.Margin = new System.Windows.Forms.Padding(2);
+            this.txbTK.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbTK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.txbTK.Name = "txbTK";
-            this.txbTK.Size = new System.Drawing.Size(205, 29);
-            this.txbTK.TabIndex = 8;
-            this.txbTK.Text = "tvchinh";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
+            resources.ApplyResources(this.label4, "label4");
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(11, 334);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(108)))), ((int)(((byte)(108)))));
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(165, 24);
-            this.label4.TabIndex = 15;
-            this.label4.Text = "Nhập lại mật khẩu:";
             // 
             // txbNLMK
             // 
+            resources.ApplyResources(this.txbNLMK, "txbNLMK");
             this.txbNLMK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(246)))), ((int)(((byte)(254)))));
-            this.txbNLMK.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txbNLMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbNLMK.Location = new System.Drawing.Point(180, 325);
-            this.txbNLMK.Margin = new System.Windows.Forms.Padding(2);
+            this.txbNLMK.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbNLMK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.txbNLMK.Name = "txbNLMK";
-            this.txbNLMK.PasswordChar = '*';
-            this.txbNLMK.Size = new System.Drawing.Size(205, 29);
-            this.txbNLMK.TabIndex = 14;
-            this.txbNLMK.Text = "123";
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
+            resources.ApplyResources(this.label5, "label5");
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(11, 190);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(108)))), ((int)(((byte)(108)))));
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(63, 24);
-            this.label5.TabIndex = 16;
-            this.label5.Text = "Gmail:";
             // 
             // txbGmail
             // 
+            resources.ApplyResources(this.txbGmail, "txbGmail");
             this.txbGmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(246)))), ((int)(((byte)(254)))));
-            this.txbGmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txbGmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbGmail.Location = new System.Drawing.Point(180, 188);
-            this.txbGmail.Margin = new System.Windows.Forms.Padding(2);
+            this.txbGmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbGmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.txbGmail.Name = "txbGmail";
-            this.txbGmail.Size = new System.Drawing.Size(205, 29);
-            this.txbGmail.TabIndex = 17;
-            this.txbGmail.Text = "chinhtv124@gmail.com";
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
+            resources.ApplyResources(this.label6, "label6");
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(11, 242);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(108)))), ((int)(((byte)(108)))));
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(83, 24);
-            this.label6.TabIndex = 18;
-            this.label6.Text = "Giới tính:";
             // 
             // txbGioiTinh
             // 
+            resources.ApplyResources(this.txbGioiTinh, "txbGioiTinh");
             this.txbGioiTinh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(246)))), ((int)(((byte)(254)))));
-            this.txbGioiTinh.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txbGioiTinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbGioiTinh.Location = new System.Drawing.Point(180, 233);
-            this.txbGioiTinh.Margin = new System.Windows.Forms.Padding(2);
+            this.txbGioiTinh.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbGioiTinh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.txbGioiTinh.Name = "txbGioiTinh";
-            this.txbGioiTinh.Size = new System.Drawing.Size(205, 29);
-            this.txbGioiTinh.TabIndex = 19;
-            this.txbGioiTinh.Text = "Nam";
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
+            resources.ApplyResources(this.label7, "label7");
             this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(11, 147);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(108)))), ((int)(((byte)(108)))));
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(151, 24);
-            this.label7.TabIndex = 20;
-            this.label7.Text = "Tên người dùng:";
             // 
             // txbTenHienThi
             // 
+            resources.ApplyResources(this.txbTenHienThi, "txbTenHienThi");
             this.txbTenHienThi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(246)))), ((int)(((byte)(254)))));
-            this.txbTenHienThi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txbTenHienThi.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbTenHienThi.Location = new System.Drawing.Point(180, 145);
-            this.txbTenHienThi.Margin = new System.Windows.Forms.Padding(2);
+            this.txbTenHienThi.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbTenHienThi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.txbTenHienThi.Name = "txbTenHienThi";
-            this.txbTenHienThi.Size = new System.Drawing.Size(205, 29);
-            this.txbTenHienThi.TabIndex = 21;
-            this.txbTenHienThi.Text = "Trương Văn Chinh";
+            // 
+            // label8
+            // 
+            resources.ApplyResources(this.label8, "label8");
+            this.label8.Name = "label8";
+            // 
+            // linkLabel1
+            // 
+            resources.ApplyResources(this.linkLabel1, "linkLabel1");
+            this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(133)))), ((int)(((byte)(244)))));
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // DangKy
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Window;
-            this.BackgroundImage = global::Final.Properties.Resources.dangnhap;
-            this.ClientSize = new System.Drawing.Size(410, 435);
+            this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.txbTenHienThi);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txbGioiTinh);
@@ -235,9 +188,10 @@
             this.Controls.Add(this.btnDK);
             this.Controls.Add(this.txbMK);
             this.Controls.Add(this.txbTK);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "DangKy";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "DangKy";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -259,5 +213,7 @@
         private System.Windows.Forms.TextBox txbGioiTinh;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txbTenHienThi;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

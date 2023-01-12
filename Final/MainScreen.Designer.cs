@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBoxFilter = new System.Windows.Forms.ComboBox();
             this.buttonMapSearch = new System.Windows.Forms.Button();
             this.buttonTimChu = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -40,9 +41,8 @@
             this.pblogo = new System.Windows.Forms.PictureBox();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.comboBoxFilter = new System.Windows.Forms.ComboBox();
             this.button5 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -63,6 +63,28 @@
             this.panel1.Size = new System.Drawing.Size(1076, 711);
             this.panel1.TabIndex = 0;
             // 
+            // comboBoxFilter
+            // 
+            this.comboBoxFilter.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.comboBoxFilter.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.comboBoxFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBoxFilter.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxFilter.ForeColor = System.Drawing.Color.Gray;
+            this.comboBoxFilter.FormattingEnabled = true;
+            this.comboBoxFilter.ItemHeight = 23;
+            this.comboBoxFilter.Items.AddRange(new object[] {
+            "Điểm chuẩn",
+            "Ngành",
+            "Tổ hợp môn",
+            "Trường"});
+            this.comboBoxFilter.Location = new System.Drawing.Point(37, 19);
+            this.comboBoxFilter.Margin = new System.Windows.Forms.Padding(0);
+            this.comboBoxFilter.Name = "comboBoxFilter";
+            this.comboBoxFilter.Size = new System.Drawing.Size(138, 31);
+            this.comboBoxFilter.TabIndex = 5;
+            this.comboBoxFilter.Text = "Trường";
+            this.comboBoxFilter.TextChanged += new System.EventHandler(this.comboBoxFilter_TextChanged);
+            // 
             // buttonMapSearch
             // 
             this.buttonMapSearch.BackColor = System.Drawing.SystemColors.ButtonShadow;
@@ -70,9 +92,9 @@
             this.buttonMapSearch.FlatAppearance.BorderSize = 0;
             this.buttonMapSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonMapSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonMapSearch.Location = new System.Drawing.Point(958, 12);
+            this.buttonMapSearch.Location = new System.Drawing.Point(936, 19);
             this.buttonMapSearch.Name = "buttonMapSearch";
-            this.buttonMapSearch.Size = new System.Drawing.Size(38, 35);
+            this.buttonMapSearch.Size = new System.Drawing.Size(29, 28);
             this.buttonMapSearch.TabIndex = 4;
             this.buttonMapSearch.UseVisualStyleBackColor = false;
             this.buttonMapSearch.Click += new System.EventHandler(this.buttonMapSearch_Click);
@@ -84,9 +106,9 @@
             this.buttonTimChu.FlatAppearance.BorderSize = 0;
             this.buttonTimChu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonTimChu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonTimChu.Location = new System.Drawing.Point(905, 11);
+            this.buttonTimChu.Location = new System.Drawing.Point(901, 19);
             this.buttonTimChu.Name = "buttonTimChu";
-            this.buttonTimChu.Size = new System.Drawing.Size(38, 35);
+            this.buttonTimChu.Size = new System.Drawing.Size(29, 28);
             this.buttonTimChu.TabIndex = 3;
             this.buttonTimChu.UseVisualStyleBackColor = false;
             this.buttonTimChu.Click += new System.EventHandler(this.button6_Click);
@@ -121,10 +143,12 @@
             // 
             // textBoxSearch
             // 
+            this.textBoxSearch.BackColor = System.Drawing.SystemColors.Menu;
+            this.textBoxSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxSearch.Location = new System.Drawing.Point(349, 12);
+            this.textBoxSearch.Location = new System.Drawing.Point(198, 19);
             this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(538, 35);
+            this.textBoxSearch.Size = new System.Drawing.Size(687, 28);
             this.textBoxSearch.TabIndex = 0;
             // 
             // panel2
@@ -146,11 +170,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Aqua;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.RoyalBlue;
             this.label1.Location = new System.Drawing.Point(12, 5);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(274, 37);
+            this.label1.Size = new System.Drawing.Size(286, 33);
             this.label1.TabIndex = 9;
             this.label1.Text = "Tìm Trường Đại Học";
             // 
@@ -167,11 +191,12 @@
             // button8
             // 
             this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatAppearance.CheckedBackColor = System.Drawing.Color.Cyan;
-            this.button8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
-            this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Aqua;
+            this.button8.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(169)))), ((int)(((byte)(255)))));
+            this.button8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(169)))), ((int)(((byte)(255)))));
+            this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(169)))), ((int)(((byte)(255)))));
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.button8.Location = new System.Drawing.Point(0, 511);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(308, 68);
@@ -183,11 +208,12 @@
             // button7
             // 
             this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatAppearance.CheckedBackColor = System.Drawing.Color.Cyan;
-            this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
-            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Aqua;
+            this.button7.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(169)))), ((int)(((byte)(255)))));
+            this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(169)))), ((int)(((byte)(255)))));
+            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(169)))), ((int)(((byte)(255)))));
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.button7.Location = new System.Drawing.Point(0, 641);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(308, 68);
@@ -196,46 +222,15 @@
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
-            // button2
-            // 
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.CheckedBackColor = System.Drawing.Color.Cyan;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Aqua;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(0, 576);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(308, 68);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Thông tin bản thân";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // comboBoxFilter
-            // 
-            this.comboBoxFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxFilter.FormattingEnabled = true;
-            this.comboBoxFilter.Items.AddRange(new object[] {
-            "Trường",
-            "Ngành",
-            "Tổ hợp môn",
-            "Điểm chuẩn"});
-            this.comboBoxFilter.Location = new System.Drawing.Point(83, 13);
-            this.comboBoxFilter.Name = "comboBoxFilter";
-            this.comboBoxFilter.Size = new System.Drawing.Size(235, 32);
-            this.comboBoxFilter.TabIndex = 5;
-            this.comboBoxFilter.Text = "Trường";
-            this.comboBoxFilter.TextChanged += new System.EventHandler(this.comboBoxFilter_TextChanged);
-            // 
             // button5
             // 
             this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatAppearance.CheckedBackColor = System.Drawing.Color.Cyan;
-            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aqua;
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Aqua;
+            this.button5.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(169)))), ((int)(((byte)(255)))));
+            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(169)))), ((int)(((byte)(255)))));
+            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(169)))), ((int)(((byte)(255)))));
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.button5.Location = new System.Drawing.Point(0, 447);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(308, 68);
@@ -243,6 +238,23 @@
             this.button5.Text = "Tất cả các trường";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button2
+            // 
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(169)))), ((int)(((byte)(255)))));
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(169)))), ((int)(((byte)(255)))));
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(169)))), ((int)(((byte)(255)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button2.Location = new System.Drawing.Point(0, 576);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(308, 68);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Thông tin bản thân";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // MainScreen
             // 
@@ -279,8 +291,8 @@
         private System.Windows.Forms.PictureBox pblogo;
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.ComboBox comboBoxFilter;
         private System.Windows.Forms.Button button5;
+        public System.Windows.Forms.ComboBox comboBoxFilter;
     }
 }
 

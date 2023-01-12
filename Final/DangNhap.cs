@@ -49,7 +49,7 @@ namespace Final
             this.Show();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Hide();
             DangKy dk = new DangKy();
