@@ -84,7 +84,7 @@
             this.lbThoiGian.AutoSize = true;
             this.lbThoiGian.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbThoiGian.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.lbThoiGian.Location = new System.Drawing.Point(217, 19);
+            this.lbThoiGian.Location = new System.Drawing.Point(296, 19);
             this.lbThoiGian.Name = "lbThoiGian";
             this.lbThoiGian.Size = new System.Drawing.Size(18, 19);
             this.lbThoiGian.TabIndex = 5;
@@ -95,7 +95,7 @@
             this.lbLoaiTG.AutoSize = true;
             this.lbLoaiTG.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbLoaiTG.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.lbLoaiTG.Location = new System.Drawing.Point(234, 19);
+            this.lbLoaiTG.Location = new System.Drawing.Point(217, 19);
             this.lbLoaiTG.Name = "lbLoaiTG";
             this.lbLoaiTG.Size = new System.Drawing.Size(73, 19);
             this.lbLoaiTG.TabIndex = 6;

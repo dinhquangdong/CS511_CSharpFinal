@@ -102,6 +102,7 @@
             this.Name = "UserControlNganhGoiY";
             this.Size = new System.Drawing.Size(1039, 143);
             this.Load += new System.EventHandler(this.UserControlNganhGoiY_Load);
+            this.Click += new System.EventHandler(this.UserControlNganhGoiY_Click);
             ((System.ComponentModel.ISupportInitialize)(this.pbAnhNganh)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

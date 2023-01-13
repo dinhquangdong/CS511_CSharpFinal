@@ -82,17 +82,9 @@ namespace Final
                 dg.TenHienThi = displayname;
                 dg.SoSao = sosao;
                 dg.LoiNhanXet = binhluan;
-                int time = (DateTime.Now.TimeOfDay.Hours - thoigian.TimeOfDay.Hours);
-                if(time <= 24)
-                {
-                    dg.LoaiTG = "giờ trước";
-                    dg.ThoiGianBL = time.ToString();
-                }
-                else
-                {
-                    dg.ThoiGianBL = (DateTime.Now.DayOfYear - thoigian.DayOfYear).ToString();
-                    dg.LoaiTG = "ngày trước";
-                }
+                string time = (DateTime.Now.TimeOfDay).ToString();
+                dg.LoaiTG = "vào lúc ";
+                dg.ThoiGianBL = time;
                 flpnDanhGia.Controls.Add(dg);
             }
         }
