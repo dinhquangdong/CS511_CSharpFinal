@@ -32,6 +32,7 @@ namespace Final
             richTextBoxGioiThieuNganh.Text = r[2].ToString();
             pictureBox1.BackgroundImage = Image.FromFile("Images/" + r[3].ToString());
 
+            label2.Text = $"Các trường có ngành {r[1].ToString()}:";
             dataGridViewDanhSachCacTruongCoNganh.Controls.Clear();
             dataGridViewDanhSachCacTruongCoNganh.DataSource = CTNganhHocDAO.Instance.GetListTruongFromMaNganh(int.Parse(r[0].ToString()));
 
@@ -63,8 +64,9 @@ namespace Final
                 dg.TenHienThi = displayname;
                 dg.SoSao = sosao;
                 dg.LoiNhanXet = binhluan;
-                string time = DateTime.Now.ToString("HH:mm:ss tt");
+                string time = thoigian.ToString("HH:mm:ss tt");
                 dg.ThoiGianBL = time;
+
                 flpnDanhGia.Controls.Add(dg);
             }
         }

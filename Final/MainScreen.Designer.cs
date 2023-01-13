@@ -38,23 +38,23 @@
             this.wbMap = new System.Windows.Forms.WebBrowser();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pbBorderTop = new System.Windows.Forms.PictureBox();
+            this.pbBorderBottom = new System.Windows.Forms.PictureBox();
+            this.pbselectBtn = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pblogo = new System.Windows.Forms.PictureBox();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.pbselectBtn = new System.Windows.Forms.PictureBox();
-            this.pbBorderBottom = new System.Windows.Forms.PictureBox();
-            this.pbBorderTop = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pblogo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbselectBtn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbBorderBottom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBorderTop)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBorderBottom)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbselectBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pblogo)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -190,6 +190,33 @@
             this.panel2.Size = new System.Drawing.Size(308, 711);
             this.panel2.TabIndex = 1;
             // 
+            // pbBorderTop
+            // 
+            this.pbBorderTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(133)))), ((int)(((byte)(244)))));
+            this.pbBorderTop.Location = new System.Drawing.Point(0, 430);
+            this.pbBorderTop.Name = "pbBorderTop";
+            this.pbBorderTop.Size = new System.Drawing.Size(308, 2);
+            this.pbBorderTop.TabIndex = 12;
+            this.pbBorderTop.TabStop = false;
+            // 
+            // pbBorderBottom
+            // 
+            this.pbBorderBottom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(133)))), ((int)(((byte)(244)))));
+            this.pbBorderBottom.Location = new System.Drawing.Point(0, 498);
+            this.pbBorderBottom.Name = "pbBorderBottom";
+            this.pbBorderBottom.Size = new System.Drawing.Size(308, 2);
+            this.pbBorderBottom.TabIndex = 11;
+            this.pbBorderBottom.TabStop = false;
+            // 
+            // pbselectBtn
+            // 
+            this.pbselectBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(133)))), ((int)(((byte)(244)))));
+            this.pbselectBtn.Location = new System.Drawing.Point(298, 430);
+            this.pbselectBtn.Name = "pbselectBtn";
+            this.pbselectBtn.Size = new System.Drawing.Size(10, 68);
+            this.pbselectBtn.TabIndex = 10;
+            this.pbselectBtn.TabStop = false;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -233,6 +260,7 @@
             // 
             // button7
             // 
+            this.button7.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.button7.FlatAppearance.BorderSize = 0;
             this.button7.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(169)))), ((int)(((byte)(255)))));
             this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(169)))), ((int)(((byte)(255)))));
@@ -288,33 +316,6 @@
             this.button2.MouseLeave += new System.EventHandler(this.button5_MouseLeave);
             this.button2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button5_MouseMove);
             // 
-            // pbselectBtn
-            // 
-            this.pbselectBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(133)))), ((int)(((byte)(244)))));
-            this.pbselectBtn.Location = new System.Drawing.Point(298, 430);
-            this.pbselectBtn.Name = "pbselectBtn";
-            this.pbselectBtn.Size = new System.Drawing.Size(10, 68);
-            this.pbselectBtn.TabIndex = 10;
-            this.pbselectBtn.TabStop = false;
-            // 
-            // pbBorderBottom
-            // 
-            this.pbBorderBottom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(133)))), ((int)(((byte)(244)))));
-            this.pbBorderBottom.Location = new System.Drawing.Point(0, 498);
-            this.pbBorderBottom.Name = "pbBorderBottom";
-            this.pbBorderBottom.Size = new System.Drawing.Size(308, 2);
-            this.pbBorderBottom.TabIndex = 11;
-            this.pbBorderBottom.TabStop = false;
-            // 
-            // pbBorderTop
-            // 
-            this.pbBorderTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(133)))), ((int)(((byte)(244)))));
-            this.pbBorderTop.Location = new System.Drawing.Point(0, 430);
-            this.pbBorderTop.Name = "pbBorderTop";
-            this.pbBorderTop.Size = new System.Drawing.Size(308, 2);
-            this.pbBorderTop.TabIndex = 12;
-            this.pbBorderTop.TabStop = false;
-            // 
             // MainScreen
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -331,10 +332,10 @@
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pblogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbselectBtn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbBorderBottom)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBorderTop)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBorderBottom)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbselectBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pblogo)).EndInit();
             this.ResumeLayout(false);
 
         }

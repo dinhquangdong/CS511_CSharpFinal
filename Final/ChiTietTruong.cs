@@ -82,11 +82,10 @@ namespace Final
                 dg.TenHienThi = displayname;
                 dg.SoSao = sosao;
                 dg.LoiNhanXet = binhluan;
-                string time = DateTime.Now.ToString("HH:mm:ss tt");
+                string time = thoigian.ToString("HH:mm:ss tt");
                 dg.ThoiGianBL = time;
                 flpnDanhGia.Controls.Add(dg);
             }
         }
-
     }
 }
