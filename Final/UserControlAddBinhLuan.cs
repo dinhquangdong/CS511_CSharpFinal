@@ -30,8 +30,16 @@ namespace Final
 
         private void btnBinhLuan_Click(object sender, EventArgs e)
         {
-            BinhLuanTruongDAO.Instance.insertBinhLuan(ChiTietTruong.instance.MaTruong, MainScreen.instance.Gmail, txbBinhLuan.Text, saodg);
-            ChiTietTruong.instance.reLoad();
+            if (MainScreen.instance.BLNganh == false)
+            {
+                BinhLuanTruongDAO.Instance.insertBinhLuan(ChiTietTruong.instance.MaTruong, MainScreen.instance.Gmail, txbBinhLuan.Text, saodg);
+                ChiTietTruong.instance.reLoad();
+            }
+            else
+            {
+                BinhLuanNganhDAO.Instance.insertBinhLuan(ChiTietNganh.instance.MaNganh, MainScreen.instance.Gmail, txbBinhLuan.Text, saodg);
+                ChiTietNganh.instance.reLoad();
+            }
         }
     }
 }

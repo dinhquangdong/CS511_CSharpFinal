@@ -93,5 +93,10 @@ namespace Final.DAO
             }
             return result;
         }
+
+        public DataTable GetListTruongFromMaNganh(int manganh)
+        {
+            return DataProvider.Instance.ExcuteQuery($"select *, TRUONG.TenTruong from CTNGANHHOC, TRUONG where TRUONG.MaTruong = CTNGANHHOC.MaTruong and CTNGANHHOC.MaNganh = {manganh}");
+        }
     }
 }

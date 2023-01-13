@@ -32,6 +32,7 @@ namespace Final
 
         private void UserControlTruong_Click(object sender, EventArgs e)
         {
+            MainScreen.instance.BLNganh = false;
             string MaTruong = TruongDAO.Instance.GetMaTruong(TenTruong);
             DataTable dt = new DataTable();
             dt = TruongDAO.Instance.GetThongTinTruongFromMaTruong(MaTruong);

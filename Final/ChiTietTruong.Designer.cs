@@ -59,9 +59,10 @@
             // 
             this.pictureBoxLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.BackgroundImage")));
             this.pictureBoxLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBoxLogo.Location = new System.Drawing.Point(29, 35);
+            this.pictureBoxLogo.Location = new System.Drawing.Point(39, 43);
+            this.pictureBoxLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(430, 351);
+            this.pictureBoxLogo.Size = new System.Drawing.Size(573, 432);
             this.pictureBoxLogo.TabIndex = 0;
             this.pictureBoxLogo.TabStop = false;
             // 
@@ -70,7 +71,8 @@
             this.labelTenTruong.AutoSize = true;
             this.labelTenTruong.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTenTruong.ForeColor = System.Drawing.Color.Blue;
-            this.labelTenTruong.Location = new System.Drawing.Point(28, 18);
+            this.labelTenTruong.Location = new System.Drawing.Point(37, 22);
+            this.labelTenTruong.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelTenTruong.Name = "labelTenTruong";
             this.labelTenTruong.Size = new System.Drawing.Size(571, 37);
             this.labelTenTruong.TabIndex = 1;
@@ -80,7 +82,8 @@
             // 
             this.labelMaTruong.AutoSize = true;
             this.labelMaTruong.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMaTruong.Location = new System.Drawing.Point(32, 410);
+            this.labelMaTruong.Location = new System.Drawing.Point(43, 505);
+            this.labelMaTruong.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelMaTruong.Name = "labelMaTruong";
             this.labelMaTruong.Size = new System.Drawing.Size(206, 33);
             this.labelMaTruong.TabIndex = 2;
@@ -90,7 +93,8 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(32, 451);
+            this.label1.Location = new System.Drawing.Point(43, 555);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(119, 33);
             this.label1.TabIndex = 3;
@@ -100,7 +104,8 @@
             // 
             this.linkLabel.AutoSize = true;
             this.linkLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel.Location = new System.Drawing.Point(158, 451);
+            this.linkLabel.Location = new System.Drawing.Point(211, 555);
+            this.linkLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linkLabel.Name = "linkLabel";
             this.linkLabel.Size = new System.Drawing.Size(201, 31);
             this.linkLabel.TabIndex = 4;
@@ -111,10 +116,11 @@
             // labelDiaChi
             // 
             this.labelDiaChi.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDiaChi.Location = new System.Drawing.Point(32, 500);
-            this.labelDiaChi.MaximumSize = new System.Drawing.Size(600, 100);
+            this.labelDiaChi.Location = new System.Drawing.Point(43, 615);
+            this.labelDiaChi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelDiaChi.MaximumSize = new System.Drawing.Size(800, 123);
             this.labelDiaChi.Name = "labelDiaChi";
-            this.labelDiaChi.Size = new System.Drawing.Size(430, 77);
+            this.labelDiaChi.Size = new System.Drawing.Size(573, 95);
             this.labelDiaChi.TabIndex = 5;
             this.labelDiaChi.Text = "Địa chỉ: Khu phố 6, P.Linh Trung, Tp.Thủ Đức, Tp.Hồ Chí Minh.";
             // 
@@ -122,7 +128,8 @@
             // 
             this.labelSoDienThoai.AutoSize = true;
             this.labelSoDienThoai.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSoDienThoai.Location = new System.Drawing.Point(32, 599);
+            this.labelSoDienThoai.Location = new System.Drawing.Point(43, 737);
+            this.labelSoDienThoai.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelSoDienThoai.Name = "labelSoDienThoai";
             this.labelSoDienThoai.Size = new System.Drawing.Size(312, 33);
             this.labelSoDienThoai.TabIndex = 6;
@@ -132,7 +139,8 @@
             // 
             this.labelSaoDanhGia.AutoSize = true;
             this.labelSaoDanhGia.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSaoDanhGia.Location = new System.Drawing.Point(32, 641);
+            this.labelSaoDanhGia.Location = new System.Drawing.Point(43, 789);
+            this.labelSaoDanhGia.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelSaoDanhGia.Name = "labelSaoDanhGia";
             this.labelSaoDanhGia.Size = new System.Drawing.Size(218, 33);
             this.labelSaoDanhGia.TabIndex = 7;
@@ -142,10 +150,11 @@
             // 
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox1.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox1.Location = new System.Drawing.Point(35, 111);
+            this.richTextBox1.Location = new System.Drawing.Point(47, 137);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(849, 212);
+            this.richTextBox1.Size = new System.Drawing.Size(1132, 261);
             this.richTextBox1.TabIndex = 8;
             this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
             // 
@@ -154,9 +163,10 @@
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(398, 599);
+            this.button1.Location = new System.Drawing.Point(531, 737);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(61, 58);
+            this.button1.Size = new System.Drawing.Size(81, 71);
             this.button1.TabIndex = 10;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -165,7 +175,8 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(26, 336);
+            this.label2.Location = new System.Drawing.Point(35, 414);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(276, 33);
             this.label2.TabIndex = 11;
@@ -193,7 +204,8 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.Location = new System.Drawing.Point(35, 372);
+            this.dataGridView1.Location = new System.Drawing.Point(47, 458);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -206,14 +218,15 @@
             this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            this.dataGridView1.Size = new System.Drawing.Size(849, 260);
+            this.dataGridView1.Size = new System.Drawing.Size(1132, 320);
             this.dataGridView1.TabIndex = 12;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(29, 68);
+            this.label3.Location = new System.Drawing.Point(39, 84);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(225, 33);
             this.label3.TabIndex = 13;
@@ -232,16 +245,18 @@
             this.panel1.Controls.Add(this.labelTenTruong);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(465, 0);
+            this.panel1.Location = new System.Drawing.Point(620, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(919, 711);
+            this.panel1.Size = new System.Drawing.Size(1225, 875);
             this.panel1.TabIndex = 14;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(794, 672);
+            this.label6.Location = new System.Drawing.Point(1059, 827);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(89, 23);
             this.label6.TabIndex = 17;
@@ -251,7 +266,8 @@
             // 
             this.lbSoLuotBL.AutoSize = true;
             this.lbSoLuotBL.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSoLuotBL.Location = new System.Drawing.Point(780, 671);
+            this.lbSoLuotBL.Location = new System.Drawing.Point(1040, 826);
+            this.lbSoLuotBL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbSoLuotBL.Name = "lbSoLuotBL";
             this.lbSoLuotBL.Size = new System.Drawing.Size(20, 23);
             this.lbSoLuotBL.TabIndex = 16;
@@ -259,16 +275,18 @@
             // 
             // flpnDanhGia
             // 
-            this.flpnDanhGia.Location = new System.Drawing.Point(36, 704);
+            this.flpnDanhGia.Location = new System.Drawing.Point(48, 866);
+            this.flpnDanhGia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flpnDanhGia.Name = "flpnDanhGia";
-            this.flpnDanhGia.Size = new System.Drawing.Size(847, 592);
+            this.flpnDanhGia.Size = new System.Drawing.Size(1129, 729);
             this.flpnDanhGia.TabIndex = 15;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(29, 664);
+            this.label4.Location = new System.Drawing.Point(39, 817);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(291, 33);
             this.label4.TabIndex = 14;
@@ -276,10 +294,10 @@
             // 
             // ChiTietTruong
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(1384, 711);
+            this.ClientSize = new System.Drawing.Size(1845, 875);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.labelSaoDanhGia);
@@ -289,6 +307,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.labelMaTruong);
             this.Controls.Add(this.pictureBoxLogo);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ChiTietTruong";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ChiTietTruong";

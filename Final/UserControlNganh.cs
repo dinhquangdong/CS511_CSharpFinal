@@ -36,23 +36,14 @@ namespace Final
 
         private void labelTenNganh_Click(object sender, EventArgs e)
         {
-            //MainScreen.instance.HienTruong = true;
-            //MainScreen.instance.HienDiem = false;
-            //MainScreen.instance.HienNganh = false;
-            //MainScreen.instance.HienToHopMon = false;
+            MainScreen.instance.BLNganh = true;
 
-            //DataTable dt = new DataTable();
-            //dt = TruongDAO.Instance.GetTruongFromMaNganh(MaNganh);
-            //MainScreen.instance.flowLayoutPanel1.Controls.Clear();            
-            //foreach (DataRow row in dt.Rows)
-            //{
-            //    UserControlTruong t = new UserControlTruong();
-            //    t.TenTruong = row[0].ToString();
-            //    t.AnhTruong = row[1].ToString();
+            DataTable dt = new DataTable();
+            dt = NganhDAO.Instance.GetThongTinNganhFromMaNganh(MaNganh);
 
-            //    MainScreen.instance.flowLayoutPanel1.Controls.Add(t);
-            //}
             ChiTietNganh ctn = new ChiTietNganh();
+            ctn.ThongTinNganh = dt;
+
             MainScreen.instance.Hide();
             ctn.ShowDialog();
             MainScreen.instance.Show();

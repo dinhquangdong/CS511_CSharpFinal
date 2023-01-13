@@ -20,6 +20,10 @@ namespace Final.DAO
         }
         private NganhDAO() { }
 
+        public DataTable GetThongTinNganhFromMaNganh(int manganh)
+        {
+            return DataProvider.Instance.ExcuteQuery($"select * from NGANHHOC where MaNganh = {manganh}");
+        }
 
         public DataTable GetListNganh()
         {
@@ -88,5 +92,6 @@ namespace Final.DAO
             int result = DataProvider.Instance.ExcuteNonQuery(query);
             return result > 0;
         }
+            
     }
 }

@@ -17,6 +17,8 @@ namespace Final
         public static MainScreen instance;
         public Image avatar;
 
+        public bool BLNganh = false;
+
         public bool HienTruong = false;
         public bool HienNganh = false;
         public bool HienDiem = false;
