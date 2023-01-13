@@ -39,7 +39,7 @@ namespace Final
                 u.diemchuan = float.Parse(dr[3].ToString());
                 flowLayoutPanel1.Controls.Add(u);
             }
-
+            lbSoNganh.Text = dt3.Rows.Count.ToString();
             DataTable dt2 = new DataTable();
             dt2 = ToHopMonDAO.Instance.GetListTHM();
             List<string> listTHM = new List<string>();
@@ -77,6 +77,12 @@ namespace Final
                 u.diemchuan = float.Parse(dr[3].ToString());
                 flowLayoutPanel1.Controls.Add(u);
             }
+        }
+
+        private void btnBackTinhDiem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MainScreen.instance.flowLayoutPanel1.Controls[0].Visible = true;
         }
     }
 }

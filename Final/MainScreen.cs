@@ -187,6 +187,7 @@ namespace Final
             wbMap.Visible = false;
             UserControlTinhDiem td = new UserControlTinhDiem();
             flowLayoutPanel1.Controls.Add(td);
+            
         }
 
         private void MainScreen_Load(object sender, EventArgs e)

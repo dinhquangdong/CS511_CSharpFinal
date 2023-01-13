@@ -148,6 +148,9 @@ namespace Final
                 float.Parse(txbT06.Text)
                 );
 
+
+            
+
         }
 
         private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
@@ -162,9 +165,10 @@ namespace Final
 
         private void button1_Click(object sender, EventArgs e)
         {
-            UserControlGoiYNganh u = new UserControlGoiYNganh();
             this.Hide();
-            MainScreen.instance.flowLayoutPanel1.Controls.Add(u);
+            UserControlGoiYNganh gyn = new UserControlGoiYNganh();
+            MainScreen.instance.flowLayoutPanel1.Controls.Add(gyn);
+
         }
     }
 }

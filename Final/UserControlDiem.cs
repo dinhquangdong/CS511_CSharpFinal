@@ -28,6 +28,22 @@ namespace Final
             ntd.ShowDialog();
         }
 
+        private void UserControlDiem_MouseLeave(object sender, EventArgs e)
+        {
+            this.BackColor = Color.White;
+            labelFrom.ForeColor = Color.FromArgb(66, 133, 244);
+            labelTo.ForeColor = Color.FromArgb(66, 133, 244);
+            pictureBox1.BackColor = Color.FromArgb(66, 133, 244);
+        }
+
+        private void UserControlDiem_MouseMove(object sender, MouseEventArgs e)
+        {
+            this.BackColor = Color.FromArgb(66, 133, 244);
+            labelFrom.ForeColor = Color.White;
+            labelTo.ForeColor = Color.White;
+            pictureBox1.BackColor = Color.White;
+        }
+
         public UserControlDiem()
         {
             InitializeComponent();

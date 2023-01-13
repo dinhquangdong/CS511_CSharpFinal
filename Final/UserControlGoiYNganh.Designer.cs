@@ -28,37 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnBackTinhDiem = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.labelDiemCuaBan = new System.Windows.Forms.Label();
+            this.btnBackTinhDiem = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lbSoNganh = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // btnBackTinhDiem
-            // 
-            this.btnBackTinhDiem.Location = new System.Drawing.Point(19, 7);
-            this.btnBackTinhDiem.Name = "btnBackTinhDiem";
-            this.btnBackTinhDiem.Size = new System.Drawing.Size(83, 56);
-            this.btnBackTinhDiem.TabIndex = 0;
-            this.btnBackTinhDiem.Text = "Trở về";
-            this.btnBackTinhDiem.UseVisualStyleBackColor = true;
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 106);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 101);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1066, 522);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1066, 527);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
             // comboBox1
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.comboBox1.DropDownHeight = 108;
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox1.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.IntegralHeight = false;
             this.comboBox1.Items.AddRange(new object[] {
             "A00"});
-            this.comboBox1.Location = new System.Drawing.Point(139, 45);
+            this.comboBox1.Location = new System.Drawing.Point(123, 50);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(183, 32);
             this.comboBox1.TabIndex = 2;
@@ -69,16 +68,79 @@
             // 
             this.labelDiemCuaBan.AutoSize = true;
             this.labelDiemCuaBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDiemCuaBan.Location = new System.Drawing.Point(387, 46);
+            this.labelDiemCuaBan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(133)))), ((int)(((byte)(244)))));
+            this.labelDiemCuaBan.Location = new System.Drawing.Point(495, 50);
             this.labelDiemCuaBan.Name = "labelDiemCuaBan";
-            this.labelDiemCuaBan.Size = new System.Drawing.Size(241, 31);
+            this.labelDiemCuaBan.Size = new System.Drawing.Size(46, 31);
             this.labelDiemCuaBan.TabIndex = 3;
-            this.labelDiemCuaBan.Text = "Điểm của bạn: 22";
+            this.labelDiemCuaBan.Text = "22";
+            // 
+            // btnBackTinhDiem
+            // 
+            this.btnBackTinhDiem.BackgroundImage = global::Final.Properties.Resources.back;
+            this.btnBackTinhDiem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnBackTinhDiem.FlatAppearance.BorderSize = 0;
+            this.btnBackTinhDiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBackTinhDiem.Location = new System.Drawing.Point(19, 19);
+            this.btnBackTinhDiem.Name = "btnBackTinhDiem";
+            this.btnBackTinhDiem.Size = new System.Drawing.Size(39, 34);
+            this.btnBackTinhDiem.TabIndex = 0;
+            this.btnBackTinhDiem.UseVisualStyleBackColor = true;
+            this.btnBackTinhDiem.Click += new System.EventHandler(this.btnBackTinhDiem_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(133)))), ((int)(((byte)(244)))));
+            this.label1.Location = new System.Drawing.Point(119, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(124, 24);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Tổ hợp môn:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(133)))), ((int)(((byte)(244)))));
+            this.label2.Location = new System.Drawing.Point(410, 21);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(218, 24);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Điểm theo tổ hơp môn:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(133)))), ((int)(((byte)(244)))));
+            this.label3.Location = new System.Drawing.Point(723, 19);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(286, 24);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Số ngành phù hợp với số điểm:";
+            // 
+            // lbSoNganh
+            // 
+            this.lbSoNganh.AutoSize = true;
+            this.lbSoNganh.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSoNganh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(133)))), ((int)(((byte)(244)))));
+            this.lbSoNganh.Location = new System.Drawing.Point(839, 50);
+            this.lbSoNganh.Name = "lbSoNganh";
+            this.lbSoNganh.Size = new System.Drawing.Size(46, 31);
+            this.lbSoNganh.TabIndex = 7;
+            this.lbSoNganh.Text = "22";
             // 
             // UserControlGoiYNganh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.lbSoNganh);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.labelDiemCuaBan);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.flowLayoutPanel1);
@@ -97,5 +159,9 @@
         private System.Windows.Forms.ComboBox comboBox1;
         public System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label labelDiemCuaBan;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbSoNganh;
     }
 }
