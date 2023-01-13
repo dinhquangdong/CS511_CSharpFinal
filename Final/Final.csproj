@@ -121,6 +121,12 @@
     <Compile Include="UserControlGoiYNganh.Designer.cs">
       <DependentUpon>UserControlGoiYNganh.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlKetQuaDiemTHM.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlKetQuaDiemTHM.Designer.cs">
+      <DependentUpon>UserControlKetQuaDiemTHM.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControlNganh.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -196,6 +202,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlGoiYNganh.resx">
       <DependentUpon>UserControlGoiYNganh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlKetQuaDiemTHM.resx">
+      <DependentUpon>UserControlKetQuaDiemTHM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlNganh.resx">
       <DependentUpon>UserControlNganh.cs</DependentUpon>
@@ -395,6 +404,19 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\back2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\result_.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\result_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\result_.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

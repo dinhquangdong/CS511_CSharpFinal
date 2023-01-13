@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.comboBoxFilter = new System.Windows.Forms.ComboBox();
             this.buttonMapSearch = new System.Windows.Forms.Button();
             this.buttonTimChu = new System.Windows.Forms.Button();
@@ -43,12 +44,17 @@
             this.button7 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbselectBtn = new System.Windows.Forms.PictureBox();
+            this.pbBorderBottom = new System.Windows.Forms.PictureBox();
+            this.pbBorderTop = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pblogo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbselectBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBorderBottom)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBorderTop)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -65,6 +71,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1076, 711);
             this.panel1.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.pictureBox1.Location = new System.Drawing.Point(189, 19);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(9, 31);
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
             // 
             // comboBoxFilter
             // 
@@ -160,6 +175,9 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.pbBorderTop);
+            this.panel2.Controls.Add(this.pbBorderBottom);
+            this.panel2.Controls.Add(this.pbselectBtn);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.pblogo);
             this.panel2.Controls.Add(this.button8);
@@ -203,13 +221,15 @@
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button8.Location = new System.Drawing.Point(0, 511);
+            this.button8.Location = new System.Drawing.Point(0, 501);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(308, 68);
             this.button8.TabIndex = 7;
             this.button8.Text = "Tính điểm";
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.button8.MouseLeave += new System.EventHandler(this.button5_MouseLeave);
+            this.button8.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button5_MouseMove);
             // 
             // button7
             // 
@@ -220,13 +240,15 @@
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button7.Location = new System.Drawing.Point(0, 641);
+            this.button7.Location = new System.Drawing.Point(0, 643);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(308, 68);
             this.button7.TabIndex = 6;
             this.button7.Text = "Admin";
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.button7.MouseLeave += new System.EventHandler(this.button5_MouseLeave);
+            this.button7.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button5_MouseMove);
             // 
             // button5
             // 
@@ -237,13 +259,15 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button5.Location = new System.Drawing.Point(0, 447);
+            this.button5.Location = new System.Drawing.Point(0, 430);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(308, 68);
             this.button5.TabIndex = 4;
             this.button5.Text = "Tất cả các trường";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.button5.MouseLeave += new System.EventHandler(this.button5_MouseLeave);
+            this.button5.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button5_MouseMove);
             // 
             // button2
             // 
@@ -254,22 +278,42 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button2.Location = new System.Drawing.Point(0, 576);
+            this.button2.Location = new System.Drawing.Point(0, 572);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(308, 68);
             this.button2.TabIndex = 1;
             this.button2.Text = "Thông tin bản thân";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.MouseLeave += new System.EventHandler(this.button5_MouseLeave);
+            this.button2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.button5_MouseMove);
             // 
-            // pictureBox1
+            // pbselectBtn
             // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.pictureBox1.Location = new System.Drawing.Point(189, 19);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(9, 31);
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
+            this.pbselectBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(133)))), ((int)(((byte)(244)))));
+            this.pbselectBtn.Location = new System.Drawing.Point(298, 430);
+            this.pbselectBtn.Name = "pbselectBtn";
+            this.pbselectBtn.Size = new System.Drawing.Size(10, 68);
+            this.pbselectBtn.TabIndex = 10;
+            this.pbselectBtn.TabStop = false;
+            // 
+            // pbBorderBottom
+            // 
+            this.pbBorderBottom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(133)))), ((int)(((byte)(244)))));
+            this.pbBorderBottom.Location = new System.Drawing.Point(0, 498);
+            this.pbBorderBottom.Name = "pbBorderBottom";
+            this.pbBorderBottom.Size = new System.Drawing.Size(308, 2);
+            this.pbBorderBottom.TabIndex = 11;
+            this.pbBorderBottom.TabStop = false;
+            // 
+            // pbBorderTop
+            // 
+            this.pbBorderTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(133)))), ((int)(((byte)(244)))));
+            this.pbBorderTop.Location = new System.Drawing.Point(0, 430);
+            this.pbBorderTop.Name = "pbBorderTop";
+            this.pbBorderTop.Size = new System.Drawing.Size(308, 2);
+            this.pbBorderTop.TabIndex = 12;
+            this.pbBorderTop.TabStop = false;
             // 
             // MainScreen
             // 
@@ -283,11 +327,14 @@
             this.Load += new System.EventHandler(this.MainScreen_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pblogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbselectBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBorderBottom)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBorderTop)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -310,6 +357,9 @@
         private System.Windows.Forms.Button button5;
         public System.Windows.Forms.ComboBox comboBoxFilter;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbselectBtn;
+        private System.Windows.Forms.PictureBox pbBorderTop;
+        private System.Windows.Forms.PictureBox pbBorderBottom;
     }
 }
 

@@ -41,14 +41,15 @@ namespace Final
             MainScreen.instance.MainScreen_Load1();
         }
 
-        private void UserControlTruong_MouseEnter(object sender, EventArgs e)
-        {
-            this.BackColor = Color.SkyBlue;
-        }
-
         private void UserControlTruong_MouseLeave(object sender, EventArgs e)
         {
             this.BackColor = Color.White;
+        }
+
+        private void UserControlTruong_MouseMove(object sender, MouseEventArgs e)
+        {
+            this.BackColor = Color.FromArgb(66, 166, 244);
+            labelName.ForeColor = Color.White;
         }
     }
 }

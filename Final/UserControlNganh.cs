@@ -16,7 +16,7 @@ namespace Final
         public static UserControlNganh Instance;
         public string TenNganh;
         public int MaNganh;
-
+        public string AnhNganh = "messi.png";
         public UserControlNganh()
         {
             InitializeComponent();
@@ -27,6 +27,7 @@ namespace Final
         {
             labelMaNganh.Text = "Mã ngành: " + MaNganh;
             labelTenNganh.Text = TenNganh;
+            pbAnhNganh.BackgroundImage = Image.FromFile("./Images/" + AnhNganh);
         }
 
         private void labelTenNganh_Click(object sender, EventArgs e)

@@ -165,6 +165,9 @@ namespace Final
 
         private void button2_Click(object sender, EventArgs e)
         {
+            pbselectBtn.Location = new Point(298, button2.Location.Y);
+            pbBorderTop.Location = new Point(0, button2.Location.Y);
+            pbBorderBottom.Location = new Point(0, button2.Location.Y + button2.Height);
             flowLayoutPanel1.Controls.Clear();
             flowLayoutPanel1.Visible = true;
             wbMap.Visible = false;
@@ -174,6 +177,9 @@ namespace Final
 
         private void button7_Click(object sender, EventArgs e)
         {
+            pbselectBtn.Location = new Point(298, button7.Location.Y);
+            pbBorderTop.Location = new Point(0, button7.Location.Y);
+            pbBorderBottom.Location = new Point(0, button7.Location.Y + button7.Height);
             Admin ins = new Admin();
             this.Hide();
             ins.ShowDialog();
@@ -182,6 +188,9 @@ namespace Final
 
         private void button8_Click(object sender, EventArgs e)
         {
+            pbselectBtn.Location = new Point(298, button8.Location.Y);
+            pbBorderTop.Location = new Point(0, button8.Location.Y);
+            pbBorderBottom.Location = new Point(0, button8.Location.Y + button8.Height);
             flowLayoutPanel1.Controls.Clear();
             flowLayoutPanel1.Visible = true;
             wbMap.Visible = false;
@@ -232,6 +241,10 @@ namespace Final
             HienDiem = false;
             HienNganh = false;
             HienToHopMon = false;
+
+            pbselectBtn.Location = new Point(298, button5.Location.Y);
+            pbBorderTop.Location = new Point(0, button5.Location.Y);
+            pbBorderBottom.Location = new Point(0, button5.Location.Y + button5.Height);
 
             wbMap.Visible = false;
             flowLayoutPanel1.Visible = true;
@@ -339,6 +352,18 @@ namespace Final
                     flowLayoutPanel1.Controls.Add(t);
                 }
             }
+        }
+
+        private void button5_MouseMove(object sender, MouseEventArgs e)
+        {
+            Button btn = sender as Button;
+            btn.ForeColor = Color.White;
+        }
+
+        private void button5_MouseLeave(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+            btn.ForeColor = Color.FromArgb(105, 105, 105);
         }
     }
 }
