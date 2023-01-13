@@ -54,5 +54,25 @@ namespace Final
 
             this.Close();
         }
+
+        void LoadDanhGia()
+        {
+            flpnDanhGia.Controls.Clear();
+            DataTable dt = new DataTable();
+            dt = BinhLuanTruongDAO.Instance.getListDanhGiaFromMaTruong(labelMaTruong.Text);
+            foreach(DataRow r in dt.Rows)
+            {
+                string displayname = AccountDAO.Instance.getDisplayNameByGmail(r[1].ToString());
+                string sosao = r[3].ToString();
+                string binhluan = r[2].ToString();
+                DateTime thoigian = (DateTime)r[4];
+                UserControlDanhGia dg = new UserControlDanhGia();
+                dg.TenHienThi = displayname;
+                dg.SoSao = sosao;
+                dg.LoiNhanXet = binhluan;
+                dg.ThoiGianBL = (DateTime.Now.DayOfYear - thoigian.DayOfYear).ToString();
+                flpnDanhGia.Controls.Add(dg);
+            }
+        }
     }
 }

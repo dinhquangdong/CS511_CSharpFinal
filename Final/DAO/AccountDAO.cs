@@ -117,5 +117,19 @@ namespace Final.DAO
             int result = DataProvider.Instance.ExcuteNonQuery(query);
             return result > 0;
         }
+
+        public string getDisplayNameByGmail(string Gmail)
+        {
+            string result = "";
+
+            DataTable dt = new DataTable();
+            string query = $"select DislayName from ACCOUNT where Gmail = N'{Gmail}'";
+            dt = DataProvider.Instance.ExcuteQuery(query);
+            foreach(DataRow r in dt.Rows)
+            {
+                result = r[0].ToString();
+            }
+            return result;
+        }
     }
 }

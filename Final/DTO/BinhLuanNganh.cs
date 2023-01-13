@@ -9,12 +9,13 @@ namespace Final.DTO
 {
     public class BinhLuanNganh
     {
-        public BinhLuanNganh(string MaNganh, string Gmail, string BinhLuan, float saoDanhgia)
+        public BinhLuanNganh(string MaNganh, string Gmail, string BinhLuan, float saoDanhgia, DateTime? thoigiandanhgia)
         {
             this.MaNganh = MaNganh;
             this.Gmail = Gmail;
             this.BinhLuan = BinhLuan;
             this.SaoDanhGia = saoDanhgia;
+            this.ThoiGian = thoigiandanhgia;
         }
         public BinhLuanNganh(DataRow row)
         {
@@ -22,16 +23,19 @@ namespace Final.DTO
             this.Gmail = row["Gmail"].ToString();
             this.BinhLuan = row["BinhLuan"].ToString();
             this.SaoDanhGia = (float)Convert.ToDouble(row["SaoDanhGia"].ToString());
+            this.ThoiGian = (DateTime?)row["ThoiGian"];
         }
 
         private string maNganh;
         private string gmail;
         private string binhLuan;
         private float saoDanhGia;
+        private DateTime? thoiGian;
 
         public string MaNganh { get => maNganh; set => maNganh = value; }
         public string Gmail { get => gmail; set => gmail = value; }
         public string BinhLuan { get => binhLuan; set => binhLuan = value; }
         public float SaoDanhGia { get => saoDanhGia; set => saoDanhGia = value; }
+        public DateTime? ThoiGian { get => thoiGian; set => thoiGian = value; }
     }
 }

@@ -17,5 +17,13 @@ namespace Final.DAO
             private set { BinhLuanTruongDAO.instance = value; }
         }
         private BinhLuanTruongDAO() { }
+
+        public DataTable getListDanhGiaFromMaTruong(string Matruong)
+        {
+            DataTable dt = new DataTable();
+            string query = $"select * from BINHLUANTRUONG where MaTruong = N'{Matruong}'";
+            dt = DataProvider.Instance.ExcuteQuery(query);
+            return dt;
+        }
     }
 }
