@@ -44,6 +44,7 @@ namespace Final
         private void UserControlTruong_MouseLeave(object sender, EventArgs e)
         {
             this.BackColor = Color.White;
+            labelName.ForeColor = Color.FromArgb(66, 166, 244);
         }
 
         private void UserControlTruong_MouseMove(object sender, MouseEventArgs e)

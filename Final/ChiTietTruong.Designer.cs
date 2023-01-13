@@ -44,6 +44,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -72,20 +73,20 @@
             // labelMaTruong
             // 
             this.labelMaTruong.AutoSize = true;
-            this.labelMaTruong.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMaTruong.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMaTruong.Location = new System.Drawing.Point(32, 410);
             this.labelMaTruong.Name = "labelMaTruong";
-            this.labelMaTruong.Size = new System.Drawing.Size(209, 31);
+            this.labelMaTruong.Size = new System.Drawing.Size(206, 33);
             this.labelMaTruong.TabIndex = 2;
             this.labelMaTruong.Text = "Mã trường: QSC";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(28, 451);
+            this.label1.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(32, 451);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 31);
+            this.label1.Size = new System.Drawing.Size(119, 33);
             this.label1.TabIndex = 3;
             this.label1.Text = "Website:";
             // 
@@ -93,7 +94,7 @@
             // 
             this.linkLabel.AutoSize = true;
             this.linkLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel.Location = new System.Drawing.Point(143, 451);
+            this.linkLabel.Location = new System.Drawing.Point(158, 451);
             this.linkLabel.Name = "linkLabel";
             this.linkLabel.Size = new System.Drawing.Size(201, 31);
             this.linkLabel.TabIndex = 4;
@@ -103,31 +104,31 @@
             // 
             // labelDiaChi
             // 
-            this.labelDiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDiaChi.Location = new System.Drawing.Point(32, 495);
-            this.labelDiaChi.MaximumSize = new System.Drawing.Size(430, 64);
+            this.labelDiaChi.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDiaChi.Location = new System.Drawing.Point(32, 500);
+            this.labelDiaChi.MaximumSize = new System.Drawing.Size(600, 100);
             this.labelDiaChi.Name = "labelDiaChi";
-            this.labelDiaChi.Size = new System.Drawing.Size(430, 64);
+            this.labelDiaChi.Size = new System.Drawing.Size(430, 77);
             this.labelDiaChi.TabIndex = 5;
             this.labelDiaChi.Text = "Địa chỉ: Khu phố 6, P.Linh Trung, Tp.Thủ Đức, Tp.Hồ Chí Minh.";
             // 
             // labelSoDienThoai
             // 
             this.labelSoDienThoai.AutoSize = true;
-            this.labelSoDienThoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSoDienThoai.Location = new System.Drawing.Point(36, 584);
+            this.labelSoDienThoai.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSoDienThoai.Location = new System.Drawing.Point(32, 599);
             this.labelSoDienThoai.Name = "labelSoDienThoai";
-            this.labelSoDienThoai.Size = new System.Drawing.Size(308, 31);
+            this.labelSoDienThoai.Size = new System.Drawing.Size(312, 33);
             this.labelSoDienThoai.TabIndex = 6;
             this.labelSoDienThoai.Text = "Điện thoại:  0123456789";
             // 
             // labelSaoDanhGia
             // 
             this.labelSaoDanhGia.AutoSize = true;
-            this.labelSaoDanhGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSaoDanhGia.Location = new System.Drawing.Point(36, 626);
+            this.labelSaoDanhGia.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSaoDanhGia.Location = new System.Drawing.Point(32, 641);
             this.labelSaoDanhGia.Name = "labelSaoDanhGia";
-            this.labelSaoDanhGia.Size = new System.Drawing.Size(212, 31);
+            this.labelSaoDanhGia.Size = new System.Drawing.Size(218, 33);
             this.labelSaoDanhGia.TabIndex = 7;
             this.labelSaoDanhGia.Text = "Đánh giá: 4.5 / 5";
             // 
@@ -135,10 +136,10 @@
             // 
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox1.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox1.Location = new System.Drawing.Point(490, 100);
+            this.richTextBox1.Location = new System.Drawing.Point(490, 128);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(849, 240);
+            this.richTextBox1.Size = new System.Drawing.Size(849, 212);
             this.richTextBox1.TabIndex = 8;
             this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
             // 
@@ -157,16 +158,17 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(481, 353);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(276, 31);
+            this.label2.Size = new System.Drawing.Size(276, 33);
             this.label2.TabIndex = 11;
-            this.label2.Text = "Danh sách các ngành";
+            this.label2.Text = "Danh sách các ngành:";
             // 
             // dataGridView1
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
@@ -201,12 +203,23 @@
             this.dataGridView1.Size = new System.Drawing.Size(845, 275);
             this.dataGridView1.TabIndex = 12;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(484, 85);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(225, 33);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Giới thiệu trường:";
+            // 
             // ChiTietTruong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1384, 711);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button1);
@@ -244,5 +257,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label3;
     }
 }

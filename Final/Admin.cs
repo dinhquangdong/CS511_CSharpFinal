@@ -359,5 +359,10 @@ namespace Final
         {
             loadlistCTTHM();
         }
+
+        private void btnReloadAd_Click(object sender, EventArgs e)
+        {
+            loadlistAccount();
+        }
     }
 }
