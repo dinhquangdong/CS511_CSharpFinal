@@ -37,6 +37,7 @@ namespace Final
                 u.tennganh = dr[1].ToString();
                 u.manganh = int.Parse(dr[2].ToString());
                 u.diemchuan = float.Parse(dr[3].ToString());
+                u.AnhNganh = dr[4].ToString();
                 flowLayoutPanel1.Controls.Add(u);
             }
             lbSoNganh.Text = dt3.Rows.Count.ToString();
@@ -75,8 +76,10 @@ namespace Final
                 u.tennganh = dr[1].ToString();
                 u.manganh = int.Parse(dr[2].ToString());
                 u.diemchuan = float.Parse(dr[3].ToString());
+                u.AnhNganh = dr[4].ToString();
                 flowLayoutPanel1.Controls.Add(u);
             }
+            lbSoNganh.Text = dt3.Rows.Count.ToString();
         }
 
         private void btnBackTinhDiem_Click(object sender, EventArgs e)

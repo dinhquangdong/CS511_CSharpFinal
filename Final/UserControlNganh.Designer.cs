@@ -58,6 +58,7 @@
             this.labelMaNganh.TabIndex = 1;
             this.labelMaNganh.Text = "Mã ngành: 7480101";
             this.labelMaNganh.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelMaNganh.Click += new System.EventHandler(this.labelTenNganh_Click);
             // 
             // pbAnhNganh
             // 
@@ -68,6 +69,7 @@
             this.pbAnhNganh.Size = new System.Drawing.Size(128, 128);
             this.pbAnhNganh.TabIndex = 2;
             this.pbAnhNganh.TabStop = false;
+            this.pbAnhNganh.Click += new System.EventHandler(this.labelTenNganh_Click);
             // 
             // UserControlNganh
             // 
@@ -81,6 +83,7 @@
             this.Name = "UserControlNganh";
             this.Size = new System.Drawing.Size(488, 128);
             this.Load += new System.EventHandler(this.UserControlNganh_Load);
+            this.Click += new System.EventHandler(this.labelTenNganh_Click);
             ((System.ComponentModel.ISupportInitialize)(this.pbAnhNganh)).EndInit();
             this.ResumeLayout(false);
 

@@ -52,6 +52,12 @@
     <Compile Include="Admin.Designer.cs">
       <DependentUpon>Admin.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChiTietNganh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChiTietNganh.Designer.cs">
+      <DependentUpon>ChiTietNganh.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChiTietTruong.cs">
       <SubType>Form</SubType>
     </Compile>
