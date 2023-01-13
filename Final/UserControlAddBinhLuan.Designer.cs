@@ -142,8 +142,7 @@
             // 
             // UserControlAddBinhLuan
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.Controls.Add(this.rd5);
             this.Controls.Add(this.rd4);
             this.Controls.Add(this.rd3);
@@ -152,6 +151,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnBinhLuan);
             this.Controls.Add(this.txbBinhLuan);
+            this.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "UserControlAddBinhLuan";
             this.Size = new System.Drawing.Size(837, 79);
             this.ResumeLayout(false);

@@ -33,7 +33,7 @@ namespace Final
             pictureBox1.BackgroundImage = Image.FromFile("Images/" + r[3].ToString());
 
             dataGridViewDanhSachCacTruongCoNganh.Controls.Clear();
-            dataGridViewDanhSachCacTruongCoNganh.DataSource = CTNganhHocDAO.Instance.GetListTruongFromMaNganh(MaNganh);
+            dataGridViewDanhSachCacTruongCoNganh.DataSource = CTNganhHocDAO.Instance.GetListTruongFromMaNganh(int.Parse(r[0].ToString()));
 
 
             LoadDanhGia(int.Parse(r[0].ToString()));
