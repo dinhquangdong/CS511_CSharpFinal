@@ -25,5 +25,12 @@ namespace Final.DAO
             dt = DataProvider.Instance.ExcuteQuery(query);
             return dt;
         }
+
+        public bool insertBinhLuan(string MaTruong, string gmail, string binhluan,int sosao)
+        {
+            string query = $"Insert BINHLUANTRUONG (MaTruong, Gmail, BinhLuan, SaoDanhGia, ThoiGian) values (N'{MaTruong}', N'{gmail}', N'{binhluan}',{sosao}, GetDate())";
+            int result = DataProvider.Instance.ExcuteNonQuery(query);
+            return result > 0;
+        }
     }
 }

@@ -123,7 +123,7 @@ namespace Final.DAO
             string result = "";
 
             DataTable dt = new DataTable();
-            string query = $"select DislayName from ACCOUNT where Gmail = N'{Gmail}'";
+            string query = $"select DisplayName from ACCOUNT where Gmail = N'{Gmail}'";
             dt = DataProvider.Instance.ExcuteQuery(query);
             foreach(DataRow r in dt.Rows)
             {

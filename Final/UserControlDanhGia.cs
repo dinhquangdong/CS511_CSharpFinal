@@ -16,6 +16,7 @@ namespace Final
         public string LoiNhanXet;
         public string SoSao;
         public string ThoiGianBL;
+        public string LoaiTG;
         public UserControlDanhGia()
         {
             InitializeComponent();
@@ -29,6 +30,7 @@ namespace Final
             lbBinhLuan.Text = LoiNhanXet;
             lbSoSao.Text = SoSao;
             lbThoiGian.Text = ThoiGianBL;
+            lbLoaiTG.Text = LoaiTG;
         }
     }
 }

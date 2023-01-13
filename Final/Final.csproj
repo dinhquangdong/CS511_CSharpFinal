@@ -113,6 +113,12 @@
     <Compile Include="QMK.Designer.cs">
       <DependentUpon>QMK.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlAddBinhLuan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlAddBinhLuan.Designer.cs">
+      <DependentUpon>UserControlAddBinhLuan.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControlDanhGia.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -206,6 +212,9 @@
     </Compile>
     <EmbeddedResource Include="QMK.resx">
       <DependentUpon>QMK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlAddBinhLuan.resx">
+      <DependentUpon>UserControlAddBinhLuan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlDanhGia.resx">
       <DependentUpon>UserControlDanhGia.cs</DependentUpon>

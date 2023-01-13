@@ -22,7 +22,7 @@ namespace Final.DTO
             this.MaTruong = row["MaTruong"].ToString();
             this.Gmail = row["Gmail"].ToString();
             this.BinhLuan = row["BinhLuan"].ToString();
-            this.SaoDanhGia = (float)Convert.ToDouble(row["SaoDanhGia"].ToString());
+            this.SaoDanhGia = (int)row["SaoDanhGia"];
             this.ThoiGian = (DateTime?)row["ThoiGian"];
         }
 

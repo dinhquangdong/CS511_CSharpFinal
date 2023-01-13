@@ -34,7 +34,7 @@
             this.pbSao = new System.Windows.Forms.PictureBox();
             this.lbBinhLuan = new System.Windows.Forms.Label();
             this.lbThoiGian = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbLoaiTG = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbSao)).BeginInit();
             this.SuspendLayout();
             // 
@@ -90,23 +90,22 @@
             this.lbThoiGian.TabIndex = 5;
             this.lbThoiGian.Text = "1";
             // 
-            // label2
+            // lbLoaiTG
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.label2.Location = new System.Drawing.Point(234, 19);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 19);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "giờ trước";
+            this.lbLoaiTG.AutoSize = true;
+            this.lbLoaiTG.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbLoaiTG.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.lbLoaiTG.Location = new System.Drawing.Point(234, 19);
+            this.lbLoaiTG.Name = "lbLoaiTG";
+            this.lbLoaiTG.Size = new System.Drawing.Size(73, 19);
+            this.lbLoaiTG.TabIndex = 6;
+            this.lbLoaiTG.Text = "giờ trước";
             // 
             // UserControlDanhGia
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.White;
-            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Controls.Add(this.label2);
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Controls.Add(this.lbLoaiTG);
             this.Controls.Add(this.lbThoiGian);
             this.Controls.Add(this.lbBinhLuan);
             this.Controls.Add(this.pbSao);
@@ -114,7 +113,7 @@
             this.Controls.Add(this.lbTenHienThiUser);
             this.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "UserControlDanhGia";
-            this.Size = new System.Drawing.Size(835, 138);
+            this.Size = new System.Drawing.Size(837, 139);
             this.Load += new System.EventHandler(this.UserControlDanhGia_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbSao)).EndInit();
             this.ResumeLayout(false);
@@ -129,6 +128,6 @@
         private System.Windows.Forms.PictureBox pbSao;
         private System.Windows.Forms.Label lbBinhLuan;
         private System.Windows.Forms.Label lbThoiGian;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbLoaiTG;
     }
 }
