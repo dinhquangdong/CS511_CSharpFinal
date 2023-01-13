@@ -33,6 +33,7 @@
             this.labelTenNganh = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.flpnDanhGia = new System.Windows.Forms.FlowLayoutPanel();
             this.label5 = new System.Windows.Forms.Label();
             this.labelSoLuotBL = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -40,7 +41,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.richTextBoxGioiThieuNganh = new System.Windows.Forms.RichTextBox();
-            this.flpnDanhGia = new System.Windows.Forms.FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDanhSachCacTruongCoNganh)).BeginInit();
@@ -90,6 +90,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(934, 711);
             this.panel1.TabIndex = 3;
+            // 
+            // flpnDanhGia
+            // 
+            this.flpnDanhGia.AutoScroll = true;
+            this.flpnDanhGia.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.flpnDanhGia.Location = new System.Drawing.Point(36, 606);
+            this.flpnDanhGia.Name = "flpnDanhGia";
+            this.flpnDanhGia.Size = new System.Drawing.Size(849, 248);
+            this.flpnDanhGia.TabIndex = 18;
             // 
             // label5
             // 
@@ -161,14 +170,6 @@
             this.richTextBoxGioiThieuNganh.Size = new System.Drawing.Size(849, 261);
             this.richTextBoxGioiThieuNganh.TabIndex = 9;
             this.richTextBoxGioiThieuNganh.Text = resources.GetString("richTextBoxGioiThieuNganh.Text");
-            // 
-            // flpnDanhGia
-            // 
-            this.flpnDanhGia.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.flpnDanhGia.Location = new System.Drawing.Point(36, 606);
-            this.flpnDanhGia.Name = "flpnDanhGia";
-            this.flpnDanhGia.Size = new System.Drawing.Size(849, 248);
-            this.flpnDanhGia.TabIndex = 18;
             // 
             // ChiTietNganh
             // 

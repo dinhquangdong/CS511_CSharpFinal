@@ -78,6 +78,7 @@
             // rd1
             // 
             this.rd1.AutoSize = true;
+            this.rd1.Checked = true;
             this.rd1.Location = new System.Drawing.Point(151, 16);
             this.rd1.Name = "rd1";
             this.rd1.Size = new System.Drawing.Size(51, 17);
@@ -95,7 +96,6 @@
             this.rd2.Name = "rd2";
             this.rd2.Size = new System.Drawing.Size(51, 17);
             this.rd2.TabIndex = 4;
-            this.rd2.TabStop = true;
             this.rd2.Tag = "2";
             this.rd2.Text = "2 sao";
             this.rd2.UseVisualStyleBackColor = true;
@@ -108,7 +108,6 @@
             this.rd3.Name = "rd3";
             this.rd3.Size = new System.Drawing.Size(51, 17);
             this.rd3.TabIndex = 5;
-            this.rd3.TabStop = true;
             this.rd3.Tag = "3";
             this.rd3.Text = "3 sao";
             this.rd3.UseVisualStyleBackColor = true;
@@ -121,7 +120,6 @@
             this.rd4.Name = "rd4";
             this.rd4.Size = new System.Drawing.Size(51, 17);
             this.rd4.TabIndex = 6;
-            this.rd4.TabStop = true;
             this.rd4.Tag = "4";
             this.rd4.Text = "4 sao";
             this.rd4.UseVisualStyleBackColor = true;
@@ -134,7 +132,6 @@
             this.rd5.Name = "rd5";
             this.rd5.Size = new System.Drawing.Size(51, 17);
             this.rd5.TabIndex = 7;
-            this.rd5.TabStop = true;
             this.rd5.Tag = "5";
             this.rd5.Text = "5 sao";
             this.rd5.UseVisualStyleBackColor = true;

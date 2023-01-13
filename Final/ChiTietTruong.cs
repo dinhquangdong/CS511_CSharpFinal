@@ -82,8 +82,7 @@ namespace Final
                 dg.TenHienThi = displayname;
                 dg.SoSao = sosao;
                 dg.LoiNhanXet = binhluan;
-                string time = (DateTime.Now.TimeOfDay).ToString();
-                dg.LoaiTG = "vào lúc ";
+                string time = DateTime.Now.ToString("HH:mm:ss tt");
                 dg.ThoiGianBL = time;
                 flpnDanhGia.Controls.Add(dg);
             }

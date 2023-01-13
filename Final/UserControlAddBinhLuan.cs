@@ -13,7 +13,7 @@ namespace Final
 {
     public partial class UserControlAddBinhLuan : UserControl
     {
-        int saodg;
+        int saodg = 1;
         public UserControlAddBinhLuan()
         {
             InitializeComponent();
