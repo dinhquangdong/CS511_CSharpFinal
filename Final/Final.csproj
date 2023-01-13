@@ -71,6 +71,8 @@
       <DependentUpon>DangNhap.cs</DependentUpon>
     </Compile>
     <Compile Include="DAO\AccountDAO.cs" />
+    <Compile Include="DAO\BinhLuanNganhDAO.cs" />
+    <Compile Include="DAO\BinhLuanTruongDAO.cs" />
     <Compile Include="DAO\CTNganhHocDAO.cs" />
     <Compile Include="DAO\CTToHopMonDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
@@ -78,6 +80,8 @@
     <Compile Include="DAO\ToHopMonDAO.cs" />
     <Compile Include="DAO\TruongDAO.cs" />
     <Compile Include="DTO\Account.cs" />
+    <Compile Include="DTO\BinhLuanNganh.cs" />
+    <Compile Include="DTO\BinhLuanTruong.cs" />
     <Compile Include="DTO\CTNganhHoc.cs" />
     <Compile Include="DTO\CTToHopMon.cs" />
     <Compile Include="DTO\Nganh.cs" />
@@ -108,6 +112,12 @@
     </Compile>
     <Compile Include="QMK.Designer.cs">
       <DependentUpon>QMK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlDanhGia.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlDanhGia.Designer.cs">
+      <DependentUpon>UserControlDanhGia.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControlDiem.cs">
       <SubType>UserControl</SubType>
@@ -196,6 +206,9 @@
     </Compile>
     <EmbeddedResource Include="QMK.resx">
       <DependentUpon>QMK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlDanhGia.resx">
+      <DependentUpon>UserControlDanhGia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlDiem.resx">
       <DependentUpon>UserControlDiem.cs</DependentUpon>
@@ -420,6 +433,11 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Images\addImage.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\filled_select.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>
