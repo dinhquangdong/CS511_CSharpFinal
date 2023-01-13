@@ -26,6 +26,13 @@ namespace Final.DAO
             return DataProvider.Instance.ExcuteQuery("Select * from NGANHHOC");
         }
 
+        public DataTable GetAnhNganhFromMaNganh(int manganh)
+        {
+            DataTable dt = new DataTable();
+            dt = DataProvider.Instance.ExcuteQuery($"select AnhNganh from NGANHHOC where MaNganh = N'{manganh}'");
+            return dt;
+        }
+
         public DataTable TimKiem(string text)
         {
             DataTable dt = new DataTable();

@@ -16,7 +16,7 @@ namespace Final
         public static UserControlNganh Instance;
         public string TenNganh;
         public int MaNganh;
-        public string AnhNganh = "messi.png";
+        public string AnhNganh;
         public UserControlNganh()
         {
             InitializeComponent();
@@ -25,9 +25,13 @@ namespace Final
 
         private void UserControlNganh_Load(object sender, EventArgs e)
         {
+            DataTable dt = NganhDAO.Instance.GetAnhNganhFromMaNganh(MaNganh);
+            foreach(DataRow r in dt.Rows)
+                AnhNganh = r["AnhNganh"].ToString();
+
             labelMaNganh.Text = "Mã ngành: " + MaNganh;
             labelTenNganh.Text = TenNganh;
-            pbAnhNganh.BackgroundImage = Image.FromFile("./Images/" + AnhNganh);
+            pbAnhNganh.BackgroundImage = Image.FromFile("Images/" + AnhNganh);
         }
 
         private void labelTenNganh_Click(object sender, EventArgs e)
