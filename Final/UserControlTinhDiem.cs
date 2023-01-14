@@ -201,6 +201,7 @@ namespace Final
 
         private void button1_Click(object sender, EventArgs e)
         {
+            MainScreen.instance.GoiYNganh = true;
             this.Hide();
             UserControlGoiYNganh gyn = new UserControlGoiYNganh();
             MainScreen.instance.flowLayoutPanel1.Controls.Add(gyn);

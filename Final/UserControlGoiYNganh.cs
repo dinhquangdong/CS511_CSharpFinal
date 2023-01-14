@@ -13,9 +13,11 @@ namespace Final
 {
     public partial class UserControlGoiYNganh : UserControl
     {
+        public static UserControlGoiYNganh instance;
         public UserControlGoiYNganh()
         {
             InitializeComponent();
+            instance = this;
         }
 
         private void UserControlGoiYNganh_Load(object sender, EventArgs e)
@@ -84,6 +86,7 @@ namespace Final
 
         private void btnBackTinhDiem_Click(object sender, EventArgs e)
         {
+            MainScreen.instance.GoiYNganh = false;
             this.Hide();
             MainScreen.instance.flowLayoutPanel1.Controls[0].Visible = true;
         }

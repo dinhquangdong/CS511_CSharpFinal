@@ -82,6 +82,13 @@ namespace Final.DAO
             return dt;
         }
 
+        public DataTable GetListNganhTruongDiemChuanFromMaToHopMonvaDiemAndTimKiem(string MaThm, float diem, string timkiem)
+        {
+            string query = $"select TenTruong, TenNganh, NGANHHOC.MaNganh, DiemChuan, AnhNganh from TRUONG, NGANHHOC, CTNGANHHOC, CTTOHOPMON where TRUONG.MaTruong=CTNGANHHOC.MaTruong and NGANHHOC.MaNganh=CTNGANHHOC.MaNganh and DiemChuan<={diem} and CTTOHOPMON.MaNganh = NGANHHOC.MaNganh and CTTOHOPMON.MaToHopMon = N'{MaThm}' and dbo.fuConvertToUnsign1(TenNganh) like N'%'+dbo.fuConvertToUnsign1('{timkiem}')+'%'";
+            DataTable dt = DataProvider.Instance.ExcuteQuery(query);
+            return dt;
+        }
+
         public string getDiemMinMaxFromMaTruong(string matruong)
         {
             string query = $"select Min(DiemChuan), MAX(DiemChuan) from CTNGANHHOC where MaTruong = N'{matruong}'";

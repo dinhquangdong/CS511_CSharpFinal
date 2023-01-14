@@ -18,6 +18,7 @@ namespace Final
         public Image avatar;
 
         public bool BLNganh = false;
+        public bool GoiYNganh = false;
 
         public bool HienTruong = false;
         public bool HienNganh = false;
@@ -143,9 +144,29 @@ namespace Final
                 }
             }
 
-            else if (HienDiem == true)
+            else if (GoiYNganh == true)
             {
+                UserControlGoiYNganh.instance.flowLayoutPanel1.Controls.Clear();
 
+                DataTable dt = new DataTable();
+                dt = AccountDAO.Instance.GetListDiemFromGmail(Gmail);
+
+                DataTable dt3 = new DataTable();
+                float diem = 0;
+                DataRow r = dt.Rows[0];
+                diem = float.Parse(r[dt.Columns.IndexOf(UserControlGoiYNganh.instance.comboBox1.Text)].ToString());
+                dt3 = CTNganhHocDAO.Instance.GetListNganhTruongDiemChuanFromMaToHopMonvaDiemAndTimKiem(UserControlGoiYNganh.instance.comboBox1.Text, diem, textBoxSearch.Text);
+                UserControlGoiYNganh.instance.lbSoNganh.Text = dt3.Rows.Count.ToString();
+                foreach (DataRow dr in dt3.Rows)
+                {
+                    UserControlNganhGoiY u = new UserControlNganhGoiY();
+                    u.tentruong = dr[0].ToString();
+                    u.tennganh = dr[1].ToString();
+                    u.manganh = int.Parse(dr[2].ToString());
+                    u.diemchuan = float.Parse(dr[3].ToString());
+                    u.AnhNganh = dr[4].ToString();
+                    UserControlGoiYNganh.instance.flowLayoutPanel1.Controls.Add(u);
+                }
             }
 
             else if (HienToHopMon == true)

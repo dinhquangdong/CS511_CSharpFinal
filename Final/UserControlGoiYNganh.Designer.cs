@@ -156,12 +156,12 @@
         #endregion
 
         private System.Windows.Forms.Button btnBackTinhDiem;
-        private System.Windows.Forms.ComboBox comboBox1;
         public System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Label labelDiemCuaBan;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label lbSoNganh;
+        public System.Windows.Forms.ComboBox comboBox1;
+        public System.Windows.Forms.Label labelDiemCuaBan;
+        public System.Windows.Forms.Label lbSoNganh;
     }
 }
