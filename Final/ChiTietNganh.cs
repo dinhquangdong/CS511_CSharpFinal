@@ -36,8 +36,8 @@ namespace Final
             dataGridViewDanhSachCacTruongCoNganh.Controls.Clear();
             dataGridViewDanhSachCacTruongCoNganh.DataSource = CTNganhHocDAO.Instance.GetListTruongFromMaNganh(int.Parse(r[0].ToString()));
 
-
             LoadDanhGia(int.Parse(r[0].ToString()));
+            MaNganh = int.Parse(r[0].ToString());
         }
 
         public void reLoad()

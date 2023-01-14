@@ -19,12 +19,13 @@ namespace Final.DAO
         private BinhLuanNganhDAO() { }
         public DataTable getListDanhGiaFromMaNganh(int manganh)
         {
-            return DataProvider.Instance.ExcuteQuery($"select * from BINHLUANNGANH where MaNganh = {manganh}");
+            string query = $"select * from BINHLUANNGANH where MaNganh = {manganh}";
+            return DataProvider.Instance.ExcuteQuery(query);
         }
 
         public bool insertBinhLuan(int manganh, string gmail, string binhluan, int sosao)
         {
-            string query = $"Insert BINHLUANNGANH (MaNganh, Gmail, BinhLuan, SaoDanhGia, ThoiGian) values (N'{manganh}', N'{gmail}', N'{binhluan}',{sosao}, GetDate())";
+            string query = $"Insert BINHLUANNGANH (MaNganh, Gmail, BinhLuan, SaoDanhGia, ThoiGian) values ({manganh}, N'{gmail}', N'{binhluan}',{sosao}, GetDate())";
             int result = DataProvider.Instance.ExcuteNonQuery(query);
             return result > 0;
         }

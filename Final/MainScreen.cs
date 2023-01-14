@@ -123,7 +123,7 @@ namespace Final
                     UserControlTruong t = new UserControlTruong();
                     t.TenTruong = row[0].ToString();
                     t.AnhTruong = row[1].ToString();
-
+                    t.MinMaxDiem = CTNganhHocDAO.Instance.getDiemMinMaxFromMaTruong(row[2].ToString());
                     flowLayoutPanel1.Controls.Add(t);
                 }
             }

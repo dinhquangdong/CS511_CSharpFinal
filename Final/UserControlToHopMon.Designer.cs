@@ -35,7 +35,7 @@
             // labelMon
             // 
             this.labelMon.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMon.Location = new System.Drawing.Point(113, 17);
+            this.labelMon.Location = new System.Drawing.Point(220, 15);
             this.labelMon.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelMon.Name = "labelMon";
             this.labelMon.Size = new System.Drawing.Size(286, 47);
@@ -65,9 +65,9 @@
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.labelMon);
             this.Controls.Add(this.labelMa);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UserControlToHopMon";
-            this.Size = new System.Drawing.Size(416, 76);
+            this.Size = new System.Drawing.Size(521, 76);
             this.Load += new System.EventHandler(this.UserControlToHopMon_Load);
             this.Click += new System.EventHandler(this.UserControlToHopMon_Click);
             this.ResumeLayout(false);

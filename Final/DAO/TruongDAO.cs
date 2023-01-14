@@ -47,7 +47,7 @@ namespace Final.DAO
         public DataTable TimKiem(string text)
         {
             DataTable dt = new DataTable();
-            dt = DataProvider.Instance.ExcuteQuery($"Select TenTruong, AnhTruong from TRUONG where dbo.fuConvertToUnsign1(TenTruong) like N'%'+dbo.fuConvertToUnsign1('{text}')+'%'");
+            dt = DataProvider.Instance.ExcuteQuery($"Select TenTruong, AnhTruong, MaTruong from TRUONG where dbo.fuConvertToUnsign1(TenTruong) like N'%'+dbo.fuConvertToUnsign1('{text}')+'%'");
             return dt;
         }
 
