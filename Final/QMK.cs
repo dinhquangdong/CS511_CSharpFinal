@@ -43,7 +43,7 @@ namespace Final
             string TenUser = txbUsername.Text;
             string email = txbEmail.Text;
             string from = "20521137@gm.uit.edu.vn";
-            string password = "vanchinh12042002";
+            string password = "vanch";
             string newPass = GetRandomPassword();
             MailMessage mailMessage = new MailMessage();
             mailMessage.From = new MailAddress(from);
